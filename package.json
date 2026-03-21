@@ -1,0 +1,32 @@
+{
+  "name": "genshin-wish-app",
+  "version": "1.0.0",
+  "description": "A Genshin Impact Fortune Slip Wish App where users can select a character to wish for, triggering a dialogue scene and a fortune slip animation.",
+  "main": "src/main.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.98.0",
+    "typescript": "^4.4.4",
+    "vite": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.0.1"
+  },
+  "keywords": [
+    "genshin",
+    "impact",
+    "wish",
+    "react",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

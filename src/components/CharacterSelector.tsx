@@ -39,7 +39,6 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
     if (name.length > 8) {
       return name.slice(0, 8) + '..';
     }
-    // You can add any logic here to transform the character name if needed
     return name;
   };
 

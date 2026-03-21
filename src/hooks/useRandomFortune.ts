@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import fortunes from '../data/fortunes';
+import {fortunes} from '../data/fortunes';
 
 const useRandomFortune = () => {
     const [fortune, setFortune] = useState('');

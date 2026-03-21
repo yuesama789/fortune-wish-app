@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-// import { useRandomFortune } from '../hooks/useRandomFortune';
+import  useRandomFortune  from '../hooks/useRandomFortune';
 // import './FortuneSlipAnimation.css'; // Assuming you will create a CSS file for animations
 
 interface FortuneSlipAnimationProps {
@@ -10,7 +10,7 @@ interface FortuneSlipAnimationProps {
 const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimationEnd, onReturnClick }) => {
     const [isAnimating, setIsAnimating] = useState(false);
     const animationTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-    // const fortune = useRandomFortune();
+    const fortune = useRandomFortune();
 
     const startAnimation = () => {
         setIsAnimating(true);
@@ -33,9 +33,9 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
     return (
         <div className={`fortune-slip ${isAnimating ? 'animate' : ''}`}>
             {isAnimating ? (
-                <div className="fortune-text">{/* fortune */}</div>
-            ) : (
                 <div className="fortune-placeholder">Wishing...</div>
+            ) : (
+                <div className="fortune-text">{fortune}</div>
             )}
             <button type="button" onClick={onReturnClick}>Return to Character Selection</button>
         </div>

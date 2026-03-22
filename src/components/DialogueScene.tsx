@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './DialogueScene.scss';
 
 interface DialogueSceneProps {
@@ -13,6 +13,29 @@ interface DialogueSceneProps {
 }
 
 const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, onReturnClick }) => {
+    const [selectedOption, setSelectedOption] = useState<'wish' | 'return' | null>(null);
+    const clickTimeoutRef = useRef<number | null>(null);
+
+    useEffect(() => {
+        return () => {
+            if (clickTimeoutRef.current !== null) {
+                window.clearTimeout(clickTimeoutRef.current);
+            }
+        };
+    }, []);
+
+    const triggerOption = (option: 'wish' | 'return', callback: () => void) => {
+        setSelectedOption(option);
+
+        if (clickTimeoutRef.current !== null) {
+            window.clearTimeout(clickTimeoutRef.current);
+        }
+
+        clickTimeoutRef.current = window.setTimeout(() => {
+            callback();
+        }, 100);
+    };
+
     const speechBubbleIcon = (
         <svg height="32px" width="32px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512" xmlSpace="preserve">
@@ -41,8 +64,22 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, o
                 </div>
             </div>
             <div className="dialogue-options">
-                <div className="button" onClick={onWishClick}><span className='dialogue-options-border'></span>{speechBubbleIcon} Let's hope for good fortune!</div>
-                <div className="button" onClick={onReturnClick}><span className='dialogue-options-border'></span>{speechBubbleIcon} (Select another character)</div>
+                <div
+                    className={`button ${selectedOption === 'wish' ? 'is-selected' : ''}`}
+                    onClick={() => triggerOption('wish', onWishClick)}
+                >
+                    <span className='dialogue-options-border'></span>
+                    {speechBubbleIcon}
+                    Let's hope for good fortune!
+                </div>
+                <div
+                    className={`button ${selectedOption === 'return' ? 'is-selected' : ''}`}
+                    onClick={() => triggerOption('return', onReturnClick)}
+                >
+                    <span className='dialogue-options-border'></span>
+                    {speechBubbleIcon}
+                    (Select another character)
+                </div>
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ interface DialogueSceneProps {
 
 const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, onReturnClick }) => {
     const speechBubbleIcon = (
-        <svg height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+        <svg height="32px" width="32px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512" xmlSpace="preserve">
                 <style type="text/css">{`.st0{fill:#FFFFFF;}`}</style>
         <g>

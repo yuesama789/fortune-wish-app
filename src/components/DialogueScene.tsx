@@ -36,11 +36,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, o
             <div className='dialogue-blurredbackground'>
                 <div className='dialogue-container'>
                     <h2>{character.name}</h2>
-                    <h3>
-                        <span className='dialogue-ornament-left'></span>
-                        <span>Any relevant title of this character</span>
-                        <span className='dialogue-ornament-right'></span>
-                    </h3>
+                    <span className='dialogue-ornament'></span>
                     <p>{character.dialogue}</p>
                 </div>
             </div>

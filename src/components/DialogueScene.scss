@@ -21,13 +21,13 @@
 
     .dialogue-options {
         display: flex;
-        gap: 10px;
+        gap: 5px;
         flex-direction: column;
         z-index: 2;
 
         .button {
             position: relative;
-            background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+            background: linear-gradient(to right bottom, rgba(25, 25, 25, 0.7), rgba(25, 25, 25, 0.1));
             color: white;
             border: none;
             padding: 10px 20px 10px 15px;
@@ -68,23 +68,20 @@
     position: relative;
     text-align: center;
 
-    h2, h3 {
+    h2 {
         color: #ffbf0a;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        
+        margin-bottom: .3em;
     }
 
-    h3 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+    p {
+        margin-top: .5em;
+        font-size: 1.2em;
     }
     
-    .dialogue-ornament-left, .dialogue-ornament-right {
-        width: 25%;
+    .dialogue-ornament {
+        display: block;
+        width: 100%;
         height: 1px;
         background-color: #ffbf0a;
         margin: 0 10px;

@@ -41,8 +41,8 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, o
                 </div>
             </div>
             <div className="dialogue-options">
-                <div className="button" onClick={onWishClick}>{speechBubbleIcon} Start Wish</div>
-                <div className="button" onClick={onReturnClick}>{speechBubbleIcon} Return to Character Selection</div>
+                <div className="button" onClick={onWishClick}><span className='dialogue-options-border'></span>{speechBubbleIcon} Let's hope for good fortune!</div>
+                <div className="button" onClick={onReturnClick}><span className='dialogue-options-border'></span>{speechBubbleIcon} (Select another character)</div>
             </div>
         </div>
     );

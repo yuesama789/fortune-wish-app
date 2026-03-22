@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import CharacterSelector from './components/CharacterSelector';
 import DialogueScene from './components/DialogueScene';
 import FortuneSlipAnimation from './components/FortuneSlipAnimation';
-import { Character } from './types';
+import { Character, SelectedCharacter } from './types';
+import { resolveCharacterDialogue } from './utils/dialogue';
 
 type AppStep = 'selector' | 'dialogue' | 'fortune';
 
 const App: React.FC = () => {
-    const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
+    const [selectedCharacter, setSelectedCharacter] = useState<SelectedCharacter | null>(null);
     const [step, setStep] = useState<AppStep>('selector');
 
     const handleCharacterSelect = (character: Character) => {
-        setSelectedCharacter(character);
+        const dialogue = resolveCharacterDialogue(character.id);
+        setSelectedCharacter({ ...character, dialogue });
         setStep('dialogue');
     };
 

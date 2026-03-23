@@ -100,8 +100,10 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                     }}
                 >
                     <div className="fortune-text">
+                        <div className="fortune-emblem"><div className='fortune-emblem-fill'></div></div>
                         <span>Your fortune is...</span>
                         <h2>{fortune.header}</h2>
+                        <div className="fortune-ornament"></div>
                         <p>{fortune.text}</p>
                     </div>
                     <span className="fortune-continue">Click to continue</span>

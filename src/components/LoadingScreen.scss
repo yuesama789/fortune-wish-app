@@ -27,8 +27,8 @@
 .loading-mask-container {
     width: min(560px, 90vw);
     height: 72px;
-    mask-image: url('/dist/images/loading/loading.jpeg');
-    -webkit-mask-image: url('/dist/images/loading/loading.jpeg');
+    mask-image: url('/images/loading/loading.jpeg');
+    -webkit-mask-image: url('/images/loading/loading.jpeg');
     mask-size: 100% 100%;
     -webkit-mask-size: 100% 100%;
     mask-mode: luminance;

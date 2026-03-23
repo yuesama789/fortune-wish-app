@@ -18,20 +18,15 @@ interface ActiveFeaturedPatchInfo {
 // 3) featuredCharacterIds must exist in data/characters.ts.
 export const featuredPatchSchedule: FeaturedPatchSchedule[] = [
 	{
-		patchVersion: '5.4',
-		startDate: '2025-02-12',
-		featuredCharacterIds: ['dehya', 'xingqiu', 'sucrose'],
+		patchVersion: '6.4.2',
+		startDate: '2026-03-17',
+		featuredCharacterIds: ['escoffier', 'skirk', 'candace', 'charlotte', 'dahlia'],
 	},
-	{
-		patchVersion: '5.5',
-		startDate: '2025-03-26',
-		featuredCharacterIds: ['keqing', 'bennett', 'mona'],
-	},
-	{
-		patchVersion: '5.6',
-		startDate: '2026-05-07',
-		featuredCharacterIds: ['tighnari', 'qiqi', 'yumemizuki'],
-	},
+	// {
+	// 	patchVersion: '5.5',
+	// 	startDate: '2025-03-26',
+	// 	featuredCharacterIds: ['keqing', 'bennett', 'mona'],
+	// },
 ];
 
 const parseScheduleDate = (dateString: string): Date => new Date(`${dateString}T00:00:00Z`);

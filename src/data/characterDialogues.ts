@@ -55,6 +55,31 @@ export const characterDialogues: CharacterDialogueMap = {
         "I'd like to record the results… if that's okay…",
         "…I hope it works. That would be… really nice.",
     ],
+    skirk: [
+        "You’re reaching for something far beyond you… and yet, you chose me.",
+        "…So you intend to find me. Then don’t falter now.",
+        "If you’re searching for me, be certain you understand what that means.",
+    ],
+    escoffier: [
+        "Ah… so I’m the one you’ve developed a taste for.",
+        "You’ve chosen me? Then I hope your expectations are… refined.",
+        "If you’re seeking me out, I trust you know quality when you see it.",
+    ],
+    candace: [
+        "You’ve come looking for me? Then you’ll have my attention.",
+        "If it’s me you seek, I won’t turn away from that.",
+        "You’ve made your choice clear. I respect that.",
+    ],
+    charlotte: [
+        "Oh! You’re going after me? This just got interesting!",
+        "Aiming for me, huh? I should take notes on this!",
+        "Wait—this is about me? Oh, I love where this is going!",
+    ],
+    dahlia: [
+        "You’re looking for me…? That’s… a little surprising.",
+        "If it’s me you want, then I hope things turn out gently for you.",
+        "You chose me… I’ll remember that.",
+    ],
 };
 
 export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, string[]>> = {
@@ -145,5 +170,45 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Interesting... values are climbing. I-I think this is a good sign."],
         Misfortune: ["That was unfortunate. Maybe we should proceed more carefully."],
         'Great Misfortune': ["Oh dear... a severe negative outcome. A short pause might help."],
+    },
+    skirk: {
+        'Great Fortune': ["…You’ve caught the current. Don’t lose your grip now."],
+        'Good Fortune': ["The path opens. Whether you can follow it… remains to be seen."],
+        'Modest Fortune': ["…Unclear. Then you’ll have to rely on yourself."],
+        'Rising Fortune': ["It’s shifting in your favor. Slowly… but enough."],
+        Misfortune: ["You’re out of step with it. Adjust, or be left behind."],
+        'Great Misfortune': ["…Even now, you persist. Hm. Interesting."],
+    },
+    escoffier: {
+        'Great Fortune': ["Exquisite timing. I couldn’t have arranged it better myself."],
+        'Good Fortune': ["A pleasant result. You’ve chosen well."],
+        'Modest Fortune': ["Acceptable… though I suspect you were hoping for more."],
+        'Rising Fortune': ["It improves. Patience often enhances the outcome."],
+        Misfortune: ["Unfortunate… though not beyond remedy."],
+        'Great Misfortune': ["…A disappointing course. You may wish to reconsider your timing."],
+    },
+    candace: {
+        'Great Fortune': ["Good. The path is clear for you."],
+        'Good Fortune': ["Things are in your favor. Go forward with confidence."],
+        'Modest Fortune': ["Not certain… but not hopeless either."],
+        'Rising Fortune': ["It will improve. Stay steady."],
+        Misfortune: ["…Then tread carefully. Not all paths are safe."],
+        'Great Misfortune': ["You may want to wait. Even strength has its moments."],
+    },
+    charlotte: {
+        'Great Fortune': ["Wow, that’s headline-worthy luck! I’d call that a success!"],
+        'Good Fortune': ["Not bad at all! That’s a story I’d follow!"],
+        'Modest Fortune': ["Hmm… could go either way. Still worth watching!"],
+        'Rising Fortune': ["Ooh, it’s getting better! I’d stick with this!"],
+        Misfortune: ["Ah… not the best outcome. But hey, every story has setbacks!"],
+        'Great Misfortune': ["Yikes… that’s rough. Even I wouldn’t spin that as good news."],
+    },
+    dahlia: {
+        'Great Fortune': ["Oh… that’s wonderful. I’m really glad."],
+        'Good Fortune': ["That looks promising… I think it will be okay."],
+        'Modest Fortune': ["…It’s uncertain. But that doesn’t mean it’s bad."],
+        'Rising Fortune': ["It’s getting better. Just a little more."],
+        Misfortune: ["…I’m sorry. I wish it had been kinder."],
+        'Great Misfortune': ["…That’s difficult. But I don’t think it will stay that way forever."],
     },
 };

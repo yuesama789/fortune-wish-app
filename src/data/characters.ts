@@ -89,4 +89,44 @@ export const characters: Character[] = [
     element: "Anemo",
     region: "Mondstadt"
   },
+  {
+    id: 'escoffier',
+    name: "Escoffier",
+    image: "/images/characters/5/Escoffier_Icon.webp",
+    quality: 5,
+    element: "Cryo",
+    region: "Fontaine"
+  },
+  {
+    id: 'skirk',
+    name: "Skirk",
+    image: "/images/characters/5/Skirk_Icon.webp",
+    quality: 5,
+    element: "Cryo",
+    region: "OtherWorld"
+  },
+  {
+    id: 'candace',
+    name: "Candace",
+    image: "/images/characters/4/Candace_Icon.webp",
+    quality: 4,
+    element: "Hydro",
+    region: "Sumeru"
+  },
+  {
+    id: 'charlotte',
+    name: "Charlotte",
+    image: "/images/characters/4/Charlotte_Icon.webp",
+    quality: 4,
+    element: "Cryo",
+    region: "Fontaine"
+  },
+  {
+    id: 'dahlia',
+    name: "Dahlia",
+    image: "/images/characters/4/Dahlia_Icon.webp",
+    quality: 4,
+    element: "Hydro",
+    region: "Mondstadt"
+  }
 ];

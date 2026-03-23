@@ -77,6 +77,7 @@
             border-radius: 8px;
             transition: border-color 0.2s;
             overflow: hidden;
+            z-index: 1;
 
             &::before{
                 content:'';

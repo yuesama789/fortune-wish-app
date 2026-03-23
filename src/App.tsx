@@ -3,6 +3,7 @@ import CharacterSelector from './components/CharacterSelector';
 import DialogueScene from './components/DialogueScene';
 import FortuneSlipAnimation from './components/FortuneSlipAnimation';
 import AttributionModal from './components/AttributionModal';
+import LoadingScreen from './components/LoadingScreen';
 import { Character, Fortune, SelectedCharacter } from './types';
 import { resolveCharacterDialogue, resolveFortuneFollowUpDialogue } from './utils/dialogue';
 import './App.scss';
@@ -10,6 +11,7 @@ import './App.scss';
 type AppStep = 'selector' | 'dialogue' | 'fortune';
 
 const App: React.FC = () => {
+    const [isLoading, setIsLoading] = useState(true);
     const [selectedCharacter, setSelectedCharacter] = useState<SelectedCharacter | null>(null);
     const [step, setStep] = useState<AppStep>('selector');
     const [isPostFortuneDialogue, setIsPostFortuneDialogue] = useState(false);
@@ -51,6 +53,10 @@ const App: React.FC = () => {
         setIsPostFortuneDialogue(false);
         setStep('selector');
     };
+
+    if (isLoading) {
+        return <LoadingScreen onComplete={() => setIsLoading(false)} />;
+    }
 
     return (
         <div className="app">

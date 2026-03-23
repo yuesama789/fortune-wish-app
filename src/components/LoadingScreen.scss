@@ -1,0 +1,52 @@
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background-color: #23355b;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.7s ease-out;
+
+    &--fading {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    h1 {
+        color: #d4bc8e;
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 0.06em;
+    }
+}
+
+.loading-mask-container {
+    width: min(560px, 90vw);
+    height: 72px;
+    mask-image: url('/dist/images/loading/loading.jpeg');
+    -webkit-mask-image: url('/dist/images/loading/loading.jpeg');
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-mode: luminance;
+    -webkit-mask-mode: luminance;
+    overflow: hidden;
+}
+
+.loading-fill {
+    height: 100%;
+    min-width: 2px;
+    background: linear-gradient(to right, #7a6040, #d4bc8e, #f5e4a8, #d4bc8e);
+    transition: width 0.35s ease-out;
+}
+
+.loading-label {
+    color: #8a7860;
+    font-size: 0.75rem;
+    margin: 0;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}

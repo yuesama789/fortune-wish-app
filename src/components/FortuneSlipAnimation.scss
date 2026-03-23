@@ -5,13 +5,17 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    background: radial-gradient(circle at 50% 45%, rgba(52, 92, 196, 0.35), rgba(3, 5, 22, 0.85));
+    background: radial-gradient(circle at 50% 45%, rgba(110, 55, 4, 0.288), rgba(3, 5, 22, 0.85));
     display: flex;
     backdrop-filter: blur(6px);
     align-items: center;
     justify-content: center;
     overflow: hidden;
     animation: fortuneFadeIn 0.4s ease-out;
+}
+
+.fortune-slip.is-revealed {
+    backdrop-filter: blur(3px);
 }
 
 .wish-sequence {
@@ -107,10 +111,9 @@
         font-size: clamp(1.05rem, 2.8vw, 1.55rem);
         line-height: 1.45;
         padding: 1.2rem 1.4rem;
-        border-radius: 14px;
-        background: linear-gradient(145deg, rgba(31, 19, 4, 0.72), rgba(88, 49, 10, 0.55));
-        border: 1px solid rgba(255, 221, 145, 0.4);
-        max-width: 740px;
+        // border-radius: 14px;
+        // background: linear-gradient(145deg, rgba(31, 19, 4, 0.72), rgba(88, 49, 10, 0.55));
+        // border: 1px solid rgba(255, 221, 145, 0.4);
     }
 
     button {

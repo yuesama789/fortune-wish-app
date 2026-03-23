@@ -80,6 +80,7 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
             ) : (
                 <div className="fortune-result">
                     <div className="fortune-text">
+                        <span>Your fortune is...</span>
                         <h2>{fortune.header}</h2>
                         <p>{fortune.text}</p>
                     </div>

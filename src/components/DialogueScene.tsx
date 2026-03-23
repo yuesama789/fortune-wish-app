@@ -107,6 +107,13 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
             <img src={`/images/dialogue_assets/character/5/${character.name}.png`} alt={character.name} className="character-image" />
             {showUi && (
                 <>
+                
+                    <div
+                        className="return-button"
+                        onClick={onReturnClick}
+                    >
+                        {returnIcon}
+                    </div>
                     <div className='dialogue-blurredbackground'>
                         <div className='dialogue-container'>
                             <h2>{character.name}</h2>

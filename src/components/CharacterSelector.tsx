@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Character, CharacterElement, CharacterQuality } from '../types';
 import { characters as defaultCharacters } from '../data/characters';
-import { featuredCharacterIds } from '../data/featuredCharacterIds';
+import { getActiveFeaturedPatchInfo } from '../data/featuredCharacterIds';
 import './CharacterSelector.scss';
 
 interface CharacterSelectorProps {
@@ -18,7 +18,9 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
   const [elementFilter, setElementFilter] = useState<'all' | CharacterElement>('all');
   const [nameFilter, setNameFilter] = useState('');
 
-  const featuredSet = useMemo(() => new Set<string>(featuredCharacterIds), []);
+  const activePatchInfo = useMemo(() => getActiveFeaturedPatchInfo(), []);
+  const featuredSet = useMemo(() => new Set<string>(activePatchInfo.featuredCharacterIds), [activePatchInfo]);
+  const patchVersion = activePatchInfo.patchVersion;
 
   const regionOptions = useMemo(
     () => Array.from(new Set(characters.map((character) => character.region))).sort(),
@@ -134,7 +136,7 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
       </div>
 
       <section className="character-section">
-        <h3>Featured Characters</h3>
+        <h3>Featured Characters (Patch {patchVersion})</h3>
         <ul className="character-grid featured-grid">
           {featuredCharacters.length === 0 && <li className="empty-state">No featured characters configured.</li>}
           {featuredCharacters.map(renderCharacterCard)}

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import CharacterSelector from './components/CharacterSelector';
 import DialogueScene from './components/DialogueScene';
 import FortuneSlipAnimation from './components/FortuneSlipAnimation';
+import AttributionModal from './components/AttributionModal';
 import { Character, Fortune, SelectedCharacter } from './types';
 import { resolveCharacterDialogue, resolveFortuneFollowUpDialogue } from './utils/dialogue';
+import './App.scss';
 
 type AppStep = 'selector' | 'dialogue' | 'fortune';
 
@@ -11,6 +13,7 @@ const App: React.FC = () => {
     const [selectedCharacter, setSelectedCharacter] = useState<SelectedCharacter | null>(null);
     const [step, setStep] = useState<AppStep>('selector');
     const [isPostFortuneDialogue, setIsPostFortuneDialogue] = useState(false);
+    const [isAttributionOpen, setIsAttributionOpen] = useState(false);
 
     const handleCharacterSelect = (character: Character) => {
         const dialogue = resolveCharacterDialogue(character.id);
@@ -51,6 +54,14 @@ const App: React.FC = () => {
 
     return (
         <div className="app">
+            <button
+                type="button"
+                className="app-info-button"
+                aria-label="Open project info and asset sources"
+                onClick={() => setIsAttributionOpen(true)}
+            >
+                ?
+            </button>
             <h1>Genshin Impact Fortune Slip Wish App</h1>
             {!selectedCharacter && <CharacterSelector onSelect={handleCharacterSelect} />}
             {selectedCharacter && (
@@ -64,6 +75,7 @@ const App: React.FC = () => {
                 />
             )}
             {step === 'fortune' && <FortuneSlipAnimation onContinue={handleFortuneContinue} />}
+            <AttributionModal isOpen={isAttributionOpen} onClose={() => setIsAttributionOpen(false)} />
         </div>
     );
 };

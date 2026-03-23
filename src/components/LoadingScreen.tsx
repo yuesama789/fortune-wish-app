@@ -7,7 +7,7 @@ interface LoadingScreenProps {
     onComplete: () => void;
 }
 
-const ENABLE_TEST_LOADING_DELAY = true;
+const ENABLE_TEST_LOADING_DELAY = false;
 const TEST_LOADING_DURATION_MS = 5 * 60 * 1000;
 const NORMAL_LOADING_DURATION_MS = 600;
 const MINIMUM_LOADING_DURATION_MS = 2 * 1000;
@@ -53,14 +53,17 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     return (
         <div className={`loading-screen${fading ? ' loading-screen--fading' : ''}`}>
             <div className="fortune-emblem-container">
-                <FortuneEmblem color="#fff" />
+                <FortuneEmblem color="#d4bb8e" />
             </div>
             <h1>Genshin Impact - Wish For Me?</h1>
             
             <p className="loading-tooltip">Blame fate if you want… but you made the wish.</p>
 
-            <div className="loading-mask-container">
-                <div className="loading-fill" style={{ width: `${progress}%` }} />
+            <div className="loading-progress-container">
+                <div className="loading-ornament" />
+                <div className="loading-mask-container">
+                    <div className="loading-fill" style={{ width: `${progress}%` }} />
+                </div>
             </div>
         </div>
     );

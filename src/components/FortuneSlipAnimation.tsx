@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import useRandomFortune from '../hooks/useRandomFortune';
 import { Fortune } from '../types';
+import FortuneEmblem from './FortuneEmblem';
 import './FortuneSlipAnimation.scss';
 
 interface FortuneSlipAnimationProps {
@@ -100,7 +101,7 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                     }}
                 >
                     <div className="fortune-text">
-                        <div className="fortune-emblem"><div className='fortune-emblem-fill'></div></div>
+                        <FortuneEmblem color="#fff" />
                         <span>Your fortune is...</span>
                         <h2>{fortune.header}</h2>
                         <div className="fortune-ornament"></div>

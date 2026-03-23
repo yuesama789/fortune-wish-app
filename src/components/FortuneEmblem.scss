@@ -1,0 +1,20 @@
+.fortune-emblem {
+    mask-image: url('/images/loading/emblem.png');
+    -webkit-mask-image: url('/images/loading/emblem.png');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1em;
+    mask-mode: luminance;
+    -webkit-mask-mode: luminance;
+}
+
+.fortune-emblem-fill {
+    width: 100%;
+    height: 100%;
+}

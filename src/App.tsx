@@ -68,7 +68,7 @@ const App: React.FC = () => {
             >
                 ?
             </button>
-            <h1>Genshin Impact Fortune Slip Wish App</h1>
+            <h1>Genshin Impact Wish For Me?</h1>
             {!selectedCharacter && <CharacterSelector onSelect={handleCharacterSelect} />}
             {selectedCharacter && (
                 <DialogueScene

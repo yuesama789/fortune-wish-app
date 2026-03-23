@@ -11,6 +11,10 @@
     opacity: 1;
     transition: opacity 0.7s ease-out;
 
+    .fortune-emblem-container{
+        height: 50vh;
+    }
+
     &--fading {
         opacity: 0;
         pointer-events: none;
@@ -25,8 +29,8 @@
 }
 
 .loading-mask-container {
-    width: min(560px, 90vw);
-    height: 72px;
+    width: min(480px, 90vw);
+    height: 60px;
     mask-image: url('/images/loading/loading.jpeg');
     -webkit-mask-image: url('/images/loading/loading.jpeg');
     mask-size: 100% 100%;
@@ -49,4 +53,11 @@
     margin: 0;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+}
+
+.loading-tooltip {
+    color: #8a7860;
+    font-size: 0.75rem;
+    margin: 0;
+    letter-spacing: 0.05em;
 }

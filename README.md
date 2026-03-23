@@ -1,7 +1,7 @@
-# Genshin Impact Fortune Slip Wish App
+# Genshin Impact Wish For Me?
 
 ## Overview
-The Genshin Impact Fortune Slip Wish App allows users to select a character from the popular game Genshin Impact and trigger a dialogue scene along with a fortune slip animation that reveals a random fortune.
+The Genshin Impact Wish For Me? allows users to select a character from the popular game Genshin Impact and trigger a dialogue scene along with a fortune slip animation that reveals a random fortune.
 
 ## Features
 - Character selection from a predefined list.

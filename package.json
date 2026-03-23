@@ -1,7 +1,7 @@
 {
   "name": "genshin-wish-app",
   "version": "1.0.0",
-  "description": "A Genshin Impact Fortune Slip Wish App where users can select a character to wish for, triggering a dialogue scene and a fortune slip animation.",
+  "description": "A Genshin Impact Wish For Me? where users can select a character to wish for, triggering a dialogue scene and a fortune slip animation.",
   "main": "src/main.tsx",
   "scripts": {
     "dev": "vite",

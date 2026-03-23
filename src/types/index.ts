@@ -24,7 +24,15 @@ export interface SelectedCharacter extends Character {
 
 export type CharacterDialogueMap = Record<string, string[]>;
 
+export type FortuneHeader =
+  | 'Great Fortune'
+  | 'Good Fortune'
+  | 'Modest Fortune'
+  | 'Rising Fortune'
+  | 'Misfortune'
+  | 'Great Misfortune';
+
 export interface Fortune {
-  header: string;
+  header: FortuneHeader;
   text: string;
 }

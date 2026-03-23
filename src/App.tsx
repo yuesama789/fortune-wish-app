@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import CharacterSelector from './components/CharacterSelector';
 import DialogueScene from './components/DialogueScene';
 import FortuneSlipAnimation from './components/FortuneSlipAnimation';
-import { Character, SelectedCharacter } from './types';
-import { resolveCharacterDialogue } from './utils/dialogue';
+import { Character, Fortune, SelectedCharacter } from './types';
+import { resolveCharacterDialogue, resolveFortuneFollowUpDialogue } from './utils/dialogue';
 
 type AppStep = 'selector' | 'dialogue' | 'fortune';
 
@@ -19,6 +19,25 @@ const App: React.FC = () => {
 
     const handleStartWish = () => {
         setStep('fortune');
+    };
+
+    const handleFortuneContinue = (fortune: Fortune) => {
+        setSelectedCharacter((currentCharacter) => {
+            if (!currentCharacter) {
+                return currentCharacter;
+            }
+
+            const followUpDialogue = resolveFortuneFollowUpDialogue(
+                currentCharacter.id,
+                fortune.header,
+            );
+
+            return {
+                ...currentCharacter,
+                dialogue: followUpDialogue,
+            };
+        });
+        setStep('dialogue');
     };
 
     const handleReturnToSelection = () => {
@@ -38,7 +57,7 @@ const App: React.FC = () => {
                     showUi={step !== 'fortune'}
                 />
             )}
-            {step === 'fortune' && <FortuneSlipAnimation onReturnClick={handleReturnToSelection} />}
+            {step === 'fortune' && <FortuneSlipAnimation onContinue={handleFortuneContinue} />}
         </div>
     );
 };

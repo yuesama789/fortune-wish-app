@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import useRandomFortune from '../hooks/useRandomFortune';
+import { Fortune } from '../types';
 import './FortuneSlipAnimation.scss';
 
 interface FortuneSlipAnimationProps {
     onAnimationEnd?: () => void;
-    onReturnClick: () => void;
+    onContinue: (fortune: Fortune) => void;
 }
 
 interface Sparkle {
@@ -30,7 +31,7 @@ const sparkleConfig: Sparkle[] = [
     { angle: 344, radius: 140, size: 9, delay: 0.3, duration: 1.55 },
 ];
 
-const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimationEnd, onReturnClick }) => {
+const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimationEnd, onContinue }) => {
     const [isAnimating, setIsAnimating] = useState(false);
     const animationTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const fortune = useRandomFortune();
@@ -52,6 +53,14 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
             }
         };
     }, []);
+
+    const handleContinue = () => {
+        if (isAnimating) {
+            return;
+        }
+
+        onContinue(fortune);
+    };
 
     return (
         <div className={`fortune-slip ${isAnimating ? 'is-animating' : 'is-revealed'}`}>
@@ -78,13 +87,24 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                     <div className="wish-flash" aria-hidden="true" />
                 </div>
             ) : (
-                <div className="fortune-result">
+                <div
+                    className="fortune-result"
+                    onClick={handleContinue}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(event) => {
+                        if (event.key === 'Enter' || event.key === ' ') {
+                            event.preventDefault();
+                            handleContinue();
+                        }
+                    }}
+                >
                     <div className="fortune-text">
                         <span>Your fortune is...</span>
                         <h2>{fortune.header}</h2>
                         <p>{fortune.text}</p>
                     </div>
-                    <button type="button" onClick={onReturnClick}>Return to Character Selection</button>
+                    <span className="fortune-continue">Click to continue</span>
                 </div>
             )}
         </div>

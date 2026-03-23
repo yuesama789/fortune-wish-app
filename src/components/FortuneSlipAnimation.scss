@@ -104,6 +104,7 @@
     width: min(88vw, 760px);
     text-align: center;
     animation: fortuneReveal 0.45s ease-out;
+    cursor: pointer;
 
     .fortune-text {
         color: #ffe9ae;
@@ -116,22 +117,13 @@
         // border: 1px solid rgba(255, 221, 145, 0.4);
     }
 
-    button {
-        color: #2f1d04;
-        background: linear-gradient(145deg, #ffd87a, #f5b94a);
-        border: 1px solid rgba(95, 54, 5, 0.6);
-        border-radius: 999px;
+    .fortune-continue {
+        color: #ffe3a3;
         font-size: 0.95rem;
-        font-weight: 700;
-        letter-spacing: 0.02em;
-        padding: 0.62rem 1.35rem;
-        cursor: pointer;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-
-        &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 18px rgba(246, 182, 73, 0.45);
-        }
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px rgba(255, 227, 163, 0.5);
+        animation: continuePulse 1.3s ease-in-out infinite;
     }
 }
 
@@ -243,5 +235,17 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes continuePulse {
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-2px);
     }
 }

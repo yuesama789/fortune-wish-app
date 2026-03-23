@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import  useRandomFortune  from '../hooks/useRandomFortune';
-// import './FortuneSlipAnimation.css'; // Assuming you will create a CSS file for animations
+import './FortuneSlipAnimation.scss';
 
 interface FortuneSlipAnimationProps {
     onAnimationEnd?: () => void;
@@ -17,7 +17,7 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
         animationTimeoutRef.current = setTimeout(() => {
             setIsAnimating(false);
             onAnimationEnd?.();
-        }, 3000); // Duration of the animation
+        }, 30000); // Duration of the animation
     };
 
     useEffect(() => {

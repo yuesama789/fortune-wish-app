@@ -29,8 +29,8 @@ const App: React.FC = () => {
     return (
         <div className="app">
             <h1>Genshin Impact Fortune Slip Wish App</h1>
-            {step === 'selector' && <CharacterSelector onSelect={handleCharacterSelect} />}
-            {step === 'dialogue' && selectedCharacter && (
+            {!selectedCharacter && <CharacterSelector onSelect={handleCharacterSelect} />}
+            {selectedCharacter && (
                 <DialogueScene
                     character={selectedCharacter}
                     onWishClick={handleStartWish}

@@ -2,9 +2,68 @@
     width: 80%;
     margin: 0 auto;
 
-    ul {
+    .filter-panel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+        margin-bottom: 14px;
+        padding: 10px;
+        background: rgba(22, 29, 48, 0.65);
+        border: 1px solid rgba(212, 188, 142, 0.3);
+        border-radius: 10px;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 13px;
+            color: #e9ddc4;
+        }
+
+        select,
+        input,
+        button {
+            border: 1px solid rgba(212, 188, 142, 0.5);
+            border-radius: 6px;
+            padding: 6px 8px;
+            background: rgba(7, 11, 20, 0.8);
+            color: #f5e7ca;
+            font-size: 14px;
+        }
+
+        .name-search {
+            grid-column: span 2;
+        }
+
+        input::placeholder {
+            color: rgba(245, 231, 202, 0.6);
+        }
+
+        button {
+            cursor: pointer;
+            align-self: end;
+            background: rgba(212, 188, 142, 0.22);
+
+            &:hover {
+                background: rgba(212, 188, 142, 0.33);
+            }
+        }
+    }
+
+    .character-section {
+        margin-bottom: 14px;
+
+        h3 {
+            margin: 8px 0;
+            color: #e4cd9c;
+            font-size: 20px;
+        }
+    }
+
+    .character-grid {
         list-style: none;
         padding: 0;
+        margin: 0;
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -64,6 +123,27 @@
                 margin-bottom: 3px;
             }
         }
+
+        li.empty-state {
+            width: 100%;
+            border: 1px dashed rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            padding: 14px;
+            color: #efe6d7;
+            text-align: center;
+            background: rgba(8, 12, 22, 0.45);
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .featured-grid {
+        border: 1px solid rgba(255, 210, 120, 0.4);
+        border-radius: 10px;
+        padding: 10px;
+        background: linear-gradient(145deg, rgba(94, 65, 24, 0.42), rgba(25, 20, 13, 0.45));
     }
 
     img.quality-5 {

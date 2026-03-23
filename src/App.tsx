@@ -10,10 +10,12 @@ type AppStep = 'selector' | 'dialogue' | 'fortune';
 const App: React.FC = () => {
     const [selectedCharacter, setSelectedCharacter] = useState<SelectedCharacter | null>(null);
     const [step, setStep] = useState<AppStep>('selector');
+    const [isPostFortuneDialogue, setIsPostFortuneDialogue] = useState(false);
 
     const handleCharacterSelect = (character: Character) => {
         const dialogue = resolveCharacterDialogue(character.id);
         setSelectedCharacter({ ...character, dialogue });
+        setIsPostFortuneDialogue(false);
         setStep('dialogue');
     };
 
@@ -37,11 +39,13 @@ const App: React.FC = () => {
                 dialogue: followUpDialogue,
             };
         });
+        setIsPostFortuneDialogue(true);
         setStep('dialogue');
     };
 
     const handleReturnToSelection = () => {
         setSelectedCharacter(null);
+        setIsPostFortuneDialogue(false);
         setStep('selector');
     };
 
@@ -55,6 +59,8 @@ const App: React.FC = () => {
                     onWishClick={handleStartWish}
                     onReturnClick={handleReturnToSelection}
                     showUi={step !== 'fortune'}
+                    isPostFortuneMode={isPostFortuneDialogue}
+                    onPostFortuneClick={handleReturnToSelection}
                 />
             )}
             {step === 'fortune' && <FortuneSlipAnimation onContinue={handleFortuneContinue} />}

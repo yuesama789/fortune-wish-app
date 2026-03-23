@@ -86,6 +86,24 @@
             }
         }
     }
+
+    &.post-fortune-mode {
+        cursor: pointer;
+    }
+
+    .dialogue-continue {
+        position: absolute;
+        bottom: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffe3a3;
+        font-size: 0.95rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px rgba(255, 227, 163, 0.5);
+        animation: dialogueContinuePulse 1.3s ease-in-out infinite;
+        z-index: 3;
+    }
 }
 
 .dialogue-container {
@@ -132,5 +150,17 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.4);
         filter: blur(15px);
+    }
+}
+
+@keyframes dialogueContinuePulse {
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-2px);
     }
 }

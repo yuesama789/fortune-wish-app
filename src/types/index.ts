@@ -25,5 +25,6 @@ export interface SelectedCharacter extends Character {
 export type CharacterDialogueMap = Record<string, string[]>;
 
 export interface Fortune {
+  header: string;
   text: string;
 }

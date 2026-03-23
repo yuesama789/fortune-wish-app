@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import  useRandomFortune  from '../hooks/useRandomFortune';
+import useRandomFortune from '../hooks/useRandomFortune';
 import './FortuneSlipAnimation.scss';
 
 interface FortuneSlipAnimationProps {
@@ -15,7 +15,7 @@ interface Sparkle {
     duration: number;
 }
 
-const SPARKLE_SWIRL_DURATION_MS = 2000;
+const SPARKLE_SWIRL_DURATION_MS = 2600;
 
 const sparkleConfig: Sparkle[] = [
     { angle: 10, radius: 130, size: 10, delay: 0.0, duration: 1.4 },
@@ -79,7 +79,10 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                 </div>
             ) : (
                 <div className="fortune-result">
-                    <div className="fortune-text">{fortune}</div>
+                    <div className="fortune-text">
+                        <h2>{fortune.header}</h2>
+                        <p>{fortune.text}</p>
+                    </div>
                     <button type="button" onClick={onReturnClick}>Return to Character Selection</button>
                 </div>
             )}

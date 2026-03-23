@@ -32,7 +32,7 @@
         0 0 18px rgba(255, 232, 173, 0.95),
         0 0 48px rgba(255, 189, 74, 0.8),
         0 0 120px rgba(255, 150, 53, 0.55);
-    animation: corePulse 1.25s ease-in-out infinite;
+    animation: corePulse 1.25s ease-in-out infinite, wishElementsFadeOut 2.6s ease-out forwards;
 }
 
 .wish-glow {
@@ -42,7 +42,7 @@
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 224, 138, 0.42), rgba(255, 224, 138, 0));
     filter: blur(10px);
-    animation: glowSpin 3s linear infinite;
+    animation: glowSpin 3s linear infinite, wishElementsFadeOut 2.6s ease-out forwards;
 }
 
 .fortune-loader {
@@ -52,13 +52,13 @@
     letter-spacing: 0.06em;
     font-size: clamp(1.1rem, 2.5vw, 1.55rem);
     text-shadow: 0 0 10px rgba(255, 221, 134, 0.9), 0 0 28px rgba(255, 163, 83, 0.65);
-    animation: pulseText 1.2s ease-in-out infinite;
+    animation: pulseText 1.2s ease-in-out infinite, wishElementsFadeOut 2.6s ease-out forwards;
 }
 
 .sparkle-field {
     position: absolute;
     inset: 0;
-    animation: fieldRotate 3s linear;
+    animation: fieldRotate 3s linear, wishElementsFadeOut 2.6s ease-out forwards;
 }
 
 .sparkle {
@@ -88,7 +88,7 @@
     z-index: 2;
     background: radial-gradient(circle, rgba(255, 245, 201, 0), rgba(255, 240, 169, 0));
     pointer-events: none;
-    animation: wishFinalFlash 2s ease-in forwards;
+    animation: wishFinalFlash 2.6s ease-out forwards;
 }
 
 .fortune-result {
@@ -200,17 +200,35 @@
 
 @keyframes wishFinalFlash {
     0%,
-    76% {
+    66% {
         opacity: 0;
         background: radial-gradient(circle, rgba(255, 245, 201, 0), rgba(255, 240, 169, 0));
     }
-    88% {
-        opacity: 0.45;
+    78% {
+        opacity: 0.38;
         background: radial-gradient(circle, rgba(255, 245, 201, 0.74), rgba(255, 232, 132, 0.28));
     }
-    98% {
+    84% {
+        opacity: 0.9;
+        background: radial-gradient(circle, rgba(255, 249, 226, 0.88), rgba(255, 236, 161, 0.68));
+    }
+    100% {
+        opacity: 0;
+        background: radial-gradient(circle, rgba(255, 249, 226, 0), rgba(255, 236, 161, 0));
+    }
+}
+
+@keyframes wishElementsFadeOut {
+    0%,
+    72% {
         opacity: 1;
-        background: radial-gradient(circle, rgba(255, 249, 226, 1), rgba(255, 236, 161, 0.92));
+    }
+    82% {
+        opacity: 0.18;
+    }
+    88%,
+    100% {
+        opacity: 0;
     }
 }
 

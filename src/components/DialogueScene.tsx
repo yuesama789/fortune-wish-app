@@ -10,9 +10,10 @@ interface DialogueSceneProps {
     };
     onWishClick: () => void;
     onReturnClick: () => void;
+    showUi?: boolean;
 }
 
-const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, onReturnClick }) => {
+const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, onReturnClick, showUi = true }) => {
     const [selectedOption, setSelectedOption] = useState<'wish' | 'return' | null>(null);
     const clickTimeoutRef = useRef<number | null>(null);
 
@@ -71,31 +72,35 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({ character, onWishClick, o
     return (
         <div className="dialogue-scene" style={{ backgroundImage: `url(/images/dialogue_assets/background/${character.region}.webp)` }}>
             <img src={`/images/dialogue_assets/character/5/${character.name}.png`} alt={character.name} className="character-image" />
-            <div className='dialogue-blurredbackground'>
-                <div className='dialogue-container'>
-                    <h2>{character.name}</h2>
-                    <span className='dialogue-ornament'></span>
-                    <p>{character.dialogue}</p>
-                </div>
-            </div>
-            <div className="dialogue-options">
-                <div
-                    className={`button ${selectedOption === 'wish' ? 'is-selected' : ''}`}
-                    onClick={() => triggerOption('wish', onWishClick)}
-                >
-                    <span className='dialogue-options-border'></span>
-                    {handIcon}
-                    (Try your luck!)
-                </div>
-                <div
-                    className={`button ${selectedOption === 'return' ? 'is-selected' : ''}`}
-                    onClick={() => triggerOption('return', onReturnClick)}
-                >
-                    <span className='dialogue-options-border'></span>
-                    {returnIcon}
-                    (Select another character)
-                </div>
-            </div>
+            {showUi && (
+                <>
+                    <div className='dialogue-blurredbackground'>
+                        <div className='dialogue-container'>
+                            <h2>{character.name}</h2>
+                            <span className='dialogue-ornament'></span>
+                            <p>{character.dialogue}</p>
+                        </div>
+                    </div>
+                    <div className="dialogue-options">
+                        <div
+                            className={`button ${selectedOption === 'wish' ? 'is-selected' : ''}`}
+                            onClick={() => triggerOption('wish', onWishClick)}
+                        >
+                            <span className='dialogue-options-border'></span>
+                            {handIcon}
+                            (Try your luck!)
+                        </div>
+                        <div
+                            className={`button ${selectedOption === 'return' ? 'is-selected' : ''}`}
+                            onClick={() => triggerOption('return', onReturnClick)}
+                        >
+                            <span className='dialogue-options-border'></span>
+                            {returnIcon}
+                            (Select another character)
+                        </div>
+                    </div>
+                </>
+            )}
         </div>
     );
 };

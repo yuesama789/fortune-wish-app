@@ -35,6 +35,7 @@ const App: React.FC = () => {
                     character={selectedCharacter}
                     onWishClick={handleStartWish}
                     onReturnClick={handleReturnToSelection}
+                    showUi={step !== 'fortune'}
                 />
             )}
             {step === 'fortune' && <FortuneSlipAnimation onReturnClick={handleReturnToSelection} />}

@@ -115,10 +115,20 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
                         {returnIcon}
                     </div>
                     <div className='dialogue-blurredbackground'>
-                        <div className='dialogue-container'>
+                        <div className='dialogue-container' key={character.dialogue}>
                             <h2>{character.name}</h2>
                             <span className='dialogue-ornament'></span>
-                            <p>{character.dialogue}</p>
+                            <p>
+                                {(character.dialogue.match(/[^.!?]+[.!?]+/g) ?? [character.dialogue]).map((line, i) => (
+                                    <span
+                                        key={i}
+                                        className="dialogue-line"
+                                        style={{ '--line-index': i } as React.CSSProperties}
+                                    >
+                                        {line.trim()}
+                                    </span>
+                                ))}
+                            </p>
                         </div>
                     </div>
                     {isPostFortuneMode ? (

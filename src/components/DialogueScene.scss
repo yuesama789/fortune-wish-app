@@ -141,6 +141,13 @@
         margin-top: .5em;
         font-size: 1.2em;
     }
+
+    .dialogue-line {
+        display: block;
+        clip-path: inset(0 100% 0 0);
+        animation: lineReveal 0.46s ease-out forwards;
+        animation-delay: calc(var(--line-index) * 0.34s);
+    }
     
     .dialogue-ornament {
         display: block;
@@ -166,6 +173,12 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.4);
         filter: blur(15px);
+    }
+}
+
+@keyframes lineReveal {
+    to {
+        clip-path: inset(0 0% 0 0);
     }
 }
 

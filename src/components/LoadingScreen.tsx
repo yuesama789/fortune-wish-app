@@ -57,7 +57,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             </div>
             <h1>Genshin Impact - Wish For Me?</h1>
             
-            <p className="loading-tooltip">Blame fate if you want… but you made the wish.</p>
+            <p className="loading-tooltip">Blame fate if you want… but you'll make the wish.</p>
 
             <div className="loading-progress-container">
                 <div className="loading-ornament" />

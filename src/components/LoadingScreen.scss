@@ -47,8 +47,8 @@
 }
 
 .loading-mask-container {
-    width: min(480px, 90vw);
-    height: 60px;
+    width: min(400px, 90vw);
+    aspect-ratio: 663 / 85;
     mask-image: url('/images/loading/loading.jpeg');
     -webkit-mask-image: url('/images/loading/loading.jpeg');
     mask-size: 100% 100%;

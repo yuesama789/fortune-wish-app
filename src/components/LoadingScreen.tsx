@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { characters } from '../data/characters';
+import { getRandomItem } from '../utils/random';
 import './LoadingScreen.scss';
 import FortuneEmblem from './FortuneEmblem';
 
@@ -11,10 +12,19 @@ const ENABLE_TEST_LOADING_DELAY = false;
 const TEST_LOADING_DURATION_MS = 5 * 60 * 1000;
 const NORMAL_LOADING_DURATION_MS = 600;
 const MINIMUM_LOADING_DURATION_MS = 2 * 1000;
+const LOADING_TOOLTIPS = [
+    "Blame fate if you want… but you'll make the wish.",
+    'Fate may guide you… but the final choice is yours.',
+    "The stars can advise you - they won't take responsibility.",
+    'Even fate cannot decide for you.',
+];
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     const [progress, setProgress] = useState(0);
     const [fading, setFading] = useState(false);
+    const [loadingTooltip] = useState(
+        () => getRandomItem(LOADING_TOOLTIPS) as string,
+    );
     const onCompleteRef = useRef(onComplete);
     onCompleteRef.current = onComplete;
 
@@ -57,7 +67,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             </div>
             <h1>Genshin Impact - Wish For Me?</h1>
             
-            <p className="loading-tooltip">Blame fate if you want… but you'll make the wish.</p>
+            <p className="loading-tooltip">{loadingTooltip}</p>
 
             <div className="loading-progress-container">
                 <div className="loading-ornament" />

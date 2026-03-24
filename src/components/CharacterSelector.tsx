@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Character, CharacterElement, CharacterQuality } from '../types';
 import { characters as defaultCharacters } from '../data/characters';
 import { getActiveFeaturedPatchInfo } from '../data/featuredCharacterIds';
+import { resolveAssetUrl } from '../utils/assets';
 import './CharacterSelector.scss';
 
 interface CharacterSelectorProps {
@@ -66,9 +67,9 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
 
   const renderCharacterCard = (character: Character) => (
     <li key={character.id} onClick={() => onSelect(character)}>
-      <img src={character.image} alt={character.name} className={`character-img quality-${character.quality}`} />
+      <img src={resolveAssetUrl(character.image)} alt={character.name} className={`character-img quality-${character.quality}`} />
       <span className='character-element'>
-        <img src={elementIconMap[character.element]} alt={character.element} />
+        <img src={resolveAssetUrl(elementIconMap[character.element])} alt={character.element} />
       </span>
       <div className='character-name'>{getCharacterName(character.name)}</div>
     </li>
@@ -164,7 +165,7 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
                 className={`filter-bubble element-bubble${elementFilter === element ? ' active' : ''}`}
                 onClick={() => setElementFilter(elementFilter === element ? 'all' : element as CharacterElement)}
               >
-                <img src={elementIconMap[element]} alt={element} />
+                <img src={resolveAssetUrl(elementIconMap[element])} alt={element} />
                 {element}
               </button>
             ))}

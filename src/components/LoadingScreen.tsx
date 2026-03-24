@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { characters } from '../data/characters';
+import { resolveAssetUrl } from '../utils/assets';
 import { getRandomItem } from '../utils/random';
 import './LoadingScreen.scss';
 import FortuneEmblem from './FortuneEmblem';
@@ -29,7 +30,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     onCompleteRef.current = onComplete;
 
     useEffect(() => {
-        const imageUrls = characters.map((c) => c.image);
+        const imageUrls = characters.map((c) => resolveAssetUrl(c.image));
         const total = imageUrls.length;
 
         if (total === 0) {

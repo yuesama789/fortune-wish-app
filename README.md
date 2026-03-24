@@ -47,6 +47,25 @@ Vite will print the local URL in the terminal (commonly `http://localhost:5173`)
 - `npm run build`: Create a production build.
 - `npm run serve`: Preview the production build locally.
 
+## Deploy To GitHub Pages
+
+This repository is preconfigured for GitHub Pages with:
+
+- GitHub Actions build using repository-based `--base`
+- Pages workflow at `.github/workflows/deploy-pages.yml`
+
+Steps:
+
+1. Push to the `main` branch.
+2. Open GitHub repository settings.
+3. Go to `Settings -> Pages`.
+4. Set source to `GitHub Actions`.
+5. Wait for the `Deploy to GitHub Pages` workflow to complete.
+
+Your app will be published to the repository Pages URL.
+
+If you rename the repository, no base-path config change is needed because the workflow derives it dynamically.
+
 ## Project Structure
 
 ```text

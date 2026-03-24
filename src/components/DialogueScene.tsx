@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { resolveAssetUrl } from '../utils/assets';
 import './DialogueScene.scss';
 
 interface DialogueSceneProps {
@@ -89,7 +90,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
     return (
         <div
             className={`dialogue-scene ${isPostFortuneMode ? 'post-fortune-mode' : ''}`}
-            style={{ backgroundImage: `url(/images/dialogue_assets/background/${character.region}.webp)` }}
+            style={{ backgroundImage: `url(${resolveAssetUrl(`/images/dialogue_assets/background/${character.region}.webp`)})` }}
             onClick={handlePostFortuneClick}
             role={isPostFortuneMode ? 'button' : undefined}
             tabIndex={isPostFortuneMode ? 0 : undefined}
@@ -104,7 +105,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
                 }
             }}
         >
-            <img src={`/images/dialogue_assets/character/5/${character.name}.png`} alt={character.name} className="character-image" />
+            <img src={resolveAssetUrl(`/images/dialogue_assets/character/5/${character.name}.png`)} alt={character.name} className="character-image" />
             {showUi && (
                 <>
                 

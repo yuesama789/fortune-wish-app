@@ -103,7 +103,7 @@ export const characters: Character[] = [
     image: "/images/characters/5/Skirk_Icon.webp",
     quality: 5,
     element: "Cryo",
-    region: "OtherWorld"
+    region: "Unknown"
   },
   {
     id: 'candace',

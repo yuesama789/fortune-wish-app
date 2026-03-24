@@ -94,45 +94,84 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
             onChange={(event) => setNameFilter(event.target.value)}
           />
         </label>
-        <label>
-          Quality
-          <select
-            value={qualityFilter}
-            onChange={(event) => {
-              const nextValue = event.target.value;
-              setQualityFilter(nextValue === 'all' ? 'all' : (Number(nextValue) as CharacterQuality));
-            }}
-          >
-            <option value="all">All</option>
-            <option value="5">5-Star</option>
-            <option value="4">4-Star</option>
-          </select>
-        </label>
-        <label>
-          Region
-          <select value={regionFilter} onChange={(event) => setRegionFilter(event.target.value)}>
-            <option value="all">All</option>
-            {regionOptions.map((region) => (
-              <option key={region} value={region}>{region}</option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Element
-          <select
-            value={elementFilter}
-            onChange={(event) => {
-              const nextValue = event.target.value;
-              setElementFilter(nextValue === 'all' ? 'all' : (nextValue as CharacterElement));
-            }}
-          >
-            <option value="all">All</option>
+
+        <div className="filter-group-quality-region">
+          <div className="filter-group">
+            <span className="filter-group-label">Quality</span>
+            <div className="filter-bubbles">
+              <button
+                type="button"
+                className={`filter-bubble${qualityFilter === 'all' ? ' active' : ''}`}
+                onClick={() => setQualityFilter('all')}
+              >
+                All
+              </button>
+              <button
+                type="button"
+                className={`filter-bubble quality-5${qualityFilter === 5 ? ' active' : ''}`}
+                onClick={() => setQualityFilter(qualityFilter === 5 ? 'all' : 5)}
+              >
+                5 ★
+              </button>
+              <button
+                type="button"
+                className={`filter-bubble quality-4${qualityFilter === 4 ? ' active' : ''}`}
+                onClick={() => setQualityFilter(qualityFilter === 4 ? 'all' : 4)}
+              >
+                4 ★
+              </button>
+            </div>
+          </div>
+
+          <div className="filter-group">
+            <span className="filter-group-label">Region</span>
+            <div className="filter-bubbles">
+              <button
+                type="button"
+                className={`filter-bubble${regionFilter === 'all' ? ' active' : ''}`}
+                onClick={() => setRegionFilter('all')}
+              >
+                All
+              </button>
+              {regionOptions.map((region) => (
+                <button
+                  key={region}
+                  type="button"
+                  className={`filter-bubble${regionFilter === region ? ' active' : ''}`}
+                  onClick={() => setRegionFilter(regionFilter === region ? 'all' : region)}
+                >
+                  {region}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="filter-group">
+          <span className="filter-group-label">Element</span>
+          <div className="filter-bubbles">
+            <button
+              type="button"
+              className={`filter-bubble${elementFilter === 'all' ? ' active' : ''}`}
+              onClick={() => setElementFilter('all')}
+            >
+              All
+            </button>
             {elementOptions.map((element) => (
-              <option key={element} value={element}>{element}</option>
+              <button
+                key={element}
+                type="button"
+                className={`filter-bubble element-bubble${elementFilter === element ? ' active' : ''}`}
+                onClick={() => setElementFilter(elementFilter === element ? 'all' : element as CharacterElement)}
+              >
+                <img src={elementIconMap[element]} alt={element} />
+                {element}
+              </button>
             ))}
-          </select>
-        </label>
-        <button type="button" onClick={clearFilters}>Clear Filters</button>
+          </div>
+        </div>
+
+        <button type="button" className="clear-filters-btn" onClick={clearFilters}>Clear Filters</button>
       </div>
 
       <section className="character-section">

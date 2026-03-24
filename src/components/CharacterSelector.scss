@@ -4,49 +4,120 @@
     margin: 0 auto;
 
     .filter-panel {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        display: flex;
+        flex-direction: column;
         gap: 10px;
         margin-bottom: 14px;
-        padding: 10px;
+        padding: 12px 14px;
         background: rgba(22, 29, 48, 0.65);
         border: 1px solid rgba(212, 188, 142, 0.3);
         border-radius: 10px;
 
-        label {
+        .name-search {
             display: flex;
             flex-direction: column;
             gap: 4px;
             font-size: 13px;
             color: #e9ddc4;
+
+            input {
+                border: 1px solid rgba(212, 188, 142, 0.5);
+                border-radius: 6px;
+                padding: 6px 8px;
+                background: rgba(7, 11, 20, 0.8);
+                color: #f5e7ca;
+                font-size: 14px;
+
+                &::placeholder {
+                    color: rgba(245, 231, 202, 0.6);
+                }
+            }
         }
 
-        select,
-        input,
-        button {
-            border: 1px solid rgba(212, 188, 142, 0.5);
-            border-radius: 6px;
-            padding: 6px 8px;
-            background: rgba(7, 11, 20, 0.8);
-            color: #f5e7ca;
-            font-size: 14px;
+        .filter-group-quality-region {
+            display: flex;
+            gap: 20px;
+
+            .filter-group:first-of-type {
+                border-right: 2px solid rgba(212, 188, 142, 0.3);
+                padding-right: 1em;
+            }
         }
 
-        .name-search {
-            grid-column: span 2;
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        input::placeholder {
-            color: rgba(245, 231, 202, 0.6);
+        .filter-group-label {
+            font-size: 12px;
+            color: rgba(233, 221, 196, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
 
-        button {
+        .filter-bubbles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .filter-bubble {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 188, 142, 0.35);
+            background: rgba(7, 11, 20, 0.7);
+            color: rgba(245, 231, 202, 0.75);
+            font-size: 13px;
             cursor: pointer;
-            align-self: end;
-            background: rgba(212, 188, 142, 0.22);
+            transition: background 0.15s, border-color 0.15s, color 0.15s;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
 
             &:hover {
-                background: rgba(212, 188, 142, 0.33);
+                background: rgba(212, 188, 142, 0.15);
+                color: #f5e7ca;
+            }
+
+            &.active {
+                background: rgba(212, 188, 142, 0.28);
+                border-color: rgba(212, 188, 142, 0.85);
+                color: #fff8e4;
+            }
+
+            &.quality-5.active {
+                background: rgba(175, 110, 15, 0.4);
+                border-color: #d4a844;
+                color: #ffd76e;
+            }
+
+            &.quality-4.active {
+                background: rgba(95, 55, 150, 0.4);
+                border-color: #a87fd4;
+                color: #d4b0ff;
+            }
+        }
+
+        .clear-filters-btn {
+            align-self: flex-start;
+            border: 1px solid rgba(212, 188, 142, 0.45);
+            border-radius: 6px;
+            padding: 5px 14px;
+            background: rgba(212, 188, 142, 0.15);
+            color: #f5e7ca;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.15s;
+
+            &:hover {
+                background: rgba(212, 188, 142, 0.28);
             }
         }
     }

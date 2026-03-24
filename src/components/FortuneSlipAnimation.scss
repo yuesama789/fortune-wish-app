@@ -26,12 +26,13 @@
     width: clamp(70px, 9vw, 110px);
     aspect-ratio: 1;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #fffef0, #ffd87c 56%, rgba(255, 164, 66, 0.85));
+    background: radial-gradient(circle at 35% 35%, #fbfeff, #d8ecff 38%, #8cb9ea 64%, rgba(33, 67, 116, 0.94));
     box-shadow:
-        0 0 18px rgba(255, 232, 173, 0.95),
-        0 0 48px rgba(255, 189, 74, 0.8),
-        0 0 120px rgba(255, 150, 53, 0.55);
-    animation: corePulse 1.25s ease-in-out infinite, wishElementsFadeOut 2.6s ease-out forwards;
+        inset 0 0 18px rgba(255, 255, 255, 0.42),
+        0 0 20px rgba(228, 243, 255, 0.94),
+        0 0 52px rgba(132, 177, 227, 0.6),
+        0 0 120px rgba(38, 86, 146, 0.38);
+    animation: corePulse 1.25s ease-in-out infinite, wishElementsFadeOut 1.8s ease-out forwards;
 }
 
 .wish-glow {
@@ -39,25 +40,25 @@
     width: clamp(220px, 38vw, 420px);
     aspect-ratio: 1;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 224, 138, 0.42), rgba(255, 224, 138, 0));
-    filter: blur(10px);
-    animation: glowSpin 3s linear infinite, wishElementsFadeOut 2.6s ease-out forwards;
+    background: radial-gradient(circle, rgba(196, 226, 255, 0.34), rgba(93, 144, 206, 0.16), rgba(93, 144, 206, 0));
+    filter: blur(12px);
+    animation: glowSpin 3s linear infinite, wishElementsFadeOut 1.8s ease-out forwards;
 }
 
 .fortune-loader {
     position: absolute;
     bottom: 14%;
-    color: #fff8d5;
+    color: #eef7ff;
     letter-spacing: 0.06em;
     font-size: clamp(1.1rem, 2.5vw, 1.55rem);
-    text-shadow: 0 0 10px rgba(255, 221, 134, 0.9), 0 0 28px rgba(255, 163, 83, 0.65);
-    animation: pulseText 1.2s ease-in-out infinite, wishElementsFadeOut 2.6s ease-out forwards;
+    text-shadow: 0 0 10px rgba(225, 243, 255, 0.88), 0 0 28px rgba(93, 144, 206, 0.5);
+    animation: pulseText 1.2s ease-in-out infinite, wishElementsFadeOut 1.8s ease-out forwards;
 }
 
 .sparkle-field {
     position: absolute;
     inset: 0;
-    animation: fieldRotate 3s linear, wishElementsFadeOut 2.6s ease-out forwards;
+    animation: fieldRotate 3s linear, wishElementsFadeOut 1.8s ease-out forwards;
 }
 
 .sparkle {
@@ -72,22 +73,33 @@
     width: var(--sparkle-size);
     height: var(--sparkle-size);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.98), rgba(255, 208, 116, 0.85), rgba(255, 190, 67, 0));
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.99), rgba(255, 246, 205, 0.92), rgba(255, 219, 132, 0.52), rgba(255, 210, 110, 0));
     transform: rotate(var(--sparkle-angle)) translateX(var(--sparkle-radius)) scale(0.1);
     transform-origin: 0 0;
-    box-shadow: 0 0 6px rgba(255, 232, 171, 0.95), 0 0 16px rgba(255, 171, 92, 0.8);
+    box-shadow:
+        0 0 8px rgba(255, 252, 236, 0.98),
+        0 0 18px rgba(255, 232, 171, 0.88),
+        0 0 28px rgba(255, 205, 102, 0.58);
     opacity: 0;
     animation: sparkleOrbit var(--sparkle-duration) ease-in-out infinite;
     animation-delay: var(--sparkle-delay);
 }
 
-.wish-flash {
+.fortune-flash-overlay {
     position: fixed;
     inset: 0;
-    z-index: 2;
-    background: radial-gradient(circle, rgba(255, 245, 201, 0), rgba(255, 240, 169, 0));
+    z-index: 4;
     pointer-events: none;
-    animation: wishFinalFlash 2.6s ease-out forwards;
+    background: radial-gradient(circle, rgba(231, 243, 255, 0.98), rgba(39, 63, 102, 0.92));
+    will-change: opacity;
+
+    &.is-charging {
+        animation: wishFinalFlash 1.8s cubic-bezier(0.2, 0.78, 0.24, 1) forwards;
+    }
+
+    &.is-fading {
+        animation: fortuneFlashFadeOut 0.58s cubic-bezier(0.16, 0.84, 0.26, 1) forwards;
+    }
 }
 
 .fortune-slip.phase-revealed {
@@ -134,15 +146,6 @@
         text-shadow: 0 0 10px rgba(75, 71, 63, 0.5);
         animation: continuePulse 1.3s ease-in-out infinite;
     }
-}
-
-.fortune-reveal-flash {
-    position: fixed;
-    inset: 0;
-    z-index: 4;
-    pointer-events: none;
-    background: radial-gradient(circle, rgba(255, 249, 226, 0.96), rgba(255, 236, 161, 0.78));
-    animation: fortuneFlashFadeOut 0.34s ease-out forwards;
 }
 
    .fortune-slip-background {
@@ -224,22 +227,12 @@
 
 @keyframes wishFinalFlash {
     0%,
-    66% {
-        opacity: 0;
-        background: radial-gradient(circle, rgba(255, 245, 201, 0), rgba(255, 240, 169, 0));
-    }
-    78% {
-        opacity: 0.38;
-        background: radial-gradient(circle, rgba(255, 245, 201, 0.74), rgba(255, 232, 132, 0.28));
-    }
-    84% {
-        opacity: 0.9;
-        background: radial-gradient(circle, rgba(255, 249, 226, 0.88), rgba(255, 236, 161, 0.68));
-    }
-    100% {
-        opacity: 1;
-        background: radial-gradient(circle, rgba(255, 249, 226, 0.96), rgba(255, 236, 161, 0.78));
-    }
+    58% { opacity: 0; }
+    68% { opacity: 0.08; }
+    76% { opacity: 0.28; }
+    84% { opacity: 0.58; }
+    92% { opacity: 0.82; }
+    100% { opacity: 1; }
 }
 
 @keyframes wishElementsFadeOut {
@@ -270,6 +263,12 @@
 @keyframes fortuneFlashFadeOut {
     from {
         opacity: 1;
+    }
+    35% {
+        opacity: 0.78;
+    }
+    70% {
+        opacity: 0.28;
     }
     to {
         opacity: 0;

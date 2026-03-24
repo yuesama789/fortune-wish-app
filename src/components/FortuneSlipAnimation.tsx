@@ -19,7 +19,7 @@ interface Sparkle {
 
 type AnimationPhase = 'wish' | 'revealed';
 
-const SPARKLE_SWIRL_DURATION_MS = 2600;
+const SPARKLE_SWIRL_DURATION_MS = 1800;
 
 const sparkleConfig: Sparkle[] = [
     { angle: 10, radius: 130, size: 10, delay: 0.0, duration: 1.4 },
@@ -87,7 +87,6 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                         ))}
                     </div>
                     <div className="fortune-loader">Asking the stars...</div>
-                    <div className="wish-flash" aria-hidden="true" />
                 </div>
             )}
             {animationPhase === 'revealed' && (
@@ -113,7 +112,10 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                     <span className="fortune-continue">Click to continue</span>
                 </div>
             )}
-            {animationPhase === 'revealed' && <div className="fortune-reveal-flash" aria-hidden="true" />}
+            <div
+                className={`fortune-flash-overlay ${animationPhase === 'wish' ? 'is-charging' : 'is-fading'}`}
+                aria-hidden="true"
+            />
             <div className="fortune-slip-background" />
         </div>
     );

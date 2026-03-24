@@ -12,6 +12,7 @@ export type CharacterElement =
 export interface Character {
   id: string; // stable lookup key, e.g. "diluc"
   name: string;
+  releaseDate: string; // ISO date string: YYYY-MM-DD
   image: string;
   quality: CharacterQuality;
   element: CharacterElement;

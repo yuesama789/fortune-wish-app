@@ -42,8 +42,9 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
       .filter((character) => (qualityFilter === 'all' ? true : character.quality === qualityFilter))
       .filter((character) => (regionFilter === 'all' ? true : character.region === regionFilter))
       .filter((character) => (elementFilter === 'all' ? true : character.element === elementFilter))
-      .filter((character) => character.name.toLowerCase().includes(nameFilter.trim().toLowerCase())),
-    [characters, featuredSet, qualityFilter, regionFilter, elementFilter, nameFilter],
+      .filter((character) => character.name.toLowerCase().includes(nameFilter.trim().toLowerCase()))
+      .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate)),
+    [characters, qualityFilter, regionFilter, elementFilter, nameFilter],
   );
 
   const elementIconMap: Record<CharacterElement, string> = {

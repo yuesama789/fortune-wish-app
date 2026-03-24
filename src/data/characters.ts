@@ -83,15 +83,6 @@ export const characters: Character[] = [
     region: "Liyue"
   },
   {
-    id: 'bennett',
-    name: "Bennett",
-    releaseDate: '2020-09-28',
-    image: "/images/characters/Bennett_Icon.webp",
-    quality: 4,
-    element: "Pyro",
-    region: "Mondstadt"
-  },
-  {
     id: 'sucrose',
     name: "Sucrose",
     releaseDate: '2020-09-28',
@@ -245,30 +236,12 @@ export const characters: Character[] = [
     region: "Mondstadt"
   },
   {
-    id: 'sucrose',
-    name: "Sucrose",
-    releaseDate: '2020-09-28',
-    image: "/images/characters/Sucrose_Icon.webp",
-    quality: 4,
-    element: "Anemo",
-    region: "Mondstadt"
-  },
-  {
     id: 'xiangling',
     name: "Xiangling",
     releaseDate: '2020-09-28',
     image: "/images/characters/Xiangling_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Liyue"
-  },
-  {
-    id: 'xingqiu',
-    name: "Xingqiu",
-    releaseDate: '2020-09-28',
-    image: "/images/characters/Xingqiu_Icon.webp",
-    quality: 4,
-    element: "Hydro",
     region: "Liyue"
   },
   {

@@ -17,6 +17,8 @@ interface Sparkle {
     duration: number;
 }
 
+type AnimationPhase = 'wish' | 'revealed';
+
 const SPARKLE_SWIRL_DURATION_MS = 2600;
 
 const sparkleConfig: Sparkle[] = [
@@ -33,14 +35,14 @@ const sparkleConfig: Sparkle[] = [
 ];
 
 const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimationEnd, onContinue }) => {
-    const [isAnimating, setIsAnimating] = useState(false);
+    const [animationPhase, setAnimationPhase] = useState<AnimationPhase>('wish');
     const animationTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const fortune = useRandomFortune();
 
     const startAnimation = () => {
-        setIsAnimating(true);
+        setAnimationPhase('wish');
         animationTimeoutRef.current = setTimeout(() => {
-            setIsAnimating(false);
+            setAnimationPhase('revealed');
             onAnimationEnd?.();
         }, SPARKLE_SWIRL_DURATION_MS);
     };
@@ -56,7 +58,7 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
     }, []);
 
     const handleContinue = () => {
-        if (isAnimating) {
+        if (animationPhase !== 'revealed') {
             return;
         }
 
@@ -64,8 +66,8 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
     };
 
     return (
-        <div className={`fortune-slip ${isAnimating ? 'is-animating' : 'is-revealed'}`}>
-            {isAnimating ? (
+        <div className={`fortune-slip phase-${animationPhase}`}>
+            {animationPhase !== 'revealed' && (
                 <div className="wish-sequence">
                     <div className="wish-core" />
                     <div className="wish-glow" />
@@ -87,7 +89,8 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                     <div className="fortune-loader">Asking the stars...</div>
                     <div className="wish-flash" aria-hidden="true" />
                 </div>
-            ) : (
+            )}
+            {animationPhase === 'revealed' && (
                 <div
                     className="fortune-result"
                     onClick={handleContinue}
@@ -110,6 +113,7 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                     <span className="fortune-continue">Click to continue</span>
                 </div>
             )}
+            {animationPhase === 'revealed' && <div className="fortune-reveal-flash" aria-hidden="true" />}
             <div className="fortune-slip-background" />
         </div>
     );

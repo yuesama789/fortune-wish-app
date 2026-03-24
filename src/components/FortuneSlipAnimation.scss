@@ -90,6 +90,12 @@
     animation: wishFinalFlash 2.6s ease-out forwards;
 }
 
+.fortune-slip.phase-revealed {
+    .fortune-result {
+        animation: fortuneReveal 0.18s ease-out;
+    }
+}
+
 .fortune-result {
     display: flex;
     flex-direction: column;
@@ -98,8 +104,8 @@
     gap: 1rem;
     width: min(88vw, 760px);
     text-align: center;
-    animation: fortuneReveal 0.45s ease-out;
     cursor: pointer;
+    z-index: 3;
 
     .fortune-text {
         color: #ffe9ae;
@@ -129,6 +135,16 @@
         animation: continuePulse 1.3s ease-in-out infinite;
     }
 }
+
+.fortune-reveal-flash {
+    position: fixed;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 249, 226, 0.96), rgba(255, 236, 161, 0.78));
+    animation: fortuneFlashFadeOut 0.34s ease-out forwards;
+}
+
    .fortune-slip-background {
         position: absolute;
         width: 100%;
@@ -221,8 +237,8 @@
         background: radial-gradient(circle, rgba(255, 249, 226, 0.88), rgba(255, 236, 161, 0.68));
     }
     100% {
-        opacity: 0;
-        background: radial-gradient(circle, rgba(255, 249, 226, 0), rgba(255, 236, 161, 0));
+        opacity: 1;
+        background: radial-gradient(circle, rgba(255, 249, 226, 0.96), rgba(255, 236, 161, 0.78));
     }
 }
 
@@ -242,12 +258,21 @@
 
 @keyframes fortuneReveal {
     from {
-        opacity: 0;
-        transform: translateY(10px);
+        opacity: 0.96;
+        transform: translateY(0);
     }
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fortuneFlashFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 

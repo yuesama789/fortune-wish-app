@@ -12,12 +12,17 @@ export interface ResourceSourceSection {
 
 export const resourceSources: ResourceSourceSection[] = [
   {
-    section: 'Dialogue Backgrounds',
+    section: 'Backgrounds',
     items: [
       {
         asset: 'Liyue dialogue background',
         sourceName: 'Reddit (r/Genshin_Impact)',
         url: 'https://www.reddit.com/r/Genshin_Impact/comments/ljw2qw/i_cleaned_the_background_of_the_lantern_rite_part/',
+      },
+      {
+        asset: 'Character selection screen & fortune background',
+        sourceName: 'Reddit (r/Genshin_Impact)',
+        url: 'https://www.tumblr.com/genshinimpactresources/',
       },
     ],
   },

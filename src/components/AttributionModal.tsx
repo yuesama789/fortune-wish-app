@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { resourceSources } from '../data/resourceSources';
 import './AttributionModal.scss';
 
@@ -8,6 +8,15 @@ interface AttributionModalProps {
 }
 
 const AttributionModal: React.FC<AttributionModalProps> = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) {
     return null;
   }

@@ -1,19 +1,21 @@
 import { Character, FortuneHeader } from '../types';
-import { characterDialogues, fortuneFollowUpDialogues } from '../data/characterDialogues';
+import {
+  characterDialogues,
+  fallbackCharacterDialogues,
+  fallbackFortuneFollowUpDialogues,
+  fortuneFollowUpDialogues,
+} from '../data/characterDialogues';
 import { getRandomItem } from './random';
 
 export function resolveCharacterDialogue(characterId: Character['id']): string {
   const options = characterDialogues[characterId];
+  const normalizedOptions = options && options.length > 0 ? options : fallbackCharacterDialogues;
 
-  if (!options || options.length === 0) {
-    return '...';
+  if (normalizedOptions.length === 1) {
+    return normalizedOptions[0];
   }
 
-  if (options.length === 1) {
-    return options[0];
-  }
-
-  return getRandomItem(options);
+  return getRandomItem(normalizedOptions);
 }
 
 export function resolveFortuneFollowUpDialogue(
@@ -22,10 +24,12 @@ export function resolveFortuneFollowUpDialogue(
 ): string {
   const characterSpecificDialogues = fortuneFollowUpDialogues[characterId];
   const options = characterSpecificDialogues?.[fortuneHeader];
+  const normalizedOptions =
+    options && options.length > 0 ? options : fallbackFortuneFollowUpDialogues;
 
-  if (!options || options.length === 0) {
-    return resolveCharacterDialogue(characterId);
+  if (normalizedOptions.length === 1) {
+    return normalizedOptions[0];
   }
 
-  return options.length === 1 ? options[0] : getRandomItem(options);
+  return getRandomItem(normalizedOptions);
 }

@@ -1,5 +1,19 @@
 import { CharacterDialogueMap, FortuneHeader } from '../types';
 
+export const fallbackCharacterDialogues: string[] = [
+    "Fate may guide you... but the final choice is yours.",
+    "The stars can advise you - they won't take responsibility.",
+    'Even fate cannot decide for you.',
+    "The odds are quiet today. Your choice will speak louder than them.",
+];
+
+export const fallbackFortuneFollowUpDialogues: string[] = [
+    'The result is in. Decide your next step with care.',
+    'Fortune has spoken for now. What you do next matters more.',
+    'Take a breath and choose your next wish on your own terms.',
+    'One outcome never defines the whole path. Keep going if you want to.',
+];
+
 export const characterDialogues: CharacterDialogueMap = {
     dehya: [
         "So… you're aiming for me this time? Heh. I like your taste. Let's see if you can actually pull it off.",

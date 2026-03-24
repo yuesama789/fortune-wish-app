@@ -84,7 +84,7 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
 
   return (
     <div className="character-selector">
-      <h2>Select a Character to Wish For:</h2>
+      <h2>Choose who you’re risking it all for…</h2>
       <div className="filter-panel">
         <label className="name-search">
           Search by name:

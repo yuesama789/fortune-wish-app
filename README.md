@@ -1,75 +1,97 @@
 # Genshin Impact Wish For Me?
 
-## Overview
-The Genshin Impact Wish For Me? allows users to select a character from the popular game Genshin Impact and trigger a dialogue scene along with a fortune slip animation that reveals a random fortune.
+A lightweight React + TypeScript app inspired by Genshin Impact wish scenes.
+Choose a featured character, play a themed dialogue sequence, and reveal a random fortune slip.
 
 ## Features
-- Character selection from a predefined list.
-- Display of character-specific dialogue.
-- Animation of a fortune slip that reveals a random fortune.
+
+- Character selection with curated image assets.
+- Character-specific dialogue scene flow.
+- Fortune slip reveal animation.
+- Loading screen and visual quality/emblem assets.
+- Attribution modal for asset source references.
+
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite
+- Sass (SCSS)
+
+## Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone <repository-url>
+cd genshin-fortune-slip-wish-app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run in development
+
+```bash
+npm run dev
+```
+
+Vite will print the local URL in the terminal (commonly `http://localhost:5173`).
+
+## Available Scripts
+
+- `npm run dev`: Start Vite development server.
+- `npm run build`: Create a production build.
+- `npm run serve`: Preview the production build locally.
 
 ## Project Structure
-```
-genshin-wish-app
-├── src
-│   ├── App.tsx
-│   ├── main.tsx
-│   ├── components
-│   │   ├── CharacterSelector.tsx
-│   │   ├── DialogueScene.tsx
-│   │   └── FortuneSlipAnimation.tsx
-│   ├── data
-│   │   ├── characters.ts
-│   │   └── fortunes.ts
-│   ├── hooks
-│   │   └── useRandomFortune.ts
-│   ├── types
-│   │   └── index.ts
-│   ├── utils
-│   │   └── random.js
-│   └── styles
-│       └── index.css
-├── public
-│   └── vite.svg
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-```
 
-## Setup Instructions
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd genshin-wish-app
-   ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-5. Open your browser and go to `http://localhost:3000` to view the application.
+```text
+.
+|-- public/
+|   |-- images/
+|   |   |-- characters/
+|   |   |-- dialogue_assets/
+|   |   |-- elements/
+|   |   |-- loading/
+|   |   `-- quality/
+|-- src/
+|   |-- components/
+|   |   |-- CharacterSelector.tsx
+|   |   |-- DialogueScene.tsx
+|   |   |-- FortuneSlipAnimation.tsx
+|   |   `-- ...
+|   |-- data/
+|   |   |-- characters.ts
+|   |   |-- characterDialogues.ts
+|   |   |-- featuredCharacterIds.ts
+|   |   `-- fortunes.ts
+|   |-- hooks/
+|   |-- styles/
+|   |-- types/
+|   |-- utils/
+|   |-- App.tsx
+|   `-- main.tsx
+|-- index.html
+|-- package.json
+|-- tsconfig.json
+`-- vite.config.ts
+```
 
 ## Usage
-- Select a character from the dropdown menu.
-- Click the "Wish" button to trigger the dialogue scene and fortune slip animation.
-- Enjoy the random fortune revealed with each wish!
 
-## Technologies Used
-- JavaScript
-- TypeScript
-- React
-- Vite
+1. Open the app in your browser.
+2. Pick a character.
+3. Start the wish interaction.
+4. Watch the dialogue and reveal your random fortune.
 
 ## Contributing
-Feel free to submit issues or pull requests for improvements or bug fixes. 
+
+Issues and pull requests are welcome.
 
 ## License
-This project is licensed under the MIT License.
+
+MIT

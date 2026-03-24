@@ -39,7 +39,6 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
 
   const filteredCharacters = useMemo(
     () => characters
-      .filter((character) => !featuredSet.has(character.id))
       .filter((character) => (qualityFilter === 'all' ? true : character.quality === qualityFilter))
       .filter((character) => (regionFilter === 'all' ? true : character.region === regionFilter))
       .filter((character) => (elementFilter === 'all' ? true : character.element === elementFilter))
@@ -86,11 +85,11 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
       <h2>Select a Character to Wish For:</h2>
       <div className="filter-panel">
         <label className="name-search">
-          Search Name
+          Search by name:
           <input
             type="text"
             value={nameFilter}
-            placeholder="e.g. Keqing"
+            placeholder="Search by name..."
             onChange={(event) => setNameFilter(event.target.value)}
           />
         </label>
@@ -148,7 +147,7 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
         </div>
 
         <div className="filter-group">
-          <span className="filter-group-label">Element</span>
+          <span className="filter-group-label">Elemental Type</span>
           <div className="filter-bubbles">
             <button
               type="button"
@@ -171,7 +170,7 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
           </div>
         </div>
 
-        <button type="button" className="clear-filters-btn" onClick={clearFilters}>Clear Filters</button>
+        <button type="button" className="clear-filters-btn" onClick={clearFilters}>X Clear Filters</button>
       </div>
 
       <section className="character-section">

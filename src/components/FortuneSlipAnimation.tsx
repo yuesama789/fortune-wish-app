@@ -110,6 +110,7 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                     <span className="fortune-continue">Click to continue</span>
                 </div>
             )}
+            <div className="fortune-slip-background" />
         </div>
     );
 };

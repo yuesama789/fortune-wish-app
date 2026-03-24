@@ -105,7 +105,18 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
                 }
             }}
         >
-            <img src={resolveAssetUrl(`/images/dialogue_assets/character/5/${character.name}.png`)} alt={character.name} className="character-image" />
+            <img
+                src={resolveAssetUrl(`/images/dialogue_assets/character/5/${character.name}.png`)}
+                alt={character.name}
+                className="character-image"
+                onError={(event) => {
+                    const fallbackSrc = resolveAssetUrl(character.image);
+
+                    if (event.currentTarget.src !== fallbackSrc) {
+                        event.currentTarget.src = fallbackSrc;
+                    }
+                }}
+            />
             {showUi && (
                 <>
                 

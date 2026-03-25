@@ -11,3 +11,7 @@ export function resolveAssetUrl(path: string): string {
   const baseUrl = import.meta.env.BASE_URL || "/";
   return baseUrl + normalizedPath;
 }
+
+export function normalizeAssetName(name: string): string {
+  return name.trim().replace(/\s+/g, '_');
+}

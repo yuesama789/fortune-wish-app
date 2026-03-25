@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { resolveAssetUrl } from '../utils/assets';
+import { normalizeAssetName, resolveAssetUrl } from '../utils/assets';
 import './DialogueScene.scss';
 
 interface DialogueSceneProps {
@@ -106,7 +106,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
             }}
         >
             <img
-                src={resolveAssetUrl(`/images/dialogue_assets/characters/${character.name}.png`)}
+                src={resolveAssetUrl(`/images/dialogue_assets/characters/${normalizeAssetName(character.name)}.png`)}
                 alt={character.name}
                 className="character-image"
                 onError={(event) => {

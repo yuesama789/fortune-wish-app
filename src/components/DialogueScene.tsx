@@ -26,6 +26,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
 }) => {
     const [selectedOption, setSelectedOption] = useState<'wish' | 'return' | null>(null);
     const clickTimeoutRef = useRef<number | null>(null);
+    const backgroundRegion = normalizeAssetName(character.region || 'default_bg');
 
     useEffect(() => {
         return () => {
@@ -90,7 +91,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
     return (
         <div
             className={`dialogue-scene ${isPostFortuneMode ? 'post-fortune-mode' : ''}`}
-            style={{ backgroundImage: `url(${resolveAssetUrl(`/images/dialogue_assets/background/${character.region}.webp`)})` }}
+            style={{ backgroundImage: `url(${resolveAssetUrl(`/images/dialogue_assets/background/${backgroundRegion}.webp`)})` }}
             onClick={handlePostFortuneClick}
             role={isPostFortuneMode ? 'button' : undefined}
             tabIndex={isPostFortuneMode ? 0 : undefined}

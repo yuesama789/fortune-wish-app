@@ -120,7 +120,7 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
             <div
                 className="fortune-slip-background"
                 style={{
-                    '--fortune-slip-background-image': `url(${resolveAssetUrl('/images/dialogue_assets/background/fortuneSlip2.webp')})`,
+                    '--fortune-slip-background-image': `url(${resolveAssetUrl('/images/dialogue_assets/background/fortune_reveal.webp')})`,
                 } as React.CSSProperties}
             />
         </div>

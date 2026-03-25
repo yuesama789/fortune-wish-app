@@ -486,6 +486,52 @@ export const characters: Character[] = [
     quality: 4,
     element: "Anemo",
     region: "Natlan"
+  },
+  {
+    id: 'lan_yan',
+    name: "Lan Yan",
+    releaseDate: '2025-01-21',
+    image: "/images/characters/Lan_Yan_Icon.webp",
+    quality: 4,
+    element: "Anemo",
+    region: "Liyue"
+  },
+  {
+    id: 'iansan',
+    name: "Iansan",
+    releaseDate: '2025-05-26',
+    image: "/images/characters/Iansan_Icon.webp",
+    quality: 4,
+    element: "Electro",
+    region: "Natlan"
+  },
+  {
+    id: 'aino',
+    name: "Aino",
+    releaseDate: '2025-09-10',
+    image: "/images/characters/Aino_Icon.webp",
+    quality: 4,
+    element: "Hydro",
+    region: "Nord-Krai"
+  },
+  {
+    id: 'jahoda',
+    name: "Jahoda",
+    releaseDate: '2026-12-03',
+    image: "/images/characters/Jahoda_Icon.webp",
+    quality: 4,
+    element: "Anemo",
+    region: "Nord-Krai"
+  },
+  {
+    id: 'illuga',
+    name: "Illuga",
+    releaseDate: '2026-02-03',
+    image: "/images/characters/Illuga_Icon.webp",
+    quality: 4,
+    element: "Geo",
+    region: "Nord-Krai"
   }
+
 
 ];

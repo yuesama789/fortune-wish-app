@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/genshin-fortune-slip-wish-app/',
+  base: '/fortune-wish-app/',
   server: {
     port: 3000,
     open: true,

@@ -42,13 +42,6 @@
     position: relative;
 }
 
-
-@media (max-width: 500px) {
-    .loading-progress-container {
-        transform: scale(0.8);
-    }
-}
-
 @media screen and (min-width: 1200px) {
     .loading-ornament {
         position: absolute;

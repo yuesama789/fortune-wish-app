@@ -532,6 +532,4 @@ export const characters: Character[] = [
     element: "Geo",
     region: "Nord-Krai"
   }
-
-
 ];

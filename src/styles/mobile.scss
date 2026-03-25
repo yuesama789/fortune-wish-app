@@ -1,0 +1,119 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    h1 {
+        width: 92vw;
+        font-size: 1.35rem;
+        text-align: left;
+        margin-top: 3em;
+    }
+
+    .app-info-button {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+    }
+
+    .character-selector {
+        width: 92%;
+
+        .filter-panel {
+            padding: 10px;
+
+            .filter-group-quality-region {
+                flex-direction: column;
+                gap: 10px;
+
+                .filter-group:first-of-type {
+                    border-right: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .filter-bubble {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+
+        .character-grid {
+            li {
+                width: 104px;
+            }
+        }
+    }
+
+    .dialogue-scene {
+        padding: 0;
+        background-attachment: scroll;
+
+        .character-image {
+            height: 95%;
+            left: auto;
+            right: auto;
+        }
+
+        .dialogue-options {
+            width: min(76vw, 360px);
+        }
+
+        .return-button {
+            top: 0;
+            right: 5px;
+        }
+    }
+
+    .dialogue-container {
+        width: 92%;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .dialogue-blurredbackground {
+        height: 27dvh;
+    }
+
+    .loading-progress-container {
+        transform: scale(0.8);
+    }
+
+    .fortune-result {
+        .fortune-text {
+            padding: 1rem;
+        }
+    }
+
+    .attribution-overlay {
+        padding: 10px;
+    }
+
+    .attribution-modal {
+        width: 96vw;
+        max-height: 90vh;
+        padding: 14px 14px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .character-selector {
+        .character-grid {
+            gap: 8px;
+
+            li {
+                width: 96px;
+            }
+        }
+    }
+
+    .dialogue-scene {
+        .dialogue-options {
+            width: 86vw;
+        }
+    }
+}

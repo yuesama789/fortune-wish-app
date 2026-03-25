@@ -12,7 +12,7 @@ interface LoadingScreenProps {
 const ENABLE_TEST_LOADING_DELAY = false;
 const TEST_LOADING_DURATION_MS = 5 * 60 * 1000;
 const NORMAL_LOADING_DURATION_MS = 600;
-const MINIMUM_LOADING_DURATION_MS = 2 * 1000;
+const MINIMUM_LOADING_DURATION_MS = 1 * 1000;
 const LOADING_TOOLTIPS = [
     "Blame fate if you want… but you'll make the wish.",
     'Fate may guide you… but the final choice is yours.',

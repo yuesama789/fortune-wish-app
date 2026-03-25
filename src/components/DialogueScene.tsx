@@ -27,6 +27,11 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
     const [selectedOption, setSelectedOption] = useState<'wish' | 'return' | null>(null);
     const clickTimeoutRef = useRef<number | null>(null);
     const backgroundRegion = normalizeAssetName(character.region || 'default_bg');
+    const dialogueCharacterImageSrc = resolveAssetUrl(
+        `/images/dialogue_assets/characters/${normalizeAssetName(character.name)}.png`,
+    );
+    const fallbackCharacterImageSrc = resolveAssetUrl(character.image);
+    const [characterImageSrc, setCharacterImageSrc] = useState(fallbackCharacterImageSrc);
 
     useEffect(() => {
         return () => {
@@ -35,6 +40,28 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
             }
         };
     }, []);
+
+    useEffect(() => {
+        let isCancelled = false;
+        setCharacterImageSrc(fallbackCharacterImageSrc);
+
+        const portraitProbe = new Image();
+        portraitProbe.onload = () => {
+            if (!isCancelled) {
+                setCharacterImageSrc(dialogueCharacterImageSrc);
+            }
+        };
+        portraitProbe.onerror = () => {
+            if (!isCancelled) {
+                setCharacterImageSrc(fallbackCharacterImageSrc);
+            }
+        };
+        portraitProbe.src = dialogueCharacterImageSrc;
+
+        return () => {
+            isCancelled = true;
+        };
+    }, [dialogueCharacterImageSrc, fallbackCharacterImageSrc]);
 
     const triggerOption = (option: 'wish' | 'return', callback: () => void) => {
         setSelectedOption(option);
@@ -106,17 +133,11 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
                 }
             }}
         >
-            <img
-                src={resolveAssetUrl(`/images/dialogue_assets/characters/${normalizeAssetName(character.name)}.png`)}
-                alt={character.name}
+            <div 
                 className="character-image"
-                onError={(event) => {
-                    const fallbackSrc = resolveAssetUrl(character.image);
-
-                    if (event.currentTarget.src !== fallbackSrc) {
-                        event.currentTarget.src = fallbackSrc;
-                    }
-                }}
+                role="img"
+                aria-label={character.name}
+                style={{ backgroundImage: `url(${characterImageSrc})` }}
             />
             {showUi && (
                 <>

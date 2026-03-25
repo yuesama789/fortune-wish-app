@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import useRandomFortune from '../hooks/useRandomFortune';
 import { Fortune } from '../types';
+import { resolveAssetUrl } from '../utils/assets';
 import FortuneEmblem from './FortuneEmblem';
 import './FortuneSlipAnimation.scss';
 
@@ -116,7 +117,12 @@ const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimation
                 className={`fortune-flash-overlay ${animationPhase === 'wish' ? 'is-charging' : 'is-fading'}`}
                 aria-hidden="true"
             />
-            <div className="fortune-slip-background" />
+            <div
+                className="fortune-slip-background"
+                style={{
+                    '--fortune-slip-background-image': `url(${resolveAssetUrl('/images/dialogue_assets/background/fortuneSlip2.webp')})`,
+                } as React.CSSProperties}
+            />
         </div>
     );
 };

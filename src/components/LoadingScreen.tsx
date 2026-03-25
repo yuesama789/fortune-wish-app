@@ -72,7 +72,12 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
             <div className="loading-progress-container">
                 <div className="loading-ornament" />
-                <div className="loading-mask-container">
+                <div
+                    className="loading-mask-container"
+                    style={{
+                        '--loading-mask-image': `url(${resolveAssetUrl('/images/misc/loading.jpeg')})`,
+                    } as React.CSSProperties}
+                >
                     <div className="loading-fill" style={{ width: `${progress}%` }} />
                 </div>
             </div>

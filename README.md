@@ -49,22 +49,31 @@ Vite will print the local URL in the terminal (commonly `http://localhost:5173`)
 
 ## Deploy To GitHub Pages
 
-This repository is preconfigured for GitHub Pages with:
+Deployment is manual and branch-based. Committing to `main` does **not** change the live site.
 
-- GitHub Actions build using repository-based `--base`
-- Pages workflow at `.github/workflows/deploy-pages.yml`
+### First-time setup
 
-Steps:
+1. Open GitHub repository settings.
+2. Go to `Settings → Pages`.
+3. Set source to **Deploy from a branch**.
+4. Select branch: `gh-pages`, folder: `/ (root)`.
+5. Save.
 
-1. Push to the `main` branch.
-2. Open GitHub repository settings.
-3. Go to `Settings -> Pages`.
-4. Set source to `GitHub Actions`.
-5. Wait for the `Deploy to GitHub Pages` workflow to complete.
+### Publishing a new version
 
-Your app will be published to the repository Pages URL.
+Run this locally whenever you are ready to update the live site:
 
-If you rename the repository, no base-path config change is needed because the workflow derives it dynamically.
+```bash
+npm run deploy
+```
+
+This builds the app and pushes the `dist/` output to the `gh-pages` branch.
+The live site updates only when you run this command.
+
+### Note on repository name
+
+The base path is hardcoded as `/genshin-fortune-slip-wish-app/` in `vite.config.ts`.
+If you rename the repository, update that value to match.
 
 ## Project Structure
 

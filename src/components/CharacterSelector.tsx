@@ -83,7 +83,13 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
   };
 
   return (
-    <div className="character-selector">
+    <div
+      className="character-selector"
+      style={{
+        '--quality-5-background-image': `url(${resolveAssetUrl('/images/quality/Background_5_Star.webp')})`,
+        '--quality-4-background-image': `url(${resolveAssetUrl('/images/quality/Background_4_Star.webp')})`,
+      } as React.CSSProperties}
+    >
       <h2>Choose who you’re risking it all for…</h2>
       <div className="filter-panel">
         <label className="name-search">

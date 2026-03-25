@@ -106,7 +106,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
             }}
         >
             <img
-                src={resolveAssetUrl(`/images/dialogue_assets/character/5/${character.name}.png`)}
+                src={resolveAssetUrl(`/images/dialogue_assets/characters/${character.name}.png`)}
                 alt={character.name}
                 className="character-image"
                 onError={(event) => {

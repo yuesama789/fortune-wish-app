@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CharacterSelector from './components/CharacterSelector';
 import DialogueScene from './components/DialogueScene';
 import FortuneSlipAnimation from './components/FortuneSlipAnimation';
 import AttributionModal from './components/AttributionModal';
 import LoadingScreen from './components/LoadingScreen';
 import { Character, Fortune, SelectedCharacter } from './types';
+import { resolveAssetUrl } from './utils/assets';
 import { resolveCharacterDialogue, resolveFortuneFollowUpDialogue } from './utils/dialogue';
 import './App.scss';
 
@@ -16,6 +17,18 @@ const App: React.FC = () => {
     const [step, setStep] = useState<AppStep>('selector');
     const [isPostFortuneDialogue, setIsPostFortuneDialogue] = useState(false);
     const [isAttributionOpen, setIsAttributionOpen] = useState(false);
+
+    useEffect(() => {
+        const body = document.body;
+        body.style.setProperty(
+            '--app-background-image',
+            `url(${resolveAssetUrl('/images/dialogue_assets/background/default_bg.webp')})`,
+        );
+
+        return () => {
+            body.style.removeProperty('--app-background-image');
+        };
+    }, []);
 
     const handleCharacterSelect = (character: Character) => {
         const dialogue = resolveCharacterDialogue(character.id);

@@ -61,8 +61,8 @@
 .loading-mask-container {
     width: min(400px, 90vw);
     aspect-ratio: 663 / 85;
-    mask-image: url('/images/loading/loading.jpeg');
-    -webkit-mask-image: url('/images/loading/loading.jpeg');
+    mask-image: var(--loading-mask-image);
+    -webkit-mask-image: var(--loading-mask-image);
     mask-size: 100% 100%;
     -webkit-mask-size: 100% 100%;
     mask-mode: luminance;

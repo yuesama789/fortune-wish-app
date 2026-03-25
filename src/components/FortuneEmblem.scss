@@ -1,6 +1,6 @@
 .fortune-emblem {
-    mask-image: url('/images/loading/emblem.png');
-    -webkit-mask-image: url('/images/loading/emblem.png');
+    mask-image: var(--fortune-emblem-mask-image);
+    -webkit-mask-image: var(--fortune-emblem-mask-image);
     mask-size: contain;
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;

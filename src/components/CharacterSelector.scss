@@ -208,9 +208,9 @@
     }
 
     img.quality-5 {
-        background-image: url('/images/quality/Background_Item_5_Star.webp');
+        background-image: var(--quality-5-background-image);
     }
     img.quality-4 {
-        background-image: url('/images/quality/Background_Item_4_Star.webp');
+        background-image: var(--quality-4-background-image);
     }
 }

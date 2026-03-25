@@ -31,7 +31,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
         `/images/dialogue_assets/characters/${normalizeAssetName(character.name)}.png`,
     );
     const fallbackCharacterImageSrc = resolveAssetUrl(character.image);
-    const [characterImageSrc, setCharacterImageSrc] = useState(fallbackCharacterImageSrc);
+    const [characterImageSrc, setCharacterImageSrc] = useState<string | null>(null);
 
     useEffect(() => {
         return () => {
@@ -43,7 +43,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
 
     useEffect(() => {
         let isCancelled = false;
-        setCharacterImageSrc(fallbackCharacterImageSrc);
+        setCharacterImageSrc(null);
 
         const portraitProbe = new Image();
         portraitProbe.onload = () => {
@@ -133,12 +133,14 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
                 }
             }}
         >
-            <div 
-                className="character-image"
-                role="img"
-                aria-label={character.name}
-                style={{ backgroundImage: `url(${characterImageSrc})` }}
-            />
+            {characterImageSrc && (
+                <div 
+                    className="character-image"
+                    role="img"
+                    aria-label={character.name}
+                    style={{ backgroundImage: `url(${characterImageSrc})` }}
+                />
+            )}
             {showUi && (
                 <>
                 

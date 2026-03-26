@@ -253,7 +253,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         Misfortune: ["…Unfortunate. Though failure often provides more valuable data than success."],
         'Great Misfortune': ["…Ah. Now this is where things become truly interesting. Go on. I'm curious to see how you handle the consequences."],
     },
-    Eula: { 
+    eula: { 
         'Great Fortune': ["Oh? A result like this… impressive. Don't misunderstand—I'm not praising you. I'm simply acknowledging it."], 
         'Good Fortune': ["Hmph. A decent outcome. You've managed well enough… though I wouldn't get too comfortable if I were you."], 
         'Modest Fortune': ["…This is acceptable, I suppose. Not remarkable, but not entirely disappointing either. I'll allow it."], 
@@ -261,7 +261,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         Misfortune: ["…Is this truly the best you could do? Unacceptable. Don't think I'll simply overlook a result like this."], 
         'Great Misfortune': ["…You've really outdone yourself this time. Don't worry—I won't forget this. I'll have my vengeance."], 
     },
-    Nefer: {
+    nefer: {
         'Great Fortune': ["…How delightful. Fortune clearly favors you today. I suppose even I can't deny such a promising outcome."],
         'Good Fortune': ["A pleasant result. It seems your timing is… acceptable. I'd say you may proceed without regret."],
         'Modest Fortune': ["Not extraordinary, but not without merit. If you act wisely, this could still turn in your favor."],
@@ -269,7 +269,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         Misfortune: ["…Unfortunate. The currents don't align in your favor today. You may wish to reconsider your approach."],
         'Great Misfortune': ["Oh dear… even I find this outcome difficult to defend. Perhaps restraint would serve you better—for now."],
     },
-    Furina: {
+    furina: {
         'Great Fortune': ["Magnificent! Just as I expected—such brilliance could only unfold under my exquisite guidance!"],
         'Good Fortune': ["A pleasing result! Not quite perfection, but with me involved, how could it be anything less?"],
         'Modest Fortune': ["Hmm… acceptable, I suppose. Even the grandest performances have their quieter moments."],
@@ -277,7 +277,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         Misfortune: ["Oh dear… a stumble in the script. Fear not! Even tragedy can be beautiful in the right light."],
         'Great Misfortune': ["W-What!? This outcome is… utterly unacceptable! No, no—this must be rewritten at once!"],
     },
-    Clorinde: {
+    clorinde: {
         'Great Fortune': ["A decisive result. Everything aligns in your favor. If you act now, I see no reason for hesitation." ],
         'Good Fortune': ["Your chances are solid. Not flawless, but strong enough. Proceed if you trust your own resolve."  ],
         'Modest Fortune': ["…Balanced. Not an advantage, but not a loss either. What happens next depends entirely on you." ],

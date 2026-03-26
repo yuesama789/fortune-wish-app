@@ -151,9 +151,6 @@
 
     .dialogue-line {
         display: block;
-        clip-path: inset(0 100% 0 0);
-        animation: lineReveal 0.58s ease-out forwards;
-        animation-delay: calc(var(--dialogue-enter-delay, 0ms) + (var(--line-index) * 340ms));
     }
     
     .dialogue-ornament {
@@ -180,12 +177,6 @@
         bottom: -100px;
         background-color: rgba(0, 0, 0, 0.6);
         filter: blur(15px);
-    }
-}
-
-@keyframes lineReveal {
-    to {
-        clip-path: inset(0 0% 0 0);
     }
 }
 

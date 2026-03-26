@@ -18,7 +18,6 @@ interface DialogueSceneProps {
     };
     onReturnClick: () => void;
     actions?: DialogueSceneAction[];
-    textRevealDelayMs?: number;
     showUi?: boolean;
     isPostFortuneMode?: boolean;
     onPostFortuneClick?: () => void;
@@ -28,7 +27,6 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
     character,
     onReturnClick,
     actions = [],
-    textRevealDelayMs = 0,
     showUi = true,
     isPostFortuneMode = false,
     onPostFortuneClick,
@@ -36,7 +34,6 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const clickTimeoutRef = useRef<number | null>(null);
     const backgroundRegion = normalizeAssetName(character.region || 'default_bg');
-    const [resolvedTextRevealDelayMs, setResolvedTextRevealDelayMs] = useState(textRevealDelayMs);
     const dialogueCharacterImageSrc = resolveAssetUrl(
         `/images/dialogue_assets/characters/${normalizeAssetName(character.name)}.png`,
     );
@@ -50,10 +47,6 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
             }
         };
     }, []);
-
-    useEffect(() => {
-        setResolvedTextRevealDelayMs(textRevealDelayMs);
-    }, [character.dialogue, textRevealDelayMs]);
 
     useEffect(() => {
         let isCancelled = false;
@@ -185,21 +178,10 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
                         <div
                             className='dialogue-container'
                             key={character.dialogue}
-                            style={{ '--dialogue-enter-delay': `${resolvedTextRevealDelayMs}ms` } as React.CSSProperties}
                         >
                             <h2>{character.name}</h2>
                             <span className='dialogue-ornament'></span>
-                            <p>
-                                {(character.dialogue.match(/[^.!?]+[.!?]+/g) ?? [character.dialogue]).map((line, i) => (
-                                    <span
-                                        key={i}
-                                        className="dialogue-line"
-                                        style={{ '--line-index': i } as React.CSSProperties}
-                                    >
-                                        {line.trim()}
-                                    </span>
-                                ))}
-                            </p>
+                            <p>{character.dialogue}</p>
                         </div>
                     </div>
                     {isPostFortuneMode ? (

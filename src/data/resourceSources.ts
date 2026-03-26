@@ -21,8 +21,13 @@ export const resourceSources: ResourceSourceSection[] = [
       },
       {
         asset: 'Character selection screen & fortune background',
-        sourceName: 'Reddit (r/Genshin_Impact)',
-        url: 'https://www.tumblr.com/genshinimpactresources/',
+        sourceName: 'Official art & assets (tumblr)',
+        url: 'https://genshinimpactresources.tumblr.com/',
+      },
+      {
+        asset: 'Dialogue backgrounds',
+        sourceName: 'Genshin Resource (tumblr)',
+        url: 'https://genshinresource.tumblr.com/',
       },
     ],
   },
@@ -40,9 +45,14 @@ export const resourceSources: ResourceSourceSection[] = [
         url: 'https://www.deviantart.com/hs1jjk/art/Yumemizuki-Mizuki-Genshin-Impact-Render-1172903804',
       },
       {
-        asset: 'Escoffier transparent render',
+        asset: 'Il Capitano Image',
+        sourceName: '@anna_drw01 (Instagram)',
+        url: 'https://www.instagram.com/anna_drw01/',
+      },
+      {
+        asset: 'All character transparent renders if not specified above',
         sourceName: 'Hoyo Transparants (Tumblr)',
-        url: 'https://hoyo-transparents.tumblr.com/post/782387459331964928/genshin-impact-escoffier-transparent-renders',
+        url: 'https://hoyo-transparents.tumblr.com/',
       },
     ],
   },

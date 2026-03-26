@@ -219,7 +219,6 @@ const App: React.FC = () => {
                     character={selectedCharacter}
                     onReturnClick={handleReturnToSelection}
                     actions={dialogueActions}
-                    textRevealDelayMs={isDialogueTransitionVisible ? 480 : 0}
                     showUi
                     isPostFortuneMode={isPostFortuneDialogue}
                     onPostFortuneClick={handlePostFortuneReturn}

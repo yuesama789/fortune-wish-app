@@ -94,6 +94,11 @@ export const characterDialogues: CharacterDialogueMap = {
         "If it\'s me you want, then I hope things turn out gently for you.",
         "You chose me… I\'ll remember that.",
     ],
+    eula: [
+        "Oh? You\'re putting your fate in my hands? Very well… but don\'t expect me to go easy on you.",
+        "So you\'ve chosen me to judge your fortunes? Hmph. I hope you\'re prepared for the outcome.",
+        "You dare entrust your luck to me? Fine. Just remember—you asked for this, not me.",
+    ],
 };
 
 export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, string[]>> = {
@@ -232,5 +237,13 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Interesting. The trajectory is improving. Whether you can keep up… remains to be seen."],
         Misfortune: ["…Unfortunate. Though failure often provides more valuable data than success."],
         'Great Misfortune': ["…Ah. Now this is where things become truly interesting. Go on. I\'m curious to see how you handle the consequences."],
+    },
+    Eula: { 
+    'Great Fortune': ["Oh? A result like this… impressive. Don\'t misunderstand—I\'m not praising you. I\'m simply acknowledging it."], 
+    'Good Fortune': ["Hmph. A decent outcome. You\'ve managed well enough… though I wouldn\'t get too comfortable if I were you."], 
+    'Modest Fortune': ["…This is acceptable, I suppose. Not remarkable, but not entirely disappointing either. I\'ll allow it."], 
+    'Rising Fortune': ["I can see some improvement. Keep this up, and perhaps I\'ll have to reconsider my expectations of you."], 
+    Misfortune: ["…Is this truly the best you could do? Unacceptable. Don\'t think I\'ll simply overlook a result like this."], 
+    'Great Misfortune': ["…You\'ve really outdone yourself this time. Don\'t worry—I won\'t forget this. I\'ll have my vengeance."], 
     },
 };

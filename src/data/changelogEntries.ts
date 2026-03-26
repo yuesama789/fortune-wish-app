@@ -21,4 +21,11 @@ export const changelogEntries: ChangelogEntry[] = [
       'Added character-specific dialogue for non-playable Il Dottore.',
     ],
   },
+  {
+    version: 'v0.5.0',
+    date: '2026-03-26',
+    changes: [
+        'Added character-specific dialogue for playable Eula.',
+    ],
+  },
 ];

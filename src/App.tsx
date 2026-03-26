@@ -202,6 +202,17 @@ const App: React.FC = () => {
         return [];
     })();
 
+    const isHomeViewVisible =
+        step === 'selector' &&
+        !selectedCharacter &&
+        !isDialogueTransitionVisible &&
+        !isReturnTransitionVisible;
+
+    const shouldShowDialogueScene =
+        !!selectedCharacter &&
+        step !== 'selector' &&
+        (step !== 'fortune' || !activeFortune);
+
     return (
         <div className="app">
             <button
@@ -212,9 +223,9 @@ const App: React.FC = () => {
             >
                 ?
             </button>
-            <h1>Genshin Impact Wish For Me?</h1>
-            {!selectedCharacter && <CharacterSelector onSelect={handleCharacterSelect} />}
-            {selectedCharacter && step !== 'selector' && step !== 'fortune' && (
+            {isHomeViewVisible && <h1>Genshin Impact Wish For Me?</h1>}
+            {isHomeViewVisible && <CharacterSelector onSelect={handleCharacterSelect} />}
+            {shouldShowDialogueScene && (
                 <DialogueScene
                     character={selectedCharacter}
                     onReturnClick={handleReturnToSelection}

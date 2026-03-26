@@ -600,5 +600,16 @@ export const characters: Character[] = [
     element: "Unknown",
     region: "Unknown",
     playable: false,
-  }
+  },
+  {
+    id: 'eula',
+    name: "Eula",
+    releaseDate: '2021-05-18',
+    image: "/images/characters/Eula_Icon.webp",
+    quality: 5,
+    element: "Cryo",
+    region: "Mondstadt",
+    playable: true,
+  },
+
 ];

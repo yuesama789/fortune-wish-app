@@ -9,6 +9,7 @@ export const characters: Character[] = [
     quality: 5,
     element: 'Pyro',
     region: 'Sumeru',
+    playable: true,
   },
   {
     id: 'diluc',
@@ -18,6 +19,7 @@ export const characters: Character[] = [
     quality: 5,
     element: 'Pyro',
     region: 'Mondstadt',
+    playable: true,
   },
   {
     id: 'jean',
@@ -26,7 +28,8 @@ export const characters: Character[] = [
     image: "/images/characters/Jean_Icon.webp",
     quality: 5,
     element: "Anemo",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'keqing',
@@ -35,7 +38,8 @@ export const characters: Character[] = [
     image: "/images/characters/Keqing_Icon.webp",
     quality: 5,
     element: "Electro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'mona',
@@ -44,7 +48,8 @@ export const characters: Character[] = [
     image: "/images/characters/Mona_Icon.webp",
     quality: 5,
     element: "Hydro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'qiqi',
@@ -53,7 +58,8 @@ export const characters: Character[] = [
     image: "/images/characters/Qiqi_Icon.webp",
     quality: 5,
     element: "Cryo",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'tighnari',
@@ -62,7 +68,8 @@ export const characters: Character[] = [
     image: "/images/characters/Tighnari_Icon.webp",
     quality: 5,
     element: "Dendro",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'yumemizuki',
@@ -71,7 +78,8 @@ export const characters: Character[] = [
     image: "/images/characters/Yumemizuki_Mizuki_Icon.webp",
     quality: 5,
     element: "Anemo",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'xingqiu',
@@ -80,7 +88,8 @@ export const characters: Character[] = [
     image: "/images/characters/Xingqiu_Icon.webp",
     quality: 4,
     element: "Hydro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'sucrose',
@@ -89,7 +98,8 @@ export const characters: Character[] = [
     image: "/images/characters/Sucrose_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'escoffier',
@@ -98,7 +108,8 @@ export const characters: Character[] = [
     image: "/images/characters/Escoffier_Icon.webp",
     quality: 5,
     element: "Cryo",
-    region: "Fontaine"
+    region: "Fontaine",
+    playable: true,
   },
   {
     id: 'skirk',
@@ -107,7 +118,8 @@ export const characters: Character[] = [
     image: "/images/characters/Skirk_Icon.webp",
     quality: 5,
     element: "Cryo",
-    region: "Unknown"
+    region: "Unknown",
+    playable: true,
   },
   {
     id: 'candace',
@@ -116,7 +128,8 @@ export const characters: Character[] = [
     image: "/images/characters/Candace_Icon.webp",
     quality: 4,
     element: "Hydro",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'charlotte',
@@ -125,7 +138,8 @@ export const characters: Character[] = [
     image: "/images/characters/Charlotte_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Fontaine"
+    region: "Fontaine",
+    playable: true,
   },
   {
     id: 'dahlia',
@@ -134,7 +148,8 @@ export const characters: Character[] = [
     image: "/images/characters/Dahlia_Icon.webp",
     quality: 4,
     element: "Hydro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'amber',
@@ -143,7 +158,8 @@ export const characters: Character[] = [
     image: "/images/characters/Amber_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'barbara',
@@ -152,7 +168,8 @@ export const characters: Character[] = [
     image: "/images/characters/Barbara_Icon.webp",
     quality: 4,
     element: "Hydro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'beidou',
@@ -161,7 +178,8 @@ export const characters: Character[] = [
     image: "/images/characters/Beidou_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'bennett',
@@ -170,7 +188,8 @@ export const characters: Character[] = [
     image: "/images/characters/Bennett_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'chongyun',
@@ -179,7 +198,8 @@ export const characters: Character[] = [
     image: "/images/characters/Chongyun_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'fischl',
@@ -188,7 +208,8 @@ export const characters: Character[] = [
     image: "/images/characters/Fischl_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'kaeya',
@@ -197,7 +218,8 @@ export const characters: Character[] = [
     image: "/images/characters/Kaeya_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'lisa',
@@ -206,7 +228,8 @@ export const characters: Character[] = [
     image: "/images/characters/Lisa_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'ningguang',
@@ -215,7 +238,8 @@ export const characters: Character[] = [
     image: "/images/characters/Ningguang_Icon.webp",
     quality: 4,
     element: "Geo",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'noelle',
@@ -224,7 +248,8 @@ export const characters: Character[] = [
     image: "/images/characters/Noelle_Icon.webp",
     quality: 4,
     element: "Geo",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'razor',
@@ -233,7 +258,8 @@ export const characters: Character[] = [
     image: "/images/characters/Razor_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'xiangling',
@@ -242,7 +268,8 @@ export const characters: Character[] = [
     image: "/images/characters/Xiangling_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'diona',
@@ -251,7 +278,8 @@ export const characters: Character[] = [
     image: "/images/characters/Diona_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'xinyan',
@@ -260,7 +288,8 @@ export const characters: Character[] = [
     image: "/images/characters/Xinyan_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'rosaria',
@@ -269,7 +298,8 @@ export const characters: Character[] = [
     image: "/images/characters/Rosaria_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'yanfei',
@@ -278,7 +308,8 @@ export const characters: Character[] = [
     image: "/images/characters/Yanfei_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'sayu',
@@ -287,7 +318,8 @@ export const characters: Character[] = [
     image: "/images/characters/Sayu_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'kujou_sara',
@@ -296,7 +328,8 @@ export const characters: Character[] = [
     image: "/images/characters/Kujou_Sara_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'thoma',
@@ -305,7 +338,8 @@ export const characters: Character[] = [
     image: "/images/characters/Thoma_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'gorou',
@@ -314,7 +348,8 @@ export const characters: Character[] = [
     image: "/images/characters/Gorou_Icon.webp",
     quality: 4,
     element: "Geo",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'yun_jin',
@@ -323,7 +358,8 @@ export const characters: Character[] = [
     image: "/images/characters/Yun_Jin_Icon.webp",
     quality: 4,
     element: "Geo",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'kuki_shinobu',
@@ -332,7 +368,8 @@ export const characters: Character[] = [
     image: "/images/characters/Kuki_Shinobu_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'heizou',
@@ -341,7 +378,8 @@ export const characters: Character[] = [
     image: "/images/characters/Shikanoin_Heizou_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'collei',
@@ -350,7 +388,8 @@ export const characters: Character[] = [
     image: "/images/characters/Collei_Icon.webp",
     quality: 4,
     element: "Dendro",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'dori',
@@ -359,7 +398,8 @@ export const characters: Character[] = [
     image: "/images/characters/Dori_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'layla',
@@ -368,7 +408,8 @@ export const characters: Character[] = [
     image: "/images/characters/Layla_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'faruzan',
@@ -377,7 +418,8 @@ export const characters: Character[] = [
     image: "/images/characters/Faruzan_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'yaoyao',
@@ -386,7 +428,8 @@ export const characters: Character[] = [
     image: "/images/characters/Yaoyao_Icon.webp",
     quality: 4,
     element: "Dendro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'mika',
@@ -395,7 +438,8 @@ export const characters: Character[] = [
     image: "/images/characters/Mika_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Mondstadt"
+    region: "Mondstadt",
+    playable: true,
   },
   {
     id: 'kaveh',
@@ -404,7 +448,8 @@ export const characters: Character[] = [
     image: "/images/characters/Kaveh_Icon.webp",
     quality: 4,
     element: "Dendro",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'kirara',
@@ -413,7 +458,8 @@ export const characters: Character[] = [
     image: "/images/characters/Kirara_Icon.webp",
     quality: 4,
     element: "Dendro",
-    region: "Inazuma"
+    region: "Inazuma",
+    playable: true,
   },
   {
     id: 'lynette',
@@ -422,7 +468,8 @@ export const characters: Character[] = [
     image: "/images/characters/Lynette_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Fontaine"
+    region: "Fontaine",
+    playable: true,
   },
   {
     id: 'freminet',
@@ -431,7 +478,8 @@ export const characters: Character[] = [
     image: "/images/characters/Freminet_Icon.webp",
     quality: 4,
     element: "Cryo",
-    region: "Fontaine"
+    region: "Fontaine",
+    playable: true,
   },
   {
     id: 'chevreuse',
@@ -440,7 +488,8 @@ export const characters: Character[] = [
     image: "/images/characters/Chevreuse_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Fontaine"
+    region: "Fontaine",
+    playable: true,
   },
   {
     id: 'gaming',
@@ -449,7 +498,8 @@ export const characters: Character[] = [
     image: "/images/characters/Gaming_Icon.webp",
     quality: 4,
     element: "Pyro",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'sethos',
@@ -458,7 +508,8 @@ export const characters: Character[] = [
     image: "/images/characters/Sethos_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Sumeru"
+    region: "Sumeru",
+    playable: true,
   },
   {
     id: 'kachina',
@@ -467,7 +518,8 @@ export const characters: Character[] = [
     image: "/images/characters/Kachina_Icon.webp",
     quality: 4,
     element: "Geo",
-    region: "Natlan"
+    region: "Natlan",
+    playable: true,
   },
   {
     id: 'ororon',
@@ -476,7 +528,8 @@ export const characters: Character[] = [
     image: "/images/characters/Ororon_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Natlan"
+    region: "Natlan",
+    playable: true,
   },
   {
     id: 'ifa',
@@ -485,7 +538,8 @@ export const characters: Character[] = [
     image: "/images/characters/Ifa_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Natlan"
+    region: "Natlan",
+    playable: true,
   },
   {
     id: 'lan_yan',
@@ -494,7 +548,8 @@ export const characters: Character[] = [
     image: "/images/characters/Lan_Yan_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Liyue"
+    region: "Liyue",
+    playable: true,
   },
   {
     id: 'iansan',
@@ -503,7 +558,8 @@ export const characters: Character[] = [
     image: "/images/characters/Iansan_Icon.webp",
     quality: 4,
     element: "Electro",
-    region: "Natlan"
+    region: "Natlan",
+    playable: true,
   },
   {
     id: 'aino',
@@ -512,7 +568,8 @@ export const characters: Character[] = [
     image: "/images/characters/Aino_Icon.webp",
     quality: 4,
     element: "Hydro",
-    region: "Nord-Krai"
+    region: "Nord-Krai",
+    playable: true,
   },
   {
     id: 'jahoda',
@@ -521,7 +578,8 @@ export const characters: Character[] = [
     image: "/images/characters/Jahoda_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Nord-Krai"
+    region: "Nord-Krai",
+    playable: true,
   },
   {
     id: 'illuga',
@@ -530,6 +588,17 @@ export const characters: Character[] = [
     image: "/images/characters/Illuga_Icon.webp",
     quality: 4,
     element: "Geo",
-    region: "Nord-Krai"
+    region: "Nord-Krai",
+    playable: true,
+  },
+  {
+    id: 'il_dottore',
+    name: "Il Dottore",
+    releaseDate: '2026-05-18',
+    image: "/images/characters/Il_Dottore_Icon.webp",
+    quality: 5,
+    element: "Unknown",
+    region: "Sumeru",
+    playable: true,
   }
 ];

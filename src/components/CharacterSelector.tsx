@@ -56,6 +56,7 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
     Anemo: '/images/elements/Element_Anemo.webp',
     Geo: '/images/elements/Element_Geo.webp',
     Dendro: '/images/elements/Element_Dendro.webp',
+    Unknown: '/images/elements/Element_Unknown.webp',
   };
 
   const getCharacterName = (name: string): string => {

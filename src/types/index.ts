@@ -7,7 +7,8 @@ export type CharacterElement =
   | 'Cryo'
   | 'Anemo'
   | 'Geo'
-  | 'Dendro';
+  | 'Dendro'
+  | 'Unknown';
 
 export interface Character {
   id: string; // stable lookup key, e.g. "diluc"
@@ -17,6 +18,7 @@ export interface Character {
   quality: CharacterQuality;
   element: CharacterElement;
   region: string;
+  playable: boolean;
 }
 
 export interface SelectedCharacter extends Character {

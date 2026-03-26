@@ -7,7 +7,7 @@ interface DialogueSceneProps {
         name: string;
         dialogue: string;
         image: string;
-        region?: string; //needs fix
+        region: string;
     };
     onWishClick: () => void;
     onReturnClick: () => void;

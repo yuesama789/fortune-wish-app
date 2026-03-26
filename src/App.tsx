@@ -4,21 +4,31 @@ import DialogueScene from './components/DialogueScene';
 import FortuneSlipAnimation from './components/FortuneSlipAnimation';
 import AttributionModal from './components/AttributionModal';
 import LoadingScreen from './components/LoadingScreen';
-import { Character, Fortune, SelectedCharacter } from './types';
+import { Character, Fortune, NonPlayableStory, SelectedCharacter } from './types';
+import { fortunes } from './data/fortunes';
 import { normalizeAssetName, resolveAssetUrl } from './utils/assets';
-import { resolveCharacterDialogue, resolveFortuneFollowUpDialogue } from './utils/dialogue';
+import {
+    resolveCharacterDialogue,
+    resolveFortuneFollowUpDialogue,
+    resolveNonPlayableStory,
+} from './utils/dialogue';
 import './App.scss';
 
-type AppStep = 'selector' | 'dialogue' | 'fortune';
+type AppStep = 'selector' | 'dialogue' | 'story' | 'fortune';
+type NonPlayableStoryStage = 'intro' | 'followup' | null;
 
 const App: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedCharacter, setSelectedCharacter] = useState<SelectedCharacter | null>(null);
     const [step, setStep] = useState<AppStep>('selector');
+    const [stepAfterDialogueTransition, setStepAfterDialogueTransition] = useState<AppStep>('dialogue');
     const [isPostFortuneDialogue, setIsPostFortuneDialogue] = useState(false);
     const [isAttributionOpen, setIsAttributionOpen] = useState(false);
     const [isDialogueTransitionVisible, setIsDialogueTransitionVisible] = useState(false);
     const [isReturnTransitionVisible, setIsReturnTransitionVisible] = useState(false);
+    const [activeFortune, setActiveFortune] = useState<Fortune | null>(null);
+    const [activeNonPlayableStory, setActiveNonPlayableStory] = useState<NonPlayableStory | null>(null);
+    const [nonPlayableStoryStage, setNonPlayableStoryStage] = useState<NonPlayableStoryStage>(null);
 
     useEffect(() => {
         const body = document.body;
@@ -32,15 +42,74 @@ const App: React.FC = () => {
         };
     }, []);
 
+    const getRandomFortune = (): Fortune => {
+        const randomIndex = Math.floor(Math.random() * fortunes.length);
+        return fortunes[randomIndex];
+    };
+
+    const startFortuneReveal = () => {
+        setActiveFortune(getRandomFortune());
+        setStep('fortune');
+    };
+
     const handleCharacterSelect = (character: Character) => {
-        const dialogue = resolveCharacterDialogue(character.id);
+        let story: NonPlayableStory | null = null;
+        let dialogue: string;
+
+        if (character.playable) {
+            dialogue = resolveCharacterDialogue(character.id);
+        } else {
+            story = resolveNonPlayableStory(character.id);
+            dialogue = story.introDialogue;
+        }
+
         setSelectedCharacter({ ...character, dialogue });
+        setActiveNonPlayableStory(story);
+        setNonPlayableStoryStage(story ? 'intro' : null);
+        setActiveFortune(null);
         setIsPostFortuneDialogue(false);
+        setStepAfterDialogueTransition(story ? 'story' : 'dialogue');
         setIsDialogueTransitionVisible(true);
     };
 
     const handleStartWish = () => {
-        setStep('fortune');
+        if (!selectedCharacter || !selectedCharacter.playable) {
+            return;
+        }
+
+        startFortuneReveal();
+    };
+
+    const handleNonPlayableChoice = (choiceId: string) => {
+        if (!activeNonPlayableStory) {
+            return;
+        }
+
+        const selectedChoice = activeNonPlayableStory.options.find((option) => option.id === choiceId);
+
+        if (!selectedChoice) {
+            return;
+        }
+
+        setSelectedCharacter((currentCharacter) => {
+            if (!currentCharacter) {
+                return currentCharacter;
+            }
+
+            return {
+                ...currentCharacter,
+                dialogue: selectedChoice.followUpDialogue,
+            };
+        });
+        setNonPlayableStoryStage('followup');
+    };
+
+    const handleNonPlayableFortuneStart = () => {
+        if (!selectedCharacter || selectedCharacter.playable || nonPlayableStoryStage !== 'followup') {
+            return;
+        }
+
+        startFortuneReveal();
     };
 
     const handleFortuneContinue = (fortune: Fortune) => {
@@ -65,6 +134,9 @@ const App: React.FC = () => {
 
     const handleReturnToSelection = () => {
         setSelectedCharacter(null);
+        setActiveFortune(null);
+        setActiveNonPlayableStory(null);
+        setNonPlayableStoryStage(null);
         setIsPostFortuneDialogue(false);
         setStep('selector');
     };
@@ -85,6 +157,51 @@ const App: React.FC = () => {
         ]
         : [];
 
+    const dialogueActions = (() => {
+        if (!selectedCharacter || isPostFortuneDialogue) {
+            return [];
+        }
+
+        if (step === 'dialogue') {
+            return [
+                {
+                    id: 'wish',
+                    label: '(Try your luck!)',
+                    icon: 'wish' as const,
+                    onClick: handleStartWish,
+                },
+                {
+                    id: 'return',
+                    label: '(Select another character)',
+                    icon: 'return' as const,
+                    onClick: handleReturnToSelection,
+                },
+            ];
+        }
+
+        if (step === 'story' && activeNonPlayableStory && nonPlayableStoryStage === 'intro') {
+            return activeNonPlayableStory.options.map((option) => ({
+                id: option.id,
+                label: option.label,
+                icon: 'dialogue' as const,
+                onClick: () => handleNonPlayableChoice(option.id),
+            }));
+        }
+
+        if (step === 'story' && activeNonPlayableStory && nonPlayableStoryStage === 'followup') {
+            return [
+                {
+                    id: 'continue',
+                    label: activeNonPlayableStory.continueLabel,
+                    icon: 'wish' as const,
+                    onClick: handleNonPlayableFortuneStart,
+                },
+            ];
+        }
+
+        return [];
+    })();
+
     return (
         <div className="app">
             <button
@@ -97,13 +214,13 @@ const App: React.FC = () => {
             </button>
             <h1>Genshin Impact Wish For Me?</h1>
             {!selectedCharacter && <CharacterSelector onSelect={handleCharacterSelect} />}
-            {selectedCharacter && step !== 'selector' && (
+            {selectedCharacter && step !== 'selector' && step !== 'fortune' && (
                 <DialogueScene
                     character={selectedCharacter}
-                    onWishClick={handleStartWish}
                     onReturnClick={handleReturnToSelection}
+                    actions={dialogueActions}
                     textRevealDelayMs={isDialogueTransitionVisible ? 480 : 0}
-                    showUi={step !== 'fortune'}
+                    showUi
                     isPostFortuneMode={isPostFortuneDialogue}
                     onPostFortuneClick={handlePostFortuneReturn}
                 />
@@ -112,7 +229,7 @@ const App: React.FC = () => {
                 <LoadingScreen
                     mode="transition"
                     preloadUrls={dialogueTransitionAssets}
-                    onFadeStart={() => setStep('dialogue')}
+                    onFadeStart={() => setStep(stepAfterDialogueTransition)}
                     onComplete={() => setIsDialogueTransitionVisible(false)}
                 />
             )}
@@ -124,7 +241,9 @@ const App: React.FC = () => {
                     onComplete={() => setIsReturnTransitionVisible(false)}
                 />
             )}
-            {step === 'fortune' && <FortuneSlipAnimation onContinue={handleFortuneContinue} />}
+            {step === 'fortune' && activeFortune && (
+                <FortuneSlipAnimation fortune={activeFortune} onContinue={handleFortuneContinue} />
+            )}
             <AttributionModal isOpen={isAttributionOpen} onClose={() => setIsAttributionOpen(false)} />
         </div>
     );

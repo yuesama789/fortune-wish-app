@@ -594,11 +594,11 @@ export const characters: Character[] = [
   {
     id: 'il_dottore',
     name: "Il Dottore",
-    releaseDate: '2026-05-18',
+    releaseDate: '2028-05-18',
     image: "/images/characters/Il_Dottore_Icon.webp",
     quality: 5,
     element: "Unknown",
-    region: "Sumeru",
-    playable: true,
+    region: "Unknown",
+    playable: false,
   }
 ];

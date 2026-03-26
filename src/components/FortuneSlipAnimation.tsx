@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import useRandomFortune from '../hooks/useRandomFortune';
 import { Fortune } from '../types';
 import { resolveAssetUrl } from '../utils/assets';
 import FortuneEmblem from './FortuneEmblem';
 import './FortuneSlipAnimation.scss';
 
 interface FortuneSlipAnimationProps {
+    fortune: Fortune;
     onAnimationEnd?: () => void;
     onContinue: (fortune: Fortune) => void;
 }
@@ -35,10 +35,9 @@ const sparkleConfig: Sparkle[] = [
     { angle: 344, radius: 140, size: 9, delay: 0.3, duration: 1.55 },
 ];
 
-const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ onAnimationEnd, onContinue }) => {
+const FortuneSlipAnimation: React.FC<FortuneSlipAnimationProps> = ({ fortune, onAnimationEnd, onContinue }) => {
     const [animationPhase, setAnimationPhase] = useState<AnimationPhase>('wish');
     const animationTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-    const fortune = useRandomFortune();
 
     const startAnimation = () => {
         setAnimationPhase('wish');

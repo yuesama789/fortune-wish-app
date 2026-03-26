@@ -25,6 +25,18 @@ export interface SelectedCharacter extends Character {
   dialogue: string; // resolved single line for UI
 }
 
+export interface NonPlayableStoryChoice {
+  id: string;
+  label: string;
+  followUpDialogue: string;
+}
+
+export interface NonPlayableStory {
+  introDialogue: string;
+  options: [NonPlayableStoryChoice, NonPlayableStoryChoice];
+  continueLabel: string;
+}
+
 export type CharacterDialogueMap = Record<string, string[]>;
 
 export type FortuneHeader =

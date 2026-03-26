@@ -1,10 +1,11 @@
-import { Character, FortuneHeader } from '../types';
+import { Character, FortuneHeader, NonPlayableStory } from '../types';
 import {
   characterDialogues,
   fallbackCharacterDialogues,
   fallbackFortuneFollowUpDialogues,
   fortuneFollowUpDialogues,
 } from '../data/characterDialogues';
+import { fallbackNonPlayableStory, nonPlayableStories } from '../data/nonPlayableStories';
 import { getRandomItem } from './random';
 
 export function resolveCharacterDialogue(characterId: Character['id']): string {
@@ -32,4 +33,13 @@ export function resolveFortuneFollowUpDialogue(
   }
 
   return getRandomItem(normalizedOptions);
+}
+
+export function resolveNonPlayableStory(characterId: Character['id']): NonPlayableStory {
+  const story = nonPlayableStories[characterId] ?? fallbackNonPlayableStory;
+
+  return {
+    ...story,
+    options: story.options.map((option) => ({ ...option })) as NonPlayableStory['options'],
+  };
 }

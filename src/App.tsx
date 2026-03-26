@@ -5,7 +5,7 @@ import FortuneSlipAnimation from './components/FortuneSlipAnimation';
 import AttributionModal from './components/AttributionModal';
 import LoadingScreen from './components/LoadingScreen';
 import { Character, Fortune, SelectedCharacter } from './types';
-import { resolveAssetUrl } from './utils/assets';
+import { normalizeAssetName, resolveAssetUrl } from './utils/assets';
 import { resolveCharacterDialogue, resolveFortuneFollowUpDialogue } from './utils/dialogue';
 import './App.scss';
 
@@ -17,6 +17,8 @@ const App: React.FC = () => {
     const [step, setStep] = useState<AppStep>('selector');
     const [isPostFortuneDialogue, setIsPostFortuneDialogue] = useState(false);
     const [isAttributionOpen, setIsAttributionOpen] = useState(false);
+    const [isDialogueTransitionVisible, setIsDialogueTransitionVisible] = useState(false);
+    const [isReturnTransitionVisible, setIsReturnTransitionVisible] = useState(false);
 
     useEffect(() => {
         const body = document.body;
@@ -34,7 +36,7 @@ const App: React.FC = () => {
         const dialogue = resolveCharacterDialogue(character.id);
         setSelectedCharacter({ ...character, dialogue });
         setIsPostFortuneDialogue(false);
-        setStep('dialogue');
+        setIsDialogueTransitionVisible(true);
     };
 
     const handleStartWish = () => {
@@ -67,9 +69,21 @@ const App: React.FC = () => {
         setStep('selector');
     };
 
+    const handlePostFortuneReturn = () => {
+        setIsReturnTransitionVisible(true);
+    };
+
     if (isLoading) {
         return <LoadingScreen onComplete={() => setIsLoading(false)} />;
     }
+
+    const dialogueTransitionAssets = selectedCharacter
+        ? [
+            resolveAssetUrl(`/images/dialogue_assets/background/${normalizeAssetName(selectedCharacter.region || 'default_bg')}.webp`),
+            resolveAssetUrl(`/images/dialogue_assets/characters/${normalizeAssetName(selectedCharacter.name)}.png`),
+            resolveAssetUrl(selectedCharacter.image),
+        ]
+        : [];
 
     return (
         <div className="app">
@@ -83,14 +97,31 @@ const App: React.FC = () => {
             </button>
             <h1>Genshin Impact Wish For Me?</h1>
             {!selectedCharacter && <CharacterSelector onSelect={handleCharacterSelect} />}
-            {selectedCharacter && (
+            {selectedCharacter && step !== 'selector' && (
                 <DialogueScene
                     character={selectedCharacter}
                     onWishClick={handleStartWish}
                     onReturnClick={handleReturnToSelection}
+                    textRevealDelayMs={isDialogueTransitionVisible ? 480 : 0}
                     showUi={step !== 'fortune'}
                     isPostFortuneMode={isPostFortuneDialogue}
-                    onPostFortuneClick={handleReturnToSelection}
+                    onPostFortuneClick={handlePostFortuneReturn}
+                />
+            )}
+            {isDialogueTransitionVisible && (
+                <LoadingScreen
+                    mode="transition"
+                    preloadUrls={dialogueTransitionAssets}
+                    onFadeStart={() => setStep('dialogue')}
+                    onComplete={() => setIsDialogueTransitionVisible(false)}
+                />
+            )}
+            {isReturnTransitionVisible && (
+                <LoadingScreen
+                    mode="transition"
+                    transitionDurationMs={180}
+                    onFadeStart={handleReturnToSelection}
+                    onComplete={() => setIsReturnTransitionVisible(false)}
                 />
             )}
             {step === 'fortune' && <FortuneSlipAnimation onContinue={handleFortuneContinue} />}

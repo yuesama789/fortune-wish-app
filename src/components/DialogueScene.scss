@@ -152,8 +152,8 @@
     .dialogue-line {
         display: block;
         clip-path: inset(0 100% 0 0);
-        animation: lineReveal 0.46s ease-out forwards;
-        animation-delay: calc(var(--line-index) * 0.34s);
+        animation: lineReveal 0.58s ease-out forwards;
+        animation-delay: calc(var(--dialogue-enter-delay, 0ms) + (var(--line-index) * 340ms));
     }
     
     .dialogue-ornament {

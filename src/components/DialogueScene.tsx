@@ -11,6 +11,7 @@ interface DialogueSceneProps {
     };
     onWishClick: () => void;
     onReturnClick: () => void;
+    textRevealDelayMs?: number;
     showUi?: boolean;
     isPostFortuneMode?: boolean;
     onPostFortuneClick?: () => void;
@@ -20,6 +21,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
     character,
     onWishClick,
     onReturnClick,
+    textRevealDelayMs = 0,
     showUi = true,
     isPostFortuneMode = false,
     onPostFortuneClick,
@@ -27,6 +29,7 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
     const [selectedOption, setSelectedOption] = useState<'wish' | 'return' | null>(null);
     const clickTimeoutRef = useRef<number | null>(null);
     const backgroundRegion = normalizeAssetName(character.region || 'default_bg');
+    const [resolvedTextRevealDelayMs, setResolvedTextRevealDelayMs] = useState(textRevealDelayMs);
     const dialogueCharacterImageSrc = resolveAssetUrl(
         `/images/dialogue_assets/characters/${normalizeAssetName(character.name)}.png`,
     );
@@ -40,6 +43,10 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
             }
         };
     }, []);
+
+    useEffect(() => {
+        setResolvedTextRevealDelayMs(textRevealDelayMs);
+    }, [character.dialogue, textRevealDelayMs]);
 
     useEffect(() => {
         let isCancelled = false;
@@ -151,7 +158,11 @@ const DialogueScene: React.FC<DialogueSceneProps> = ({
                         {returnIcon}
                     </div>
                     <div className='dialogue-blurredbackground'>
-                        <div className='dialogue-container' key={character.dialogue}>
+                        <div
+                            className='dialogue-container'
+                            key={character.dialogue}
+                            style={{ '--dialogue-enter-delay': `${resolvedTextRevealDelayMs}ms` } as React.CSSProperties}
+                        >
                             <h2>{character.name}</h2>
                             <span className='dialogue-ornament'></span>
                             <p>

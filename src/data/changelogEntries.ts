@@ -25,7 +25,7 @@ export const changelogEntries: ChangelogEntry[] = [
     version: 'v0.5.0',
     date: '2026-03-26',
     changes: [
-        'Added character-specific dialogue for playable Eula.',
+        'Added character-specific dialogue for Eula, Furina, Nefer & Clorinde.',
     ],
   },
 ];

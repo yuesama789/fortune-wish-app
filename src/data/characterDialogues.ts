@@ -99,6 +99,21 @@ export const characterDialogues: CharacterDialogueMap = {
         "So you\'ve chosen me to judge your fortunes? Hmph. I hope you\'re prepared for the outcome.",
         "You dare entrust your luck to me? Fine. Just remember—you asked for this, not me.",
     ],
+    nefer: [
+        "An invitation to join you? Intriguing… You must be quite confident to summon my attention like this.",
+        "You call upon me for guidance? How curious… I wonder what you hope to find in the answers I give.",
+        "So, you seek a glimpse of what lies ahead… Very well. Let\'s see if your curiosity is rewarded."
+    ],
+    furina: [
+        "Wuhahaha! You dare summon one as exalted as I? Very well—I shall grace you with my presence.",
+        "Ah, you wish to tempt fate with me? How bold. Come, take my hand… let\'s see where this leads.",
+        "To seek judgment from the Archon of spectacle herself? Hehe… I do hope you\'re entertaining."
+    ],
+    clorinde: [
+        "You\'re asking me to weigh your chances? Very well. Just know—I don\'t deal in false hope.",
+        "So you\'ve chosen me to assess your odds. Stay composed… the result will speak for itself.",
+        "You want my judgment? Fine. But understand—once you see the outcome, there\'s no turning back."
+    ],
 };
 
 export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, string[]>> = {
@@ -239,11 +254,35 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Great Misfortune': ["…Ah. Now this is where things become truly interesting. Go on. I\'m curious to see how you handle the consequences."],
     },
     Eula: { 
-    'Great Fortune': ["Oh? A result like this… impressive. Don\'t misunderstand—I\'m not praising you. I\'m simply acknowledging it."], 
-    'Good Fortune': ["Hmph. A decent outcome. You\'ve managed well enough… though I wouldn\'t get too comfortable if I were you."], 
-    'Modest Fortune': ["…This is acceptable, I suppose. Not remarkable, but not entirely disappointing either. I\'ll allow it."], 
-    'Rising Fortune': ["I can see some improvement. Keep this up, and perhaps I\'ll have to reconsider my expectations of you."], 
-    Misfortune: ["…Is this truly the best you could do? Unacceptable. Don\'t think I\'ll simply overlook a result like this."], 
-    'Great Misfortune': ["…You\'ve really outdone yourself this time. Don\'t worry—I won\'t forget this. I\'ll have my vengeance."], 
+        'Great Fortune': ["Oh? A result like this… impressive. Don\'t misunderstand—I\'m not praising you. I\'m simply acknowledging it."], 
+        'Good Fortune': ["Hmph. A decent outcome. You\'ve managed well enough… though I wouldn\'t get too comfortable if I were you."], 
+        'Modest Fortune': ["…This is acceptable, I suppose. Not remarkable, but not entirely disappointing either. I\'ll allow it."], 
+        'Rising Fortune': ["I can see some improvement. Keep this up, and perhaps I\'ll have to reconsider my expectations of you."], 
+        Misfortune: ["…Is this truly the best you could do? Unacceptable. Don\'t think I\'ll simply overlook a result like this."], 
+        'Great Misfortune': ["…You\'ve really outdone yourself this time. Don\'t worry—I won\'t forget this. I\'ll have my vengeance."], 
+    },
+    Nefer: {
+        'Great Fortune': ["…How delightful. Fortune clearly favors you today. I suppose even I can\'t deny such a promising outcome."],
+        'Good Fortune': ["A pleasant result. It seems your timing is… acceptable. I\'d say you may proceed without regret."],
+        'Modest Fortune': ["Not extraordinary, but not without merit. If you act wisely, this could still turn in your favor."],
+        'Rising Fortune': ["Ah… I can feel it shifting. Your luck hasn\'t settled yet—but it may bloom into something worthwhile."],
+        Misfortune: ["…Unfortunate. The currents don\'t align in your favor today. You may wish to reconsider your approach."],
+        'Great Misfortune': ["Oh dear… even I find this outcome difficult to defend. Perhaps restraint would serve you better—for now."],
+    },
+    Furina: {
+        'Great Fortune': ["Magnificent! Just as I expected—such brilliance could only unfold under my exquisite guidance!"],
+        'Good Fortune': ["A pleasing result! Not quite perfection, but with me involved, how could it be anything less?"],
+        'Modest Fortune': ["Hmm… acceptable, I suppose. Even the grandest performances have their quieter moments."],
+        'Rising Fortune': ["Ah! The tension builds—how thrilling! Your fortune rises, just like the climax of a perfect act!"],
+        Misfortune: ["Oh dear… a stumble in the script. Fear not! Even tragedy can be beautiful in the right light."],
+        'Great Misfortune': ["W-What!? This outcome is… utterly unacceptable! No, no—this must be rewritten at once!"],
+    },
+    Clorinde: {
+        'Great Fortune': ["A decisive result. Everything aligns in your favor. If you act now, I see no reason for hesitation." ],
+        'Good Fortune': ["Your chances are solid. Not flawless, but strong enough. Proceed if you trust your own resolve."  ],
+        'Modest Fortune': ["…Balanced. Not an advantage, but not a loss either. What happens next depends entirely on you." ],
+        'Rising Fortune': ["I can see momentum building. It’s not guaranteed—but with the right timing, this could turn."   ],
+        Misfortune: ["The odds are against you. I’d advise restraint… unless you’re willing to accept the consequences."    ],
+        'Great Misfortune': ["…A poor outcome. If you proceed regardless, do so knowingly. I won’t stop you—but I won’t advise it." ],
     },
 };

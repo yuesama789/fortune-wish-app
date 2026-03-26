@@ -24,7 +24,7 @@ export const nonPlayableStories: Record<string, NonPlayableStory> = {
             {
                 id: 'analyze',
                 label: 'Curiosity won\'t hurt, right?',
-                followUpDialogue: '“How delightful. Curiosity has led to far more interesting outcomes than caution ever could. Let\'s see how far yours takes you.',
+                followUpDialogue: 'How delightful. Curiosity has led to far more interesting outcomes than caution ever could. Let\'s see how far yours takes you.',
             },
             {
                 id: 'provoke',

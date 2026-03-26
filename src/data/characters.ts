@@ -611,5 +611,34 @@ export const characters: Character[] = [
     region: "Mondstadt",
     playable: true,
   },
-
+  {
+    id: 'nefer',
+    name: "Nefer",
+    releaseDate: '2025-10-22',
+    image: "/images/characters/Nefer_Icon.webp",
+    quality: 5,
+    element: "Dendro",
+    region: "Nord-Krai",
+    playable: true,
+  },
+  {
+    id: 'furina',
+    name: "Furina",
+    releaseDate: '2023-11-08',
+    image: "/images/characters/Furina_Icon.webp",
+    quality: 5,
+    element: "Hydro",
+    region: "Fontaine",
+    playable: true,
+  },
+  {
+    id: 'clorinde',
+    name: "Clorinde",
+    releaseDate: '2024-06-05',
+    image: "/images/characters/Clorinde_Icon.webp",
+    quality: 5,
+    element: "Electro",
+    region: "Fontaine",
+    playable: true,
+  }
 ];

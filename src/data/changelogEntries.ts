@@ -28,4 +28,11 @@ export const changelogEntries: ChangelogEntry[] = [
         'Added character-specific dialogue for Eula, Furina, Nefer & Clorinde.',
     ],
   },
+  {
+    version: 'v0.5.1',
+    date: '2026-03-26',
+    changes: [
+        'Added character-specific dialogue for Xiangling, Razor, Noelle, Ningguang, Lisa, Kaeya & Fischl.',
+    ],
+  },
 ];

@@ -90,9 +90,9 @@ export const characterDialogues: CharacterDialogueMap = {
         "Wait—this is about me? Oh, I love where this is going!",
     ],
     dahlia: [
-        "You're looking for me…? That's… a little surprising.",
-        "If it's me you want, then I hope things turn out gently for you.",
-        "You chose me… I'll remember that.",
+        "Let us pray together. I hope the answer you receive is a good one.",
+        "I knew you'd come to me eventually. I included you in my morning prayers.",
+        "Thank Barbatos you came to find me. I was hoping for you to come to find me.",
     ],
     eula: [
         "Oh? You're putting your fate in my hands? Very well… but don't expect me to go easy on you.",
@@ -114,6 +114,41 @@ export const characterDialogues: CharacterDialogueMap = {
         "So you've chosen me to assess your odds. Stay composed… the result will speak for itself.",
         "You want my judgment? Fine. But understand—once you see the outcome, there's no turning back."
     ],
+    xiangling: [
+        "Oh! You're going for me? That's so cool! I hope you get something deliciously good!",
+        "You want me to join you? That's awesome! I hope you get a super spicy result!",
+        "Wait, you're hoping for me? That's amazing! I hope you get something extra tasty!",
+    ],
+    razor: [
+        "You smell... *sniff* nice! We can hunt! Together!",
+        "You watch stars? I watch the moon. Maybe we can watch together?",
+        "You like me? I like you too! Maybe stars will like you too!",
+    ],
+    noelle: [
+        "M-Me? You'd choose me…? I— I'll do my best! If it's what you truly want, I won't disappoint you!",
+        "Oh! You… want me? I didn't expect that… b-but I'm really happy! I'll give this everything I have!",
+        "You're asking for me…? I— I hope I'm worthy of that. Still, I'll try my hardest for you!"
+    ],
+    ningguang: [
+        "You've set your sights on me? How bold… I wonder—do you understand what you're asking for?",
+        "So, you wish to choose me? Hm… an interesting decision. I do hope you can keep up.",
+        "You're reaching for me? Ambitious. I'll indulge you—for now. Let's see where this leads."
+    ],
+    lisa: [
+        "My, my… you've chosen me? How adorable. Come here, sweetheart — let's see what you're hoping for~",
+        "Oh? You want little old me? Hehe… how bold of you. I suppose I can indulge that curiosity~",
+        "Ah~ you're reaching for me? Careful now… I might just take a liking to that kind of attention~"
+    ],
+    kaeya: [
+        "Oh? You've got your eye on me? Careful now… I'm not as easy to win over as you might think.",
+        "You want me, hm? I have to admit, you've got taste. Let's see if your luck matches your boldness.",
+        "Choosing me? Heh… I like that confidence. Just don't blame me if things get interesting."
+    ],
+    fischl: [
+        "So, thou has chosen the Prinzessin der Verurteilung? Very well — thy fate shall be unveiled before thee!",
+        "Oh? Thou seekest me? Then know this — our meeting is no mere chance, but a thread woven by destiny!",
+        "Thou darest call upon mine name? Hehe… let the stars bear witness to the choice thou has made!"
+    ]
 };
 
 export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, string[]>> = {
@@ -238,7 +273,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Great Misfortune': ["Yikes… that's rough. Even I wouldn't spin that as good news."],
     },
     dahlia: {
-        'Great Fortune': ["Oh… that's wonderful. I'm really glad."],
+        'Great Fortune': ["Lord Barbatos answers! This is a blessing. Now go forth with hope."],
         'Good Fortune': ["That looks promising… I think it will be okay."],
         'Modest Fortune': ["…It's uncertain. But that doesn't mean it's bad."],
         'Rising Fortune': ["It's getting better. Just a little more."],
@@ -284,5 +319,61 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["I can see momentum building. It's not guaranteed—but with the right timing, this could turn."   ],
         Misfortune: ["The odds are against you. I'd advise restraint… unless you're willing to accept the consequences."    ],
         'Great Misfortune': ["…A poor outcome. If you proceed regardless, do so knowingly. I won't stop you—but I won't advise it." ],
+    },
+    xiangling: {
+        'Great Fortune': ["Wow, that's amazing! I'll cook something special to celebrate!"],
+        'Good Fortune': ["Yay! That's really good! I hope you get something extra tasty!"],
+        'Modest Fortune': ["Not bad! I hope the next one is even better!"],
+        'Rising Fortune': ["Ooh, it's getting better! I can feel it!"],
+        Misfortune: ["Aw, that's not so good. But don't worry! You can try again!"],
+        'Great Misfortune': ["Yikes... that's really bad. Maybe take a break and come back hungry!"],
+    },
+    razor: {
+        'Great Fortune': ["Wow, that is great! You must hunt when you are lucky! I share meat with you."],
+        'Good Fortune': ["That's good! Stars are smiling on you! We can have fun together!"],
+        'Modest Fortune': ["Not bad! I'll watch your back! We can keep trying together!"],
+        'Rising Fortune': ["It's getting better! We can keep trying together!"],
+        Misfortune: ["Oh no, that's not good. But we can try again together!"],
+        'Great Misfortune': ["Hmm... that's really bad. Maybe we should rest and try again later!"],
+    },
+    noelle: {
+        'Great Fortune': ["Ah… this is wonderful! If you truly want me… then I'll stay by your side and do everything I can!"],
+        'Good Fortune': ["This looks promising! I'll… I'll do my best to live up to what you're hoping for, I promise!"],
+        'Modest Fortune': ["It's not perfect… but if you're willing, I'll keep trying! I won't let your choice be a mistake!"],
+        'Rising Fortune': ["It's getting better…! If you stay with me, I'll make sure things continue to improve, step by step!"],
+        Misfortune: ["Oh… I'm sorry… this isn't what you hoped for, is it? But I won't give up if you still believe in me!"],
+        'Great Misfortune': ["I… I'm really sorry… If you regret choosing me, I understand… but I'll still try to do better!"],
+    },
+    ningguang: {
+        'Great Fortune': ["Impressive. A result worthy of such ambition. If you truly desire me, I see no reason to hold back."],
+        'Good Fortune': ["A favorable outcome. You may proceed—with confidence. I'll be watching how you handle it."],
+        'Modest Fortune': ["Acceptable. Not quite what I'd call remarkable, but… with effort, you may yet earn something more."],
+        'Rising Fortune': ["I can see potential forming. Continue like this, and perhaps your choice will prove worthwhile."],
+        Misfortune: ["Unfortunate. It seems your reach exceeds your grasp… for now. You may wish to reconsider."],
+        'Great Misfortune': ["…How disappointing. If you intend to pursue me regardless, you'll need far better judgment than this."],
+    },
+    lisa: {
+        'Great Fortune': ["How wonderful~ such a lovely outcome. If you want me, darling, I see no reason to keep you waiting~"],
+        'Good Fortune': ["Mhm~ not bad at all. Looks like you've made a rather good choice… I might just reward that~"],
+        'Modest Fortune': ["Oh? Not quite perfect… but still tempting. If you're patient, I could make it worth your while~"],
+        'Rising Fortune': ["Hehe~ I like where this is going. Stay close, and your luck might improve in very interesting ways~"],
+        Misfortune: ["My… that's a shame. Still, if you insist on wanting me, I won't be too hard on you~"],
+        'Great Misfortune': ["Oh my… how unfortunate. And yet, here you are, still reaching for me. How very charming~"],
+    },
+    kaeya: {
+        'Great Fortune': ["Well now… looks like luck's on your side. If you're coming for me, I'd say this is your moment."],
+        'Good Fortune': ["Not bad at all. You might just pull this off… though I wouldn't get too comfortable just yet."],
+        'Modest Fortune': ["Hm… could go either way. Then again, where's the fun if things are too certain, right?"],
+        'Rising Fortune': ["I see potential here. Stick with it, and you might find yourself getting exactly what you want."],
+        Misfortune: ["Ouch… that's rough. Still thinking of going after me? I admire the determination."],
+        'Great Misfortune': ["…Now that's unfortunate. But if you're still set on me, I won't stop you. Could be entertaining."],
+    },
+    fischl: {
+        'Great Fortune': ["Rejoice! The stars align in thy favor! Such fortune could only be granted to one most worthy!"],
+        'Good Fortune': ["A pleasing omen! The heavens smile upon thee — proceed, and claim what destiny has prepared!"],
+        'Modest Fortune': ["Hmm… neither glory nor ruin awaits. Tread carefully, and thou may yet shape thine own fate!"],
+        'Rising Fortune': ["Behold! The tides of fate shift in thy favor — continue forth, and seize what is soon to be thine!"],
+        Misfortune: ["Alas… the stars waver, and shadows gather. Yet fear not — fate may still bend to thy will!"],
+        'Great Misfortune': ["Woe! A dire omen has been cast! Yet even now, thou standest defiant… how delightfully tragic!"],
     },
 };

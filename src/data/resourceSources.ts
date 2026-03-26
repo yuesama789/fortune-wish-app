@@ -35,11 +35,6 @@ export const resourceSources: ResourceSourceSection[] = [
     section: 'Character Dialogue Renders',
     items: [
       {
-        asset: 'Dehya transparent render',
-        sourceName: 'CleanPNG',
-        url: 'https://www.cleanpng.com/png-fierce-fantasy-character-in-armor-8526995/',
-      },
-      {
         asset: 'Yumemizuki Mizuki transparent render',
         sourceName: 'DeviantArt (hs1jjk)',
         url: 'https://www.deviantart.com/hs1jjk/art/Yumemizuki-Mizuki-Genshin-Impact-Render-1172903804',

@@ -107,7 +107,7 @@ export const characterDialogues: CharacterDialogueMap = {
     furina: [
         "Wuhahaha! You dare summon one as exalted as I? Very well—I shall grace you with my presence.",
         "Ah, you wish to tempt fate with me? How bold. Come, take my hand… let\'s see where this leads.",
-        "To seek judgment from the Archon of spectacle herself? Hehe… I do hope you\'re entertaining."
+        "To seek judgment from the Hydro Archon herself? Hehe… I do hope you\'re entertaining."
     ],
     clorinde: [
         "You\'re asking me to weigh your chances? Very well. Just know—I don\'t deal in false hope.",

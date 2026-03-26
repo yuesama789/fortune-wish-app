@@ -22,11 +22,16 @@ export const featuredPatchSchedule: FeaturedPatchSchedule[] = [
 		startDate: '2026-03-17',
 		featuredCharacterIds: ['escoffier', 'skirk', 'candace', 'charlotte', 'dahlia'],
 	},
-	// {
-	// 	patchVersion: '5.5',
-	// 	startDate: '2025-03-26',
-	// 	featuredCharacterIds: ['keqing', 'bennett', 'mona'],
-	// },
+	{
+		patchVersion: '6.5.1',
+		startDate: '2025-04-08',
+		featuredCharacterIds: ['linnea', 'chasca'],
+	},
+	{
+		patchVersion: '6.5.2',
+		startDate: '2025-04-29',
+		featuredCharacterIds: ['nefer', 'lauma'],
+	},
 ];
 
 const parseScheduleDate = (dateString: string): Date => new Date(`${dateString}T00:00:00Z`);

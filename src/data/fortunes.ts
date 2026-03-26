@@ -3,7 +3,7 @@ import { Fortune } from '../types';
 export const fortunes: Fortune[] = [
     {
         header: 'Great Fortune',
-        text: "Ah… you again. The air feels different today, doesn't it? As if something — or someone — has already chosen you. Your wish carries an unusual warmth, one that rarely goes unanswered. If you reach out now, don't be surprised if fate reaches back… with a smile.",
+        text: "The air feels different today, doesn't it? As if something — or someone — has already chosen you. Your wish carries an unusual warmth, one that rarely goes unanswered. If you reach out now, don't be surprised if fate reaches back… with a smile.",
     },
     {
         header: 'Great Fortune',
@@ -27,7 +27,7 @@ export const fortunes: Fortune[] = [
     },
     {
         header: 'Rising Fortune',
-        text: "Hmm… something is changing. You can feel it too, can't you? Luck hasn't quite caught up to you yet, but it's trying. A wish made now might not impress you immediately… but give it time. Not all good things arrive on cue.",
+        text: "Something is changing. You can feel it too, can't you? Luck hasn't quite caught up to you yet, but it's trying. A wish made now might not impress you immediately… but give it time. Not all good things arrive on cue.",
     },
     {
         header: 'Rising Fortune',
@@ -35,7 +35,7 @@ export const fortunes: Fortune[] = [
     },
     {
         header: 'Misfortune',
-        text: '…You really want to do this now? The mood is off, and even you can feel it. A wish cast in this moment may leave you with more questions than answers. Perhaps you should wait. Or… are you the stubborn type?',
+        text: "You really want to do this now? The mood is off, and even you can feel it. A wish cast in this moment may leave you with more questions than answers. Perhaps you should wait. Or… are you the stubborn type?",
     },
     {
         header: 'Misfortune',

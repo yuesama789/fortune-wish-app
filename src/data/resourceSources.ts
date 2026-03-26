@@ -35,11 +35,6 @@ export const resourceSources: ResourceSourceSection[] = [
     section: 'Character Dialogue Renders',
     items: [
       {
-        asset: 'Yumemizuki Mizuki transparent render',
-        sourceName: 'DeviantArt (hs1jjk)',
-        url: 'https://www.deviantart.com/hs1jjk/art/Yumemizuki-Mizuki-Genshin-Impact-Render-1172903804',
-      },
-      {
         asset: 'Il Capitano Image',
         sourceName: '@anna_drw01 (Instagram)',
         url: 'https://www.instagram.com/anna_drw01/',

@@ -1,16 +1,16 @@
 import { CharacterDialogueMap, FortuneHeader } from '../types';
 
 export const fallbackCharacterDialogues: string[] = [
-    "Fate may guide you... but the final choice is yours.",
-    "The stars can advise you - they won't take responsibility.",
-    'Even fate cannot decide for you.',
-    "The odds are quiet today. Your choice will speak louder than them.",
+    "I feel honored you came to me. Let's see what the stars have to say about your choice.",
+    "You've set your eyes on me. That's… flattering. Let's find out if it's also fortunate.",
+    "You want me? That's interesting. I hope the outcome is worth the attention.",
+    "So, you've chosen me. Let's see if your instincts lead you to a favorable result.",
 ];
 
 export const fallbackFortuneFollowUpDialogues: string[] = [
     'The result is in. Decide your next step with care.',
     'Fortune has spoken for now. What you do next matters more.',
-    'Take a breath and choose your next wish on your own terms.',
+    'Take a breath and choose your next step on your own terms.',
     'One outcome never defines the whole path. Keep going if you want to.',
 ];
 
@@ -35,9 +35,9 @@ export const characterDialogues: CharacterDialogueMap = {
         "If I'm the one you're after, then you better be ready to work for it.",
     ],
     mona: [
-    "You've come seeking an answer. Or perhaps… something more specific?",
-    "Your fate is difficult to read. It shifts whenever I look too closely.",
-    "…You're hoping for a particular outcome, aren't you? It's written all over you.",
+        "You've come seeking an answer. Or perhaps… something more specific?",
+        "Your fate is difficult to read. It shifts whenever I look too closely.",
+        "…You're hoping for a particular outcome, aren't you? It's written all over you.",
     ],
     qiqi: [
         "…You're making a wish? Okay. I'll try to remember that.",
@@ -70,49 +70,49 @@ export const characterDialogues: CharacterDialogueMap = {
         "…I hope it works. That would be… really nice.",
     ],
     skirk: [
-        "You\'re reaching for something far beyond you… and yet, you chose me.",
-        "…So you intend to find me. Then don\'t falter now.",
-        "If you\'re searching for me, be certain you understand what that means.",
+        "You're reaching for something far beyond you… and yet, you chose me.",
+        "…So you intend to find me. Then don't falter now.",
+        "If you're searching for me, be certain you understand what that means.",
     ],
     escoffier: [
-        "Ah… so I\'m the one you\'ve developed a taste for.",
-        "You\'ve chosen me? Then I hope your expectations are… refined.",
-        "If you\'re seeking me out, I trust you know quality when you see it.",
+        "Ah… so I'm the one you've developed a taste for.",
+        "You've chosen me? Then I hope your expectations are… refined.",
+        "If you're seeking me out, I trust you know quality when you see it.",
     ],
     candace: [
-        "You\'ve come looking for me? Then you\'ll have my attention.",
-        "If it\'s me you seek, I won\'t turn away from that.",
-        "You\'ve made your choice clear. I respect that.",
+        "You've come looking for me? Then you'll have my attention.",
+        "If it's me you seek, I won't turn away from that.",
+        "You've made your choice clear. I respect that.",
     ],
     charlotte: [
-        "Oh! You\'re going after me? This just got interesting!",
+        "Oh! You're going after me? This just got interesting!",
         "Aiming for me, huh? I should take notes on this!",
         "Wait—this is about me? Oh, I love where this is going!",
     ],
     dahlia: [
-        "You\'re looking for me…? That\'s… a little surprising.",
-        "If it\'s me you want, then I hope things turn out gently for you.",
-        "You chose me… I\'ll remember that.",
+        "You're looking for me…? That's… a little surprising.",
+        "If it's me you want, then I hope things turn out gently for you.",
+        "You chose me… I'll remember that.",
     ],
     eula: [
-        "Oh? You\'re putting your fate in my hands? Very well… but don\'t expect me to go easy on you.",
-        "So you\'ve chosen me to judge your fortunes? Hmph. I hope you\'re prepared for the outcome.",
+        "Oh? You're putting your fate in my hands? Very well… but don't expect me to go easy on you.",
+        "So you've chosen me to judge your fortunes? Hmph. I hope you're prepared for the outcome.",
         "You dare entrust your luck to me? Fine. Just remember—you asked for this, not me.",
     ],
     nefer: [
         "An invitation to join you? Intriguing… You must be quite confident to summon my attention like this.",
         "You call upon me for guidance? How curious… I wonder what you hope to find in the answers I give.",
-        "So, you seek a glimpse of what lies ahead… Very well. Let\'s see if your curiosity is rewarded."
+        "So, you seek a glimpse of what lies ahead… Very well. Let's see if your curiosity is rewarded."
     ],
     furina: [
         "Wuhahaha! You dare summon one as exalted as I? Very well—I shall grace you with my presence.",
-        "Ah, you wish to tempt fate with me? How bold. Come, take my hand… let\'s see where this leads.",
-        "To seek judgment from the Hydro Archon herself? Hehe… I do hope you\'re entertaining."
+        "Ah, you wish to tempt fate with me? How bold. Come, take my hand… let's see where this leads.",
+        "To seek judgment from the Hydro Archon herself? Hehe… I do hope you're entertaining."
     ],
     clorinde: [
-        "You\'re asking me to weigh your chances? Very well. Just know—I don\'t deal in false hope.",
-        "So you\'ve chosen me to assess your odds. Stay composed… the result will speak for itself.",
-        "You want my judgment? Fine. But understand—once you see the outcome, there\'s no turning back."
+        "You're asking me to weigh your chances? Very well. Just know—I don't deal in false hope.",
+        "So you've chosen me to assess your odds. Stay composed… the result will speak for itself.",
+        "You want my judgment? Fine. But understand—once you see the outcome, there's no turning back."
     ],
 };
 
@@ -206,16 +206,16 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Great Misfortune': ["Oh dear... a severe negative outcome. A short pause might help."],
     },
     skirk: {
-        'Great Fortune': ["…You\'ve caught the current. Don\'t lose your grip now."],
+        'Great Fortune': ["…You've caught the current. Don't lose your grip now."],
         'Good Fortune': ["The path opens. Whether you can follow it… remains to be seen."],
-        'Modest Fortune': ["…Unclear. Then you\'ll have to rely on yourself."],
-        'Rising Fortune': ["It\'s shifting in your favor. Slowly… but enough."],
-        Misfortune: ["You\'re out of step with it. Adjust, or be left behind."],
+        'Modest Fortune': ["…Unclear. Then you'll have to rely on yourself."],
+        'Rising Fortune': ["It's shifting in your favor. Slowly… but enough."],
+        Misfortune: ["You're out of step with it. Adjust, or be left behind."],
         'Great Misfortune': ["…Even now, you persist. Hm. Interesting."],
     },
     escoffier: {
-        'Great Fortune': ["Exquisite timing. I couldn\'t have arranged it better myself."],
-        'Good Fortune': ["A pleasant result. You\'ve chosen well."],
+        'Great Fortune': ["Exquisite timing. I couldn't have arranged it better myself."],
+        'Good Fortune': ["A pleasant result. You've chosen well."],
         'Modest Fortune': ["Acceptable… though I suspect you were hoping for more."],
         'Rising Fortune': ["It improves. Patience often enhances the outcome."],
         Misfortune: ["Unfortunate… though not beyond remedy."],
@@ -230,20 +230,20 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Great Misfortune': ["You may want to wait. Even strength has its moments."],
     },
     charlotte: {
-        'Great Fortune': ["Wow, that\'s headline-worthy luck! I\'d call that a success!"],
-        'Good Fortune': ["Not bad at all! That\'s a story I\'d follow!"],
+        'Great Fortune': ["Wow, that's headline-worthy luck! I'd call that a success!"],
+        'Good Fortune': ["Not bad at all! That's a story I'd follow!"],
         'Modest Fortune': ["Hmm… could go either way. Still worth watching!"],
-        'Rising Fortune': ["Ooh, it\'s getting better! I\'d stick with this!"],
+        'Rising Fortune': ["Ooh, it's getting better! I'd stick with this!"],
         Misfortune: ["Ah… not the best outcome. But hey, every story has setbacks!"],
-        'Great Misfortune': ["Yikes… that\'s rough. Even I wouldn\'t spin that as good news."],
+        'Great Misfortune': ["Yikes… that's rough. Even I wouldn't spin that as good news."],
     },
     dahlia: {
-        'Great Fortune': ["Oh… that\'s wonderful. I\'m really glad."],
+        'Great Fortune': ["Oh… that's wonderful. I'm really glad."],
         'Good Fortune': ["That looks promising… I think it will be okay."],
-        'Modest Fortune': ["…It\'s uncertain. But that doesn\'t mean it\'s bad."],
-        'Rising Fortune': ["It\'s getting better. Just a little more."],
-        Misfortune: ["…I\'m sorry. I wish it had been kinder."],
-        'Great Misfortune': ["…That\'s difficult. But I don\'t think it will stay that way forever."],
+        'Modest Fortune': ["…It's uncertain. But that doesn't mean it's bad."],
+        'Rising Fortune': ["It's getting better. Just a little more."],
+        Misfortune: ["…I'm sorry. I wish it had been kinder."],
+        'Great Misfortune': ["…That's difficult. But I don't think it will stay that way forever."],
     },
     il_dottore: {
         'Great Fortune': ["How unexpected. It seems the odds are… momentarily in your favor. Do try not to waste such a rare anomaly."],
@@ -251,22 +251,22 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Modest Fortune': ["Mediocre. But mediocrity has its uses… if handled correctly."],
         'Rising Fortune': ["Interesting. The trajectory is improving. Whether you can keep up… remains to be seen."],
         Misfortune: ["…Unfortunate. Though failure often provides more valuable data than success."],
-        'Great Misfortune': ["…Ah. Now this is where things become truly interesting. Go on. I\'m curious to see how you handle the consequences."],
+        'Great Misfortune': ["…Ah. Now this is where things become truly interesting. Go on. I'm curious to see how you handle the consequences."],
     },
     Eula: { 
-        'Great Fortune': ["Oh? A result like this… impressive. Don\'t misunderstand—I\'m not praising you. I\'m simply acknowledging it."], 
-        'Good Fortune': ["Hmph. A decent outcome. You\'ve managed well enough… though I wouldn\'t get too comfortable if I were you."], 
-        'Modest Fortune': ["…This is acceptable, I suppose. Not remarkable, but not entirely disappointing either. I\'ll allow it."], 
-        'Rising Fortune': ["I can see some improvement. Keep this up, and perhaps I\'ll have to reconsider my expectations of you."], 
-        Misfortune: ["…Is this truly the best you could do? Unacceptable. Don\'t think I\'ll simply overlook a result like this."], 
-        'Great Misfortune': ["…You\'ve really outdone yourself this time. Don\'t worry—I won\'t forget this. I\'ll have my vengeance."], 
+        'Great Fortune': ["Oh? A result like this… impressive. Don't misunderstand—I'm not praising you. I'm simply acknowledging it."], 
+        'Good Fortune': ["Hmph. A decent outcome. You've managed well enough… though I wouldn't get too comfortable if I were you."], 
+        'Modest Fortune': ["…This is acceptable, I suppose. Not remarkable, but not entirely disappointing either. I'll allow it."], 
+        'Rising Fortune': ["I can see some improvement. Keep this up, and perhaps I'll have to reconsider my expectations of you."], 
+        Misfortune: ["…Is this truly the best you could do? Unacceptable. Don't think I'll simply overlook a result like this."], 
+        'Great Misfortune': ["…You've really outdone yourself this time. Don't worry—I won't forget this. I'll have my vengeance."], 
     },
     Nefer: {
-        'Great Fortune': ["…How delightful. Fortune clearly favors you today. I suppose even I can\'t deny such a promising outcome."],
-        'Good Fortune': ["A pleasant result. It seems your timing is… acceptable. I\'d say you may proceed without regret."],
+        'Great Fortune': ["…How delightful. Fortune clearly favors you today. I suppose even I can't deny such a promising outcome."],
+        'Good Fortune': ["A pleasant result. It seems your timing is… acceptable. I'd say you may proceed without regret."],
         'Modest Fortune': ["Not extraordinary, but not without merit. If you act wisely, this could still turn in your favor."],
-        'Rising Fortune': ["Ah… I can feel it shifting. Your luck hasn\'t settled yet—but it may bloom into something worthwhile."],
-        Misfortune: ["…Unfortunate. The currents don\'t align in your favor today. You may wish to reconsider your approach."],
+        'Rising Fortune': ["Ah… I can feel it shifting. Your luck hasn't settled yet—but it may bloom into something worthwhile."],
+        Misfortune: ["…Unfortunate. The currents don't align in your favor today. You may wish to reconsider your approach."],
         'Great Misfortune': ["Oh dear… even I find this outcome difficult to defend. Perhaps restraint would serve you better—for now."],
     },
     Furina: {
@@ -281,8 +281,8 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Great Fortune': ["A decisive result. Everything aligns in your favor. If you act now, I see no reason for hesitation." ],
         'Good Fortune': ["Your chances are solid. Not flawless, but strong enough. Proceed if you trust your own resolve."  ],
         'Modest Fortune': ["…Balanced. Not an advantage, but not a loss either. What happens next depends entirely on you." ],
-        'Rising Fortune': ["I can see momentum building. It’s not guaranteed—but with the right timing, this could turn."   ],
-        Misfortune: ["The odds are against you. I’d advise restraint… unless you’re willing to accept the consequences."    ],
-        'Great Misfortune': ["…A poor outcome. If you proceed regardless, do so knowingly. I won’t stop you—but I won’t advise it." ],
+        'Rising Fortune': ["I can see momentum building. It's not guaranteed—but with the right timing, this could turn."   ],
+        Misfortune: ["The odds are against you. I'd advise restraint… unless you're willing to accept the consequences."    ],
+        'Great Misfortune': ["…A poor outcome. If you proceed regardless, do so knowingly. I won't stop you—but I won't advise it." ],
     },
 };

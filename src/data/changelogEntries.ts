@@ -47,6 +47,7 @@ export const changelogEntries: ChangelogEntry[] = [
     date: '2026-03-27',
     changes: [
         'Added character-specific dialogue for Alhaitham, Raiden Shogun, Kaedehara Kazuha, Zhongli, Wanderer, Xiao, Neuvilette, Hu Tao, Tartaglia, Lyney, Lyette, Freminet and Columbina.',
+        'Temporarily removed characters without character-specific dialogue to avoid confusion, but they will be added back in future updates once their dialogue is implemented.',
       ],
     },
 ];

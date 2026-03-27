@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Character, CharacterElement, CharacterQuality } from '../types';
 import { characters as defaultCharacters } from '../data/characters';
+import { characterDialogues, fortuneFollowUpDialogues } from '../data/characterDialogues';
 import { getActiveFeaturedPatchInfo } from '../data/featuredCharacterIds';
 import { resolveAssetUrl } from '../utils/assets';
 import './CharacterSelector.scss';
@@ -33,13 +34,17 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
     [characters],
   );
 
+  const hasCustomDialogue = (character: Character) =>
+    !!characterDialogues[character.id] && !!fortuneFollowUpDialogues[character.id];
+
   const featuredCharacters = useMemo(
-    () => characters.filter((character) => featuredSet.has(character.id)),
+    () => characters.filter((character) => featuredSet.has(character.id) && hasCustomDialogue(character)),
     [characters, featuredSet],
   );
 
   const filteredCharacters = useMemo(
     () => characters
+      .filter(hasCustomDialogue)
       .filter((character) => (qualityFilter === 'all' ? true : character.quality === qualityFilter))
       .filter((character) => (regionFilter === 'all' ? true : character.region === regionFilter))
       .filter((character) => (elementFilter === 'all' ? true : character.element === elementFilter))
@@ -103,55 +108,53 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
           />
         </label>
 
-        <div className="filter-group-quality-region">
-          <div className="filter-group">
-            <span className="filter-group-label">Quality</span>
-            <div className="filter-bubbles">
-              <button
-                type="button"
-                className={`filter-bubble${qualityFilter === 'all' ? ' active' : ''}`}
-                onClick={() => setQualityFilter('all')}
-              >
-                All
-              </button>
-              <button
-                type="button"
-                className={`filter-bubble quality-5${qualityFilter === 5 ? ' active' : ''}`}
-                onClick={() => setQualityFilter(qualityFilter === 5 ? 'all' : 5)}
-              >
-                5 ★
-              </button>
-              <button
-                type="button"
-                className={`filter-bubble quality-4${qualityFilter === 4 ? ' active' : ''}`}
-                onClick={() => setQualityFilter(qualityFilter === 4 ? 'all' : 4)}
-              >
-                4 ★
-              </button>
-            </div>
+        <div className="filter-group">
+          <span className="filter-group-label">Quality</span>
+          <div className="filter-bubbles">
+            <button
+              type="button"
+              className={`filter-bubble${qualityFilter === 'all' ? ' active' : ''}`}
+              onClick={() => setQualityFilter('all')}
+            >
+              All
+            </button>
+            <button
+              type="button"
+              className={`filter-bubble quality-5${qualityFilter === 5 ? ' active' : ''}`}
+              onClick={() => setQualityFilter(qualityFilter === 5 ? 'all' : 5)}
+            >
+              5 ★
+            </button>
+            <button
+              type="button"
+              className={`filter-bubble quality-4${qualityFilter === 4 ? ' active' : ''}`}
+              onClick={() => setQualityFilter(qualityFilter === 4 ? 'all' : 4)}
+            >
+              4 ★
+            </button>
           </div>
+        </div>
 
-          <div className="filter-group">
-            <span className="filter-group-label">Region</span>
-            <div className="filter-bubbles">
+        <div className="filter-group">
+          <span className="filter-group-label">Region</span>
+          <div className="filter-bubbles">
+            <button
+              type="button"
+              className={`filter-bubble${regionFilter === 'all' ? ' active' : ''}`}
+              onClick={() => setRegionFilter('all')}
+            >
+              All
+            </button>
+            {regionOptions.map((region) => (
               <button
+                key={region}
                 type="button"
-                className={`filter-bubble${regionFilter === 'all' ? ' active' : ''}`}
-                onClick={() => setRegionFilter('all')}
+                className={`filter-bubble${regionFilter === region ? ' active' : ''}`}
+                onClick={() => setRegionFilter(regionFilter === region ? 'all' : region)}
               >
-                All
+                {region}
               </button>
-              {regionOptions.map((region) => (
-                <button
-                  key={region}
-                  type="button"
-                  className={`filter-bubble${regionFilter === region ? ' active' : ''}`}
-                  onClick={() => setRegionFilter(regionFilter === region ? 'all' : region)}
-                >
-                  {region}
-                </button>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
 

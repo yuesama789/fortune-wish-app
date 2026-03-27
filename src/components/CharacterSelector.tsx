@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Character, CharacterElement, CharacterQuality } from '../types';
 import { characters as defaultCharacters } from '../data/characters';
 import { characterDialogues, fortuneFollowUpDialogues } from '../data/characterDialogues';
+import { nonPlayableStories } from '../data/nonPlayableStories';
 import { getActiveFeaturedPatchInfo } from '../data/featuredCharacterIds';
 import { resolveAssetUrl } from '../utils/assets';
 import './CharacterSelector.scss';
@@ -34,17 +35,21 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
     [characters],
   );
 
-  const hasCustomDialogue = (character: Character) =>
-    !!characterDialogues[character.id] && !!fortuneFollowUpDialogues[character.id];
+  const hasCustomContent = (character: Character) => {
+    const hasPlayableDialogue = !!characterDialogues[character.id] && !!fortuneFollowUpDialogues[character.id];
+    const hasNonPlayableStory = !!nonPlayableStories[character.id];
+
+    return hasPlayableDialogue || hasNonPlayableStory;
+  };
 
   const featuredCharacters = useMemo(
-    () => characters.filter((character) => featuredSet.has(character.id) && hasCustomDialogue(character)),
+    () => characters.filter((character) => featuredSet.has(character.id) && hasCustomContent(character)),
     [characters, featuredSet],
   );
 
   const filteredCharacters = useMemo(
     () => characters
-      .filter(hasCustomDialogue)
+      .filter(hasCustomContent)
       .filter((character) => (qualityFilter === 'all' ? true : character.quality === qualityFilter))
       .filter((character) => (regionFilter === 'all' ? true : character.region === regionFilter))
       .filter((character) => (elementFilter === 'all' ? true : character.element === elementFilter))

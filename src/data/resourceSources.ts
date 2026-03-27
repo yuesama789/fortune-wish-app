@@ -25,6 +25,11 @@ export const resourceSources: ResourceSourceSection[] = [
         url: 'https://genshinimpactresources.tumblr.com/',
       },
       {
+        asset: 'Character in-dialogue sprites',
+        sourceName: 'Hoyoverse transparent renders (tumblr)',
+        url: 'https://hoyo-transparents.tumblr.com/',
+      },
+      {
         asset: 'Dialogue backgrounds',
         sourceName: 'Genshin Resource (tumblr)',
         url: 'https://genshinresource.tumblr.com/',

@@ -5,7 +5,10 @@ import FortuneSlipAnimation from './components/FortuneSlipAnimation';
 import AttributionModal from './components/AttributionModal';
 import LoadingScreen from './components/LoadingScreen';
 import { Character, Fortune, NonPlayableStory, SelectedCharacter } from './types';
+import { characters } from './data/characters';
 import { fortunes } from './data/fortunes';
+import { characterDialogues, fortuneFollowUpDialogues } from './data/characterDialogues';
+import { nonPlayableStories } from './data/nonPlayableStories';
 import { normalizeAssetName, resolveAssetUrl } from './utils/assets';
 import {
     resolveCharacterDialogue,
@@ -16,6 +19,26 @@ import './App.scss';
 
 type AppStep = 'selector' | 'dialogue' | 'story' | 'fortune';
 type NonPlayableStoryStage = 'intro' | 'followup' | null;
+
+const getCharactersUsingFallbackContent = () => {
+    const initialDialogueFallback = characters
+        .filter((character) => character.playable && (!characterDialogues[character.id] || characterDialogues[character.id].length === 0))
+        .map((character) => character.name);
+
+    const fortuneFollowUpFallback = characters
+        .filter((character) => !fortuneFollowUpDialogues[character.id])
+        .map((character) => character.name);
+
+    const nonPlayableStoryFallback = characters
+        .filter((character) => !character.playable && !nonPlayableStories[character.id])
+        .map((character) => character.name);
+
+    return {
+        initialDialogueFallback,
+        fortuneFollowUpFallback,
+        nonPlayableStoryFallback,
+    };
+};
 
 const App: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +63,14 @@ const App: React.FC = () => {
         return () => {
             body.style.removeProperty('--app-background-image');
         };
+    }, []);
+
+    useEffect(() => {
+        if (!import.meta.env.DEV) {
+            return;
+        }
+
+        console.log('Characters using fallback content:', getCharactersUsingFallbackContent());
     }, []);
 
     const getRandomFortune = (): Fortune => {

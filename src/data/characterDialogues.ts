@@ -184,6 +184,71 @@ export const characterDialogues: CharacterDialogueMap = {
         "Careful… once you set your sights on me, there's no easy way out. Still want to play?",
         "Roll the dice, take a spin of the wheel. Luck or skill, it's all on you now."
     ],
+    raiden_shogun: [
+        "You set your sights on me? Then understand this—fleeting desire means nothing. Only resolve endures.",
+        "So… you would pursue eternity itself. Bold. Tell me, is your will strong enough to follow through?",
+        "You approach me without hesitation. Hm. Confidence is admirable… but it must be matched with discipline."
+    ],
+    kaedehara_kazuha: [
+        "The wind carries your intent to me… So, it is I you seek. Tell me, will you follow where it leads?",
+        "You chose me? Then stay close… the wind may guide you, but I would rather watch where you wander.",
+        "Hm… your presence stirs the air around me. If you come closer, I won't turn you away."
+    ],
+    zhongli: [
+        "You chose me… deliberately. Then I assume you understand the value of what you seek—and the cost that follows.",
+        "To set your sights on me is no small matter. Tell me… is this a passing interest, or something more enduring?",
+        "Hm. Your attention lingers on me. If you intend to proceed, I would advise you not to do so half-heartedly."
+    ],
+    wanderer: [
+        "You chose me? …You really do have questionable taste. Or maybe you just enjoy making things difficult.",
+        "Hah. Of all the options, you went with me. Don’t expect me to play nice just because you’re interested.",
+        "So you’re after me? Fine. Just don’t start whining when you realize I’m not as easy as you hoped."
+    ],
+    xiao: [
+        "You chose me… even knowing what I am. You’re either reckless… or far too persistent.",
+        "If you continue to seek me… don’t expect me to turn you away so easily.",
+        "...You’re still here. Hm. Then stay—just don’t expect me to make this easy for you."
+    ],
+    neuvillette: [
+        "You have chosen me… I see. Then this is not a passing curiosity, but a decision you have considered carefully.",
+        "To seek me out carries weight. Tell me… do you understand what it is you are reaching toward?",
+        "Hm… your gaze lingers. If you intend to approach, do so with sincerity. I have little patience for anything less."
+    ],
+    hu_tao: [
+        "Hehe~ you picked me? Are you feeling lucky… or just curious what happens if you get too close?",
+        "Oho~ aiming for me? Careful now, I come with a discount… but only if you stick around long enough~",
+        "You chose me? Hehe, bold move! Don’t worry, I’ll make this fun—whether it goes well… or not~"
+    ],
+    tartaglia: [
+        "Oh? You picked me? Heh, you’ve got guts—I like that. Let’s see how far you can keep up.",
+        "So you’re aiming for me? Careful now, this won’t be a safe game… but that’s what makes it fun, right?",
+        "Hah! Out of everyone, you chose me? Guess you’re not afraid of a little challenge. Good."
+    ],
+    alhaitham: [
+        "You chose me? Hm… not the most efficient decision. And yet, I can’t say I mind having your attention.",
+        "Out of all available options, you settled on me. Was that deliberate… or did something pull you in?",
+        "If your intention is to reach me, be precise. I don’t respond to guesswork… but I do notice consistency."
+    ],
+    columbina: [
+        "Ah… you chose me. I wondered how long it would take before your gaze found its way here…",
+        "You’re looking at me so carefully… did you think I wouldn’t notice? I’ve been watching you too…",
+        "Hm… such a quiet wish, and yet it reached me. Tell me… do you always long this openly?"
+    ],
+    lyney: [
+        "Oh? You chose me? Then allow me to give you a proper show—after all, I never disappoint my favorite audience.",
+        "My, aiming for me already? Careful now, once the curtain rises, there’s no looking away…",
+        "Hehe, you’ve got good taste. If you’re hoping to win me over, I might just make it worth your while."
+    ],
+    lynette: [
+        "You chose me. …I see. If you're expecting a reaction, you might be disappointed.",
+        "Hm. You're focusing on me. That's fine… just don't expect me to make a big deal out of it.",
+        "If you're planning to get closer, go ahead. I won't stop you… as long as you don't waste my time."
+    ],
+    freminet: [
+        "Ah… y-you chose me? I'm not really used to that… but I'll try my best, if you really want me here…",
+        "Oh… it's me? I thought you might pick someone else… but… I'm glad you didn't.",
+        "If you're sure about this… I'll stay. Just… don't expect me to be very good at this kind of thing…"
+    ],
 };
 
 export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, string[]>> = {
@@ -466,5 +531,109 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Oh? Now that's interesting… the odds are shifting. Let's see if you know how to take advantage of it."],
         Misfortune: ["Mm… unlucky. But not fatal. If you're smart, you'll learn from it—and try again with better odds."],
         'Great Misfortune': ["…Looks like the table's turned against you. Still, I wouldn't fold just yet—games like this aren't over so easily."]
+    },
+    raiden_shogun: {
+        'Great Fortune': ["Your resolve is clear. The path before you does not waver… Very well. I will acknowledge your ambition."],
+        'Good Fortune': ["You proceed with stability. Not flawless, but sufficient. Continue, and you may yet reach me."],
+        'Modest Fortune': ["Your steps lack certainty. If you intend to stand before me, refine your purpose."],
+        'Rising Fortune': ["I see change within you. Your resolve strengthens… Do not allow it to falter now."],
+        Misfortune: ["Your will is unsettled. Such instability cannot endure. Regain your focus, then return."],
+        'Great Misfortune': ["...This path collapses before it begins. If you still seek me, cast aside doubt and start anew."]
+    },
+    kaedehara_kazuha: {
+        'Great Fortune': ["The wind settles gently between us… as if it wishes to keep you by my side. I find I don't mind that at all."],
+        'Good Fortune': ["A pleasant breeze follows you… warm, steady. If you keep walking this path, you may find me waiting."],
+        'Modest Fortune': ["The wind lingers, uncertain… yet it does not leave. Perhaps it, too, is curious how close you'll come."],
+        'Rising Fortune': ["Ah… the current shifts toward me. If you continue like this, I may not be the only one being drawn in."],
+        Misfortune: ["The wind drifts away for now… but not far. If you listen closely, you may still find your way back to me."],
+        'Great Misfortune': ["...Even when the wind falls silent, I can still feel your presence. Perhaps… we are not so far apart after all."]
+    },
+    zhongli: {
+        'Great Fortune': ["Everything aligns without resistance… how rare. It seems your intentions have been… most well received."],
+        'Good Fortune': ["A favorable arrangement. With consistency, you may find yourself exactly where you intend to be—by my side."],
+        'Modest Fortune': ["Not without fault… yet not without promise. Should you remain persistent, this may still develop… interestingly."],
+        'Rising Fortune': ["I see your efforts taking shape. Slowly, but with purpose… such dedication is not without its appeal."],
+        Misfortune: ["An imbalance has appeared. It would be unwise to ignore it… though I suspect you are capable of correcting it."],
+        'Great Misfortune': ["...This path fails to hold. And yet… if your resolve is genuine, I would not dismiss the possibility of trying again."]
+    },
+    wanderer: {
+        'Great Fortune': ["...Well, look at that. You actually pulled it off. I almost didn’t think you had it in you."],
+        'Good Fortune': ["Not bad. You’re doing better than I expected. Don’t get cocky—you’re not there yet."],
+        'Modest Fortune': ["Tch. Barely passable. If this is your best, you’re going to have a hard time keeping up with me."],
+        'Rising Fortune': ["Hm… you’re improving. Slowly. I suppose that’s something… try not to ruin it now."],
+        Misfortune: ["That was sloppy. If you’re serious about this, you’ll need to do a lot better than that."],
+        'Great Misfortune': ["...Pathetic. And yet, here you are, still trying. I’ll admit… that persistence is almost interesting."]
+    },
+    xiao: {
+        'Great Fortune': ["...You’ve reached me. Even I cannot deny it now. If you insist on staying… I won’t send you away."],
+        'Good Fortune': ["You draw closer… I can feel it. Just don’t stop now. I… would notice."],
+        'Modest Fortune': ["You’re near… but not quite here. If you hesitate now, you may lose what you’ve gained."],
+        'Rising Fortune': ["...You persist. No matter how I pull away, you follow. I don’t… dislike that."],
+        Misfortune: ["You’re drifting too far. If you lose your way… I won’t be able to reach you."],
+        'Great Misfortune': ["...If you turn away now… I won’t stop you. But… I will remember that you came this far."]
+    },
+    neuvillette: {
+        'Great Fortune': ["...The currents are clear, undisturbed. It seems your path leads directly to me… without resistance."],
+        'Good Fortune': ["The flow remains steady. If you continue as you are, you will find yourself exactly where you intend to be."],
+        'Modest Fortune': ["There is some turbulence… yet nothing insurmountable. With care, you may still reach your destination."],
+        'Rising Fortune': ["I sense a shift in the tide. Subtle, but undeniable… you are drawing closer."],
+        Misfortune: ["The waters are unsettled. If you proceed without thought, you risk losing your way entirely."],
+        'Great Misfortune': ["...The current rejects this path. And yet… if your resolve is genuine, even this may be overcome in time."]
+    },
+    hu_tao: {
+        'Great Fortune': ["Waaah~ jackpot! Looks like fate wants us together! Hehe, you’re not getting rid of me that easily now~"],
+        'Good Fortune': ["Not bad, not bad! Things are looking pretty lively~ Stick with me and I’ll make sure it stays interesting!"],
+        'Modest Fortune': ["Hehe~ not amazing, but not tragic either. Guess you’ll have to try a little harder to win me over~"],
+        'Rising Fortune': ["Ooooh~ it’s getting better! I like where this is going… don’t stop now, okay?"],
+        Misfortune: ["Aww~ that didn’t go so well, huh? Don’t look so down! I can still keep you company~"],
+        'Great Misfortune': ["Ehehe… wow, that was rough! But hey, even in the worst cases, I’m great at handling… aftercare~"]
+    },
+    tartaglia: {
+        'Great Fortune': ["Now that’s what I’m talking about! You’ve got skill—and luck to match. I might actually enjoy sticking with you."],
+        'Good Fortune': ["Nice! You’re holding your own pretty well. Keep this up, and you might just win me over."],
+        'Modest Fortune': ["Not bad… but don’t slow down now. I’m not the kind of opponent you can afford to underestimate."],
+        'Rising Fortune': ["Heh, I see it—you’re getting better. This is starting to get interesting. Don’t disappoint me now."],
+        Misfortune: ["Oof, slipped up there. Don’t worry, happens to the best of us. Just don’t make it a habit, yeah?"],
+        'Great Misfortune': ["...That was rough. But hey, if you’re still standing, then the fight’s not over. Show me what you’ve got next."]
+    },
+    alhaitham: {
+        'Great Fortune': ["Optimal outcome. Your approach was calculated, effective… and unexpectedly persistent. I suppose I’ll indulge this result."],
+        'Good Fortune': ["Above average. You’re closing the gap—slowly, but with intent. I’ve started to take a particular interest in your progress."],
+        'Modest Fortune': ["Acceptable. Not efficient, but not without merit. You’re still within range… which is more than most can manage."],
+        'Rising Fortune': ["I see adjustment in your method. You’re learning… adapting. That level of focus is… more compelling than I expected."],
+        Misfortune: ["A flawed approach. Still, you haven’t withdrawn. Persistence without efficiency is inefficient… but not entirely without value."],
+        'Great Misfortune': ["...Inefficient across all variables. And yet, you remain. Hm. I’ll admit—that alone makes this worth continuing to observe."]
+    },
+    columbina: {
+        'Great Fortune': ["Oh… how lovely. Everything bends so gently toward you. It seems even fate wishes to place you in my hands…"],
+        'Good Fortune': ["Such a soft current… it carries you closer without resistance. I can feel you nearing already…"],
+        'Modest Fortune': ["Hm… not quite perfect, but not broken either. You’re still within reach… if you don’t lose your way…"],
+        'Rising Fortune': ["Ah… it’s changing. Slowly, sweetly… you’re being drawn in. I wonder how close you’ll dare to come…"],
+        Misfortune: ["Oh… something slipped. How unfortunate… but you’re still here, aren’t you? That’s all that matters for now…"],
+        'Great Misfortune': ["...How fragile. It falls apart so easily. And yet… you’re still reaching for me. I find that… endearing."]
+    },
+    lyney: {
+        'Great Fortune': ["And voilà~ a perfect outcome! Looks like the spotlight’s on us now. Tell me… are you ready for an encore?"],
+        'Good Fortune': ["A lovely result! Not quite my grand finale, but enough to keep things interesting between us, don’t you think?"],
+        'Modest Fortune': ["Hm~ a modest trick. Not my best performance… but I do enjoy an audience that keeps trying."],
+        'Rising Fortune': ["Oh? Now that’s intriguing. The act is getting better… keep watching closely, you might catch something special."],
+        Misfortune: ["Ouch~ a little mishap. Don’t worry, every good magician knows how to recover from a slip like that."],
+        'Great Misfortune': ["Ah… a failed trick. How unfortunate. But don’t leave just yet—the next act might be far more… captivating."]
+    },
+    lynette: {
+        'Great Fortune': ["...That worked out well. If this was your intention, then… you've done enough to keep my attention."],
+        'Good Fortune': ["Not bad. You're making steady progress. I don't mind seeing where this leads."],
+        'Modest Fortune': ["It's average. You haven't lost ground… but you haven't impressed me either."],
+        'Rising Fortune': ["Hm… you're improving. Slowly, but noticeably. Keep going if that's what you want."],
+        Misfortune: ["That didn't go well. Still, you're not completely off track… yet."],
+        'Great Misfortune': ["...That was a mistake. If you're serious about this, you should reconsider how you approach me."]
+    },
+    freminet: {
+        'Great Fortune': ["Oh… everything worked out… I-I'm glad. If you're okay with it… I'd like to stay with you a little longer…"],
+        'Good Fortune': ["It went well… better than I expected. Maybe… we can keep going together, if you want."],
+        'Modest Fortune': ["It's… not perfect, but it's okay. I think… we can still make this work."],
+        'Rising Fortune': ["I think it's getting better… slowly. If we don't rush, maybe… it'll turn out alright."],
+        Misfortune: ["Ah… I'm sorry… that didn't go well. But I'm still here, so… we can try again, right?"],
+        'Great Misfortune': ["...I messed up… didn't I? But… if you don't give up, I won't either. I'll stay."]
     },
 };

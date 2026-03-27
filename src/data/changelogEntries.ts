@@ -42,4 +42,11 @@ export const changelogEntries: ChangelogEntry[] = [
         'Added character-specific dialogue for Rosaria, Layla, Kuki Shinobu, Iansan, Mika, Mavuika and Yelan.',
      ],
   },
+  {
+    version: 'v0.5.3',
+    date: '2026-03-27',
+    changes: [
+        'Added character-specific dialogue for Alhaitham, Raiden Shogun, Kaedehara Kazuha, Zhongli, Wanderer, Xiao, Neuvilette, Hu Tao, Tartaglia, Lyney, Lyette, Freminet and Columbina.',
+      ],
+    },
 ];

@@ -120,7 +120,7 @@ export const characterDialogues: CharacterDialogueMap = {
         "Wait, you're hoping for me? That's amazing! I hope you get something extra tasty!",
     ],
     razor: [
-        "You smell... *sniff* nice! We can hunt! Together!",
+        "You smell… *sniff* nice! We can hunt! Together!",
         "You watch stars? I watch the moon. Maybe we can watch together?",
         "You like me? I like you too! Maybe stars will like you too!",
     ],
@@ -148,7 +148,42 @@ export const characterDialogues: CharacterDialogueMap = {
         "So, thou has chosen the Prinzessin der Verurteilung? Very well — thy fate shall be unveiled before thee!",
         "Oh? Thou seekest me? Then know this — our meeting is no mere chance, but a thread woven by destiny!",
         "Thou darest call upon mine name? Hehe… let the stars bear witness to the choice thou has made!"
-    ]
+    ],
+    rosaria: [
+        "Bravery is knowing it will hurt and doing it anyway. Stupidity is the same. Let's see where you fall.",
+        "You came all this way just to chase me? Fine. Just don't expect me to make it easy on you.",
+        "If you're serious about this, then stop hesitating. I don't have time for second thoughts."
+    ],
+    layla: [
+        "Huh—me? You… chose me? I mean, I'm not complaining, just… wasn't expecting that much attention…",
+        "I-I was just resting my eyes…! But if you're here for me, then… I guess I should try to stay awake…",
+        "Huh? Why are you looking at me like that? Oh no, did I doze off at my desk again?"
+    ],
+    kuki_shinobu: [
+        "I manage a crime syndicate, maintain good relations with law enforcement, and I'm qualified in more fields than you have fingers. I hope you'll be bringing something to the table.",
+        "If you're aiming for me, at least be efficient about it. I don't have time to babysit bad decisions.",
+        "You've got your eye on me? …Huh. I usually handle other people's problems, not become one. This'll be new."
+    ],
+    iansan: [
+        "You picked me? Nice. Just don't expect a free win—I only stick with people who actually try.",
+        "If you're going for me, we're doing this properly. No shortcuts, no excuses. You in?",
+        "Just 'cause I deadlift, don't think I enjoy carrying dead weight. If you want this, you gotta work for it."
+    ],
+    mika: [
+        "Ah—y-you chose me? I'll do my best…! I mean—if you really want me on your team, I won't mess this up…",
+        "U-Um… if this is about choosing me… I've prepared notes! I just—uh—hope they're useful to you…",
+        "Sorry… I get kind of nervous when everyone's looking at me. But I won't let you down. How favorable are the conditions looking?"
+    ],
+    mavuika: [
+        "So—you've got your eyes on me? Good. I was starting to wonder if you had any fire in you at all.",
+        "They say fortune favors the bold. So tell me… what are you waiting for? If you want me, then go get me.",
+        "Hah. You chose me? Then don't hold back. I don't follow half-hearted attempts."
+    ],
+    yelan: [
+        "So, you're betting on me? Bold choice. Just make sure you're ready to handle what comes with it.",
+        "Careful… once you set your sights on me, there's no easy way out. Still want to play?",
+        "Roll the dice, take a spin of the wheel. Luck or skill, it's all on you now."
+    ],
 };
 
 export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, string[]>> = {
@@ -188,17 +223,17 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Great Fortune': ["Ah, the stars finally align for you. A rare current, and very promising."],
         'Good Fortune': ["A pleasant convergence. Not perfect destiny, but certainly supportive."],
         'Modest Fortune': ["A muted reading. Fate is watching, but not yet committing."],
-        'Rising Fortune': ["Interesting... your chart is shifting upward. Potential is gathering."],
+        'Rising Fortune': ["Interesting… your chart is shifting upward. Potential is gathering."],
         Misfortune: ["A troubled pattern. The heavens are withholding their favor for now."],
-        'Great Misfortune': ["Yikes... that's a harsh celestial refusal. Even I would pause."],
+        'Great Misfortune': ["Yikes… that's a harsh celestial refusal. Even I would pause."],
     },
     qiqi: {
-        'Great Fortune': ["Oh. That's very lucky. I think that's... good."],
+        'Great Fortune': ["Oh. That's very lucky. I think that's… good."],
         'Good Fortune': ["That looked nice. Maybe the next one will be nice too."],
-        'Modest Fortune': ["It's okay. Not special... but okay."],
+        'Modest Fortune': ["It's okay. Not special… but okay."],
         'Rising Fortune': ["I think it's getting better. Slowly."],
         Misfortune: ["That wasn't good. Sorry."],
-        'Great Misfortune': ["Oh... that's really bad. Maybe rest first."],
+        'Great Misfortune': ["Oh… that's really bad. Maybe rest first."],
     },
     tighnari: {
         'Great Fortune': ["Strong signal. Your timing and instincts lined up well this round."],
@@ -209,10 +244,10 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Great Misfortune': ["That's a significant outlier in the wrong direction. Re-center before continuing."],
     },
     yumemizuki: {
-        'Great Fortune': ["Mm... what a bright dream. The path ahead is glowing for you."],
+        'Great Fortune': ["Mm… what a bright dream. The path ahead is glowing for you."],
         'Good Fortune': ["A gentle blessing. Keep following that feeling in your chest."],
         'Modest Fortune': ["A quiet ripple. Even soft dreams can guide the next step."],
-        'Rising Fortune': ["There it is... the dream is waking. Keep going."],
+        'Rising Fortune': ["There it is… the dream is waking. Keep going."],
         Misfortune: ["A heavy shadow crossed the dream. Be kind to yourself."],
         'Great Misfortune': ["That was a cold night vision. Wait for warmer winds before rushing on."],
     },
@@ -230,15 +265,15 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Modest Fortune': ["Not amazing, but not a disaster either. That's still a win for me!"],
         'Rising Fortune': ["I can feel it! Things are turning around!"],
         Misfortune: ["Aw man, that one hurt. But we can bounce back!"],
-        'Great Misfortune': ["Yikes... that's rough. Let's catch our breath before round two."],
+        'Great Misfortune': ["Yikes… that's rough. Let's catch our breath before round two."],
     },
     sucrose: {
-        'Great Fortune': ["Oh! That's... an excellent result. I should log this right away."],
+        'Great Fortune': ["Oh! That's… an excellent result. I should log this right away."],
         'Good Fortune': ["This is encouraging. The probability trend appears favorable."],
         'Modest Fortune': ["A moderate output. Still useful for continued observation."],
-        'Rising Fortune': ["Interesting... values are climbing. I-I think this is a good sign."],
+        'Rising Fortune': ["Interesting… values are climbing. I-I think this is a good sign."],
         Misfortune: ["That was unfortunate. Maybe we should proceed more carefully."],
-        'Great Misfortune': ["Oh dear... a severe negative outcome. A short pause might help."],
+        'Great Misfortune': ["Oh dear… a severe negative outcome. A short pause might help."],
     },
     skirk: {
         'Great Fortune': ["…You've caught the current. Don't lose your grip now."],
@@ -326,7 +361,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Modest Fortune': ["Not bad! I hope the next one is even better!"],
         'Rising Fortune': ["Ooh, it's getting better! I can feel it!"],
         Misfortune: ["Aw, that's not so good. But don't worry! You can try again!"],
-        'Great Misfortune': ["Yikes... that's really bad. Maybe take a break and come back hungry!"],
+        'Great Misfortune': ["Yikes… that's really bad. Maybe take a break and come back hungry!"],
     },
     razor: {
         'Great Fortune': ["Wow, that is great! You must hunt when you are lucky! I share meat with you."],
@@ -334,7 +369,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Modest Fortune': ["Not bad! I'll watch your back! We can keep trying together!"],
         'Rising Fortune': ["It's getting better! We can keep trying together!"],
         Misfortune: ["Oh no, that's not good. But we can try again together!"],
-        'Great Misfortune': ["Hmm... that's really bad. Maybe we should rest and try again later!"],
+        'Great Misfortune': ["Hmm… that's really bad. Maybe we should rest and try again later!"],
     },
     noelle: {
         'Great Fortune': ["Ah… this is wonderful! If you truly want me… then I'll stay by your side and do everything I can!"],
@@ -375,5 +410,61 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Behold! The tides of fate shift in thy favor — continue forth, and seize what is soon to be thine!"],
         Misfortune: ["Alas… the stars waver, and shadows gather. Yet fear not — fate may still bend to thy will!"],
         'Great Misfortune': ["Woe! A dire omen has been cast! Yet even now, thou standest defiant… how delightfully tragic!"],
+    },
+    rosaria: {
+        'Great Fortune': ["If you're sure about this, then let's get it done. I have three Fatui agents and a hangover waiting."],
+        'Good Fortune': ["Looks like things might go your way. Don't overthink it — just get it done before luck changes its mind."],
+        'Modest Fortune': ["I hope you know what you're doing. This could go either way… and I won't be there to clean it up."],
+        'Rising Fortune': ["Not great, not terrible. If you're patient, maybe it'll turn around. Or not. Your call."],
+        Misfortune: ["I hope you know what you're doing. This isn't looking good — but I doubt that'll stop you anyway."],
+        'Great Misfortune': ["That's too bad. All you can do now is pick yourself up and keep going. The alternative is worse."],
+    },
+    layla: {
+        'Great Fortune': ["Oh… oh! This alignment is incredibly precise… It's like the stars are guiding you straight to me…"],
+        'Good Fortune': ["Y-you asked the stars and they answered? Just like that?? All my charts and… Would you mind h-helping with my thesis?"],
+        'Modest Fortune': ["Hm… not perfect, but not bad either. Sometimes when I get stuck, I try it again with more coffee."],
+        'Rising Fortune': ["Wait… this is changing… slowly, but surely. If you keep going like this, the outcome might surprise both of us."],
+        Misfortune: ["Ah… this pattern is a bit unstable. It doesn't mean you'll fail, just… maybe don't push yourself too hard today."],
+        'Great Misfortune': ["O-oh… this alignment is… really harsh. B-but that doesn't mean it's over! Even the stars can shift… eventually…"]
+    },
+    kuki_shinobu: {
+        'Great Fortune': [ "Nice job, you pulled it off. Ok, if my boss sees us and gets jealous, you might need to fight him a bit. Just, you know - go for his head, he'll learn eventually." ],
+        'Good Fortune': [ "Not bad. You're making steady progress toward me. Keep it up, and I won't have to step in myself." ],
+        'Modest Fortune': [ "Average results. You're getting closer, just… slower than I'd recommend. If you need a hand, let me know, I'll help you get certified." ],
+        'Rising Fortune': [ "I see improvement. Took you long enough. Stay consistent, and you might actually reach me." ],
+        Misfortune: [ "That's a setback. Nothing critical, but you'll need to adjust if you still plan on getting to me." ],
+        'Great Misfortune': [ "…You really made this difficult for yourself. If you still want me, start thinking more carefully next time." ]
+    },
+    iansan: {
+        'Great Fortune': ["Yes! That's what I'm talking about! Back of the net! Home run, gold medal. What record are we gonna smash next?"],
+        'Good Fortune': ["Solid result! You're getting stronger, I can see it. Keep pushing like this and you'll hit your goal."],
+        'Modest Fortune': ["Pace yourself. You can do this. You've got the basics down, just need more consistency. Stick with it—you're getting there."],
+        'Rising Fortune': ["Hey, that's improvement! Bit by bit, you're building something. Don't stop now, okay?"],
+        Misfortune: ["Alright, rough round. Happens to everyone. Shake it off—we'll adjust and try again."],
+        'Great Misfortune': ["Ok, these things happen, don't sweat it. Next time, give me a few weeks' notice, I'll get a meal plan and training regimen in place for you."]
+    },
+    mika: {
+        'Great Fortune': ["You did it! Thank you for trusting me, I'm excited to be included in your expedition. When do we launch?"],
+        'Good Fortune': ["These conditions are really favorable! If we stay on track, I think we'll do great together…"],
+        'Modest Fortune': ["Just keep putting one foot in front of the other. If we're careful, we can definitely make this succeed…"],
+        'Rising Fortune': ["O-oh! It's improving… slowly, but surely! If we keep going like this, we might actually pull it off…"],
+        Misfortune: ["Ah… this might be a bit tricky… b-but don't worry! I'll help however I can, okay?"],
+        'Great Misfortune': ["U-Um… I think we might be lost? B-but it's okay! I'll find us a better route…!"]
+    },
+    mavuika: {
+        'Great Fortune': [  "Now that's what I'm talking about! Let's crack open a keg or two and celebrate your victory. We ride at dawn."],
+        'Good Fortune': [   "Now that's a strong flame. Steady, reliable… I like that. Keep pushing, and you'll get exactly what you're after."    ],
+        'Modest Fortune': [ "Keep it together. We can't back out now. Stoke that fire a little more, and we'll see where it goes."  ],
+        'Rising Fortune': [ "There it is… I can see it growing. Keep feeding that flame, and you might just reach me sooner than you think." ],
+        Misfortune: [   "That flame's flickering. Don't let it die out now—you're not done yet, not even close."  ],
+        'Great Misfortune': [   "Even the brightest blaze ends with only ashes… But if you've still got the will to burn, then get back up and prove it."  ]
+    },
+    yelan: {
+        'Great Fortune': ["Congratulations, that was a nice move. Time to enjoy the fruit of your labours. And yes, you may buy me a drink."],
+        'Good Fortune': ["Not bad at all. You're playing your hand well. Keep this up, and you'll get exactly what you're aiming for."],
+        'Modest Fortune': ["You're playing this one pretty close to the wire. It's going to be tight."],
+        'Rising Fortune': ["Oh? Now that's interesting… the odds are shifting. Let's see if you know how to take advantage of it."],
+        Misfortune: ["Mm… unlucky. But not fatal. If you're smart, you'll learn from it—and try again with better odds."],
+        'Great Misfortune': ["…Looks like the table's turned against you. Still, I wouldn't fold just yet—games like this aren't over so easily."]
     },
 };

@@ -47,6 +47,16 @@ export const resourceSources: ResourceSourceSection[] = [
     ],
   },
   {
+    section: 'Notable Mentions',
+    items: [
+      {
+        asset: 'Dialogue text support',
+        sourceName: 'from reddit user u/arseholierthanthou',
+        notes: 'Provided dialogue text for the characters, which was used as a reference for the character-specific dialogue lines. Thank you for your contribution to the project!',
+      },
+    ],
+  },
+  {
     section: 'In-Game Icons and UI Assets',
     items: [
       {

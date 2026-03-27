@@ -35,4 +35,11 @@ export const changelogEntries: ChangelogEntry[] = [
         'Added character-specific dialogue for Xiangling, Razor, Noelle, Ningguang, Lisa, Kaeya & Fischl.',
     ],
   },
+  {
+    version: 'v0.5.2',
+    date: '2026-03-27',
+    changes: [
+        'Added character-specific dialogue for Rosaria, Layla, Kuki Shinobu, Iansan, Mika, Mavuika and Yelan.',
+     ],
+  },
 ];

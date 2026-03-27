@@ -562,6 +562,26 @@ export const characters: Character[] = [
     playable: true,
   },
   {
+    id: 'mavuika',
+    name: "Mavuika",
+    releaseDate: '2025-01-01',
+    image: "/images/characters/Mavuika_Icon.webp",
+    quality: 5,
+    element: "Pyro",
+    region: "Natlan",
+    playable: true,
+  },
+  {
+    id: 'yelan',
+    name: "Yelan",
+    releaseDate: '2022-05-31',
+    image: "/images/characters/Yelan_Icon.webp",
+    quality: 5,
+    element: "Hydro",
+    region: "Liyue",
+    playable: true,
+  },
+  {
     id: 'aino',
     name: "Aino",
     releaseDate: '2025-09-10',
@@ -640,5 +660,6 @@ export const characters: Character[] = [
     element: "Electro",
     region: "Fontaine",
     playable: true,
-  }
+  },
+  
 ];

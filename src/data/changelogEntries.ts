@@ -50,4 +50,13 @@ export const changelogEntries: ChangelogEntry[] = [
         'Temporarily removed characters without character-specific dialogue to avoid confusion, but they will be added back in future updates once their dialogue is implemented.',
       ],
     },
+    {
+      version: 'v0.5.4',
+      date: '2026-03-30',
+      changes: [
+        'Added character-specific dialogue for newly introduced character Linnea.',
+        'Added character-specific dialogue for Arlecchino, Chasca, Lauma, Emilie, Navia, Sigewinne & Wriothesley.',
+      ],
+
+    }
 ];

@@ -56,6 +56,7 @@ export const changelogEntries: ChangelogEntry[] = [
       changes: [
         'Added character-specific dialogue for newly introduced character Linnea.',
         'Added character-specific dialogue for Arlecchino, Chasca, Lauma, Emilie, Navia, Sigewinne & Wriothesley.',
+        'Added "Chronicled Wish" section in character selector for characters featured in the current patch but not in the current featured banner.',
       ],
 
     }

@@ -47,6 +47,11 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
     [characters, featuredSet],
   );
 
+  const chronicledCharacters = useMemo(
+    () => characters.filter((character) => activePatchInfo.chronicleBannerIds?.includes(character.id) && hasCustomContent(character)),
+    [characters, activePatchInfo],
+  );
+
   const filteredCharacters = useMemo(
     () => characters
       .filter(hasCustomContent)
@@ -197,6 +202,16 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
           {featuredCharacters.map(renderCharacterCard)}
         </ul>
       </section>
+
+      { chronicledCharacters.length > 0 && 
+        <section className="character-section">
+          <h3>Chronicled Wish</h3>
+          <ul className="character-grid">
+            {chronicledCharacters.map(renderCharacterCard)}
+          </ul>
+        </section>
+      }
+
 
       <section className="character-section">
         <h3>All Characters</h3>

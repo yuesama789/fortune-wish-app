@@ -13,7 +13,7 @@
 .attribution-modal {
     width: min(1080px, 96vw);
     max-height: min(86vh, 900px);
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
     border-radius: 14px;
     border: 1px solid rgba(213, 189, 142, 0.55);
@@ -204,17 +204,18 @@
 
     .close-button {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -25px;
+        right: -25px;
         margin: 10px;
         border: 1px solid rgba(213, 189, 142, 0.55);
         border-radius: 999px;
         width: 30px;
         height: 30px;
-        color: #fde6b6;
-        background: rgba(213, 189, 142, 0.15);
+        color: #060a15;
+        background: #fde6b6;
         cursor: pointer;
         z-index: 4;
+        font-weight: bold;
     }
 }
 

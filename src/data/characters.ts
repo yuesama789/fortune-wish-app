@@ -841,5 +841,15 @@ export const characters: Character[] = [
     region: "Natlan",
     playable: true,
   },
+  {
+    id: 'wriothesley',
+    name: "Wriothesley",
+    releaseDate: '2025-10-08',
+    image: "/images/characters/Wriothesley_Icon.webp",
+    quality: 5,
+    element: "Cryo",
+    region: "Fontaine",
+    playable: true,
+  },
 
 ];

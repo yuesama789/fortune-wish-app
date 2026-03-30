@@ -4,11 +4,13 @@ interface FeaturedPatchSchedule {
 	patchVersion: string;
 	startDate: string; // YYYY-MM-DD
 	featuredCharacterIds: Character['id'][];
+	chronicleBannerIds?: Character['id'][];
 }
 
 interface ActiveFeaturedPatchInfo {
 	patchVersion: string;
 	featuredCharacterIds: Character['id'][];
+	chronicleBannerIds?: Character['id'][];
 }
 
 // Update this schedule whenever banners rotate.
@@ -24,8 +26,9 @@ export const featuredPatchSchedule: FeaturedPatchSchedule[] = [
 	},
 	{
 		patchVersion: '6.5.1',
-		startDate: '2025-04-08',
+		startDate: '2026-03-30',
 		featuredCharacterIds: ['linnea', 'chasca'],
+		chronicleBannerIds: ['emilie', 'clorinde', 'navia', 'sigewinne', 'lyney', 'wriothesley']
 	},
 	{
 		patchVersion: '6.5.2',
@@ -69,6 +72,7 @@ export const getActiveFeaturedPatchInfo = (date: Date = new Date()): ActiveFeatu
 	return {
 		patchVersion: activeEntry.patchVersion,
 		featuredCharacterIds: activeEntry.featuredCharacterIds,
+		chronicleBannerIds: activeEntry.chronicleBannerIds,
 	};
 };
 

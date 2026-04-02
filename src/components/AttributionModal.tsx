@@ -70,9 +70,6 @@ const AttributionModal: React.FC<AttributionModalProps> = ({ isOpen, onClose }) 
             It is not monetized, and no costs are charged to use it.
             I do not claim ownership of the creative content, characters, or third-party assets shown here.
           </p>
-          <p>
-            This menu is intended to keep clear credit to original creators and source compilations used in this project.
-          </p>
         </section>
       );
     }

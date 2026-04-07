@@ -688,7 +688,7 @@ export const characters: Character[] = [
     image: "/images/characters/Aino_Icon.webp",
     quality: 4,
     element: "Hydro",
-    region: "Nord-Krai",
+    region: "Nod-Krai",
     playable: true,
   },
   {

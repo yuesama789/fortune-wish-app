@@ -117,7 +117,7 @@ const AttributionModal: React.FC<AttributionModalProps> = ({ isOpen, onClose }) 
     if (activeTab === 'comments') {
       return (
         <section className="menu-content-section comments-section">
-          <h2>Comments</h2>
+          <h2>Feedback</h2>
           <p>
             Leave a message, report a bug, or share which fortune you pulled.
           </p>

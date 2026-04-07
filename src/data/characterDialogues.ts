@@ -184,6 +184,16 @@ export const characterDialogues: CharacterDialogueMap = {
         "Careful… once you set your sights on me, there's no easy way out. Still want to play?",
         "Roll the dice, take a spin of the wheel. Luck or skill, it's all on you now."
     ],
+    aino: [
+        "Eeeh? You picked me? Yayyy! Does that mean we get to play now? And maybe have cookies too? Pleaaase?",
+        "Hee-hee, you chose me! I knew you liked me best! C'mon, let's go do something fun right now!",
+        "Ooh! Is this a lucky game? If I win, can I have candy? Don't tell Ineffa I asked, okay?"
+    ],
+    illuga: [
+        "You chose me? ...I see. Then stay close, alright? I'd rather make sure you're safe than let you wander off alone.",
+        "So it's me you're looking for. Hm... then I'll make sure this path leads somewhere worth following.",
+        "You picked me? That's fine by me. Just... let me handle the hard part, okay?"
+    ],
     raiden_shogun: [
         "You set your sights on me? Then understand this—fleeting desire means nothing. Only resolve endures.",
         "So… you would pursue eternity itself. Bold. Tell me, is your will strong enough to follow through?",
@@ -571,6 +581,22 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Oh? Now that's interesting… the odds are shifting. Let's see if you know how to take advantage of it."],
         Misfortune: ["Mm… unlucky. But not fatal. If you're smart, you'll learn from it—and try again with better odds."],
         'Great Misfortune': ["…Looks like the table's turned against you. Still, I wouldn't fold just yet—games like this aren't over so easily."]
+    },
+    aino: {
+        'Great Fortune': ["YAAAY! We did it! Best day ever! This totally deserves cake… and cookies… and maybe five candies!"],
+        'Good Fortune': ["Hehe, see? I told you it'd work! We make a super good team! Way better than broccoli!"],
+        'Modest Fortune': ["Aww, not perfect… but it's still kinda good! We can make it even better next time, right?"],
+        'Rising Fortune': ["Ooh, it's getting better! Hee-hee, this is fun! Let's keep going, keep going!"],
+        Misfortune: ["Awwww… no fair! That was mean! Hmph… okay, okay, one more try! I'm not giving up!"],
+        'Great Misfortune': ["Waaah! That went super wrong! …Can I have a krumkake to feel better now? Just one? Pleaaase?"]
+    },
+    illuga: {
+        'Great Fortune': ["Looks like everything's aligned perfectly. Good... then I can keep you close without anything getting in our way."],
+        'Good Fortune': ["A solid result. Steady, reliable... just how I like it. We'll be alright if we keep moving together."],
+        'Modest Fortune': ["Not ideal, but manageable. Don't worry, we still have plenty of room to turn this around."],
+        'Rising Fortune': ["Oh... it's improving. Good. Keep going like this, and I'll make sure you don't lose your footing."],
+        Misfortune: ["That's a setback. But it's nothing we can't recover from. Just stay with me, alright?"],
+        'Great Misfortune': ["...Rough outcome. Still, I'm not leaving you behind over something like this. We'll try again together."]
     },
     raiden_shogun: {
         'Great Fortune': ["Your resolve is clear. The path before you does not waver… Very well. I will acknowledge your ambition."],

@@ -58,6 +58,14 @@ export const changelogEntries: ChangelogEntry[] = [
         'Added character-specific dialogue for Arlecchino, Chasca, Lauma, Emilie, Navia, Sigewinne & Wriothesley.',
         'Added "Chronicled Wish" section in character selector for characters featured in the current patch but not in the current featured banner.',
       ],
-
+    },
+    {
+      version: 'v0.5.5',
+      date: '2026-04-07',
+      changes: [
+        'Added character-specific dialogue for character Illuga and Aino.',
+        'Added a new section in the attribution menu for user feedback and comments, powered by Disqus.',
+        'Updated featured character schedule for patch 6.5.2.',
+      ],
     }
 ];

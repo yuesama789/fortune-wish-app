@@ -27,7 +27,7 @@ export const featuredPatchSchedule: FeaturedPatchSchedule[] = [
 	{
 		patchVersion: '6.5.1',
 		startDate: '2026-03-30',
-		featuredCharacterIds: ['linnea', 'chasca'],
+		featuredCharacterIds: ['linnea', 'chasca', 'aino', 'noelle', 'illuga'],
 		chronicleBannerIds: ['emilie', 'clorinde', 'navia', 'sigewinne', 'lyney', 'wriothesley']
 	},
 	{

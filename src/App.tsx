@@ -252,7 +252,7 @@ const App: React.FC = () => {
                 aria-label="Open project info and asset sources"
                 onClick={() => setIsAttributionOpen(true)}
             >
-                ?
+                ⋯
             </button>
             {isHomeViewVisible && <h1>Genshin Impact Wish For Me?</h1>}
             {isHomeViewVisible && <CharacterSelector onSelect={handleCharacterSelect} />}

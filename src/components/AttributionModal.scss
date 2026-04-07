@@ -110,6 +110,19 @@
         }
     }
 
+    .comments-section {
+        display: grid;
+        gap: 12px;
+        min-height: 100%;
+    }
+
+    .comments-embed-shell {
+        border-radius: 10px;
+        padding: 12px;
+        min-height: 360px;
+        overflow: hidden;
+    }
+
     .sources-section {
         margin-bottom: 14px;
 

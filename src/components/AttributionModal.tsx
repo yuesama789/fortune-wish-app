@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { DiscussionEmbed } from 'disqus-react';
 import { resourceSources } from '../data/resourceSources';
 import './AttributionModal.scss';
 import { changelogEntries } from '../data/changelogEntries';
@@ -8,7 +9,7 @@ interface AttributionModalProps {
   onClose: () => void;
 }
 
-type ModalTabId = 'attribution' | 'resources' | 'changelog';
+type ModalTabId = 'attribution' | 'resources' | 'changelog' | 'comments';
 
 interface ModalTab {
   id: ModalTabId;
@@ -16,13 +17,27 @@ interface ModalTab {
 }
 
 const tabs: ModalTab[] = [
+  { id: 'comments', label: 'Comments' },
   { id: 'attribution', label: 'Attribution' },
   { id: 'resources', label: 'Resources' },
   { id: 'changelog', label: 'Changelog' },
 ];
 
+const DISQUS_SHORTNAME = 'genshinwishfortune';
+const DISCUSSION_IDENTIFIER = 'genshin-wish-app-comments';
+const DISCUSSION_TITLE = 'Genshin Impact Wish For Me?';
+
 const AttributionModal: React.FC<AttributionModalProps> = ({ isOpen, onClose }) => {
   const [activeTab, setActiveTab] = React.useState<ModalTabId>('attribution');
+  const discussionUrl = typeof window === 'undefined'
+    ? ''
+    : new URL(import.meta.env.BASE_URL, window.location.origin).toString();
+  const discussionConfig = {
+    url: discussionUrl,
+    identifier: DISCUSSION_IDENTIFIER,
+    title: DISCUSSION_TITLE,
+    language: 'en_EN',
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -52,7 +67,7 @@ const AttributionModal: React.FC<AttributionModalProps> = ({ isOpen, onClose }) 
 
   useEffect(() => {
     if (isOpen) {
-      setActiveTab('attribution');
+      setActiveTab('comments');
     }
   }, [isOpen]);
 
@@ -95,6 +110,20 @@ const AttributionModal: React.FC<AttributionModalProps> = ({ isOpen, onClose }) 
               </ul>
             </section>
           ))}
+        </section>
+      );
+    }
+
+    if (activeTab === 'comments') {
+      return (
+        <section className="menu-content-section comments-section">
+          <h2>Comments</h2>
+          <p>
+            Leave a message, report a bug, or share which fortune you pulled.
+          </p>
+          <div className="comments-embed-shell">
+            <DiscussionEmbed shortname={DISQUS_SHORTNAME} config={discussionConfig} />
+          </div>
         </section>
       );
     }

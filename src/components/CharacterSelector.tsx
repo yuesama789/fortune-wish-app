@@ -22,8 +22,12 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
   const [nameFilter, setNameFilter] = useState('');
 
   const activePatchInfo = useMemo(() => getActiveFeaturedPatchInfo(), []);
-  const featuredSet = useMemo(() => new Set<string>(activePatchInfo.featuredCharacterIds), [activePatchInfo]);
   const patchVersion = activePatchInfo.patchVersion;
+
+  const characterById = useMemo(
+    () => new Map(characters.map((character) => [character.id, character])),
+    [characters],
+  );
 
   const regionOptions = useMemo(
     () => Array.from(new Set(characters.map((character) => character.region))).sort(),
@@ -43,8 +47,10 @@ const CharacterSelector: React.FC<CharacterSelectorProps> = ({
   };
 
   const featuredCharacters = useMemo(
-    () => characters.filter((character) => featuredSet.has(character.id) && hasCustomContent(character)),
-    [characters, featuredSet],
+    () => activePatchInfo.featuredCharacterIds
+      .map((id) => characterById.get(id))
+      .filter((character): character is Character => !!character && hasCustomContent(character)),
+    [activePatchInfo, characterById],
   );
 
   const chronicledCharacters = useMemo(

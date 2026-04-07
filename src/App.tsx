@@ -254,7 +254,14 @@ const App: React.FC = () => {
             >
                 ⋯
             </button>
-            {isHomeViewVisible && <h1>Genshin Impact Wish For Me?</h1>}
+            {isHomeViewVisible && 
+                (
+                    <>
+                        <h1>Genshin Impact Wish For Me?</h1>
+                        <div className="ornamental" />
+                    </>
+                )
+            }
             {isHomeViewVisible && <CharacterSelector onSelect={handleCharacterSelect} />}
             {shouldShowDialogueScene && (
                 <DialogueScene

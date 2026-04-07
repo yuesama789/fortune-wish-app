@@ -698,7 +698,7 @@ export const characters: Character[] = [
     image: "/images/characters/Lauma_Icon.webp",
     quality: 5,
     element: "Dendro",
-    region: "Nord-Krai",
+    region: "Nod-Krai",
     playable: true,
   },
   {
@@ -738,7 +738,7 @@ export const characters: Character[] = [
     image: "/images/characters/Jahoda_Icon.webp",
     quality: 4,
     element: "Anemo",
-    region: "Nord-Krai",
+    region: "Nod-Krai",
     playable: true,
   },
   {
@@ -748,7 +748,7 @@ export const characters: Character[] = [
     image: "/images/characters/Illuga_Icon.webp",
     quality: 4,
     element: "Geo",
-    region: "Nord-Krai",
+    region: "Nod-Krai",
     playable: true,
   },
   {
@@ -768,7 +768,7 @@ export const characters: Character[] = [
     image: "/images/characters/Columbina_Icon.webp",
     quality: 5,
     element: "Hydro",
-    region: "Nord-Krai",
+    region: "Nod-Krai",
     playable: true,
   },
   {
@@ -788,7 +788,7 @@ export const characters: Character[] = [
     image: "/images/characters/Nefer_Icon.webp",
     quality: 5,
     element: "Dendro",
-    region: "Nord-Krai",
+    region: "Nod-Krai",
     playable: true,
   },
   {
@@ -828,7 +828,7 @@ export const characters: Character[] = [
     image: "/images/characters/Linnea_Icon.webp",
     quality: 5,
     element: "Geo",
-    region: "Nord-Krai",
+    region: "Nod-Krai",
     playable: true,
   },
   {

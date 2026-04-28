@@ -132,7 +132,7 @@ const AttributionModal: React.FC<AttributionModalProps> = ({ isOpen, onClose }) 
       <section className="menu-content-section">
         <h2>Changelog</h2>
         <div className="changelog-list">
-          {changelogEntries.map((entry) => (
+          {[...changelogEntries].reverse().map((entry) => (
             <article key={entry.version} className="changelog-entry">
               <header>
                 <h3>{entry.version}</h3>

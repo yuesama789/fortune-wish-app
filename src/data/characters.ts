@@ -844,12 +844,33 @@ export const characters: Character[] = [
   {
     id: 'wriothesley',
     name: "Wriothesley",
-    releaseDate: '2025-10-08',
+    releaseDate: '2023-10-17',
     image: "/images/characters/Wriothesley_Icon.webp",
     quality: 5,
     element: "Cryo",
     region: "Fontaine",
     playable: true,
   },
+  {
+    id: 'mualani',
+    name: "Mualani",
+    releaseDate: '2024-08-28',
+    image: "/images/characters/Mualani_Icon.webp",
+    quality: 5,
+    element: "Hydro",
+    region: "Natlan",
+    playable: true,
+  },
+  {
+    id: 'xilonen',
+    name: "Xilonen",
+    releaseDate: '2024-10-09',
+    image: "/images/characters/Xilonen_Icon.webp",
+    quality: 5,
+    element: "Geo",
+    region: "Natlan",
+    playable: true,
+  },
+
 
 ];

@@ -27,14 +27,14 @@ export const featuredPatchSchedule: FeaturedPatchSchedule[] = [
 	{
 		patchVersion: '6.5.1',
 		startDate: '2026-03-30',
-		featuredCharacterIds: ['linnea', 'chasca', 'aino', 'noelle', 'illuga'],
-		chronicleBannerIds: ['emilie', 'clorinde', 'navia', 'sigewinne', 'lyney', 'wriothesley']
+		featuredCharacterIds: ['linnea', 'chasca', 'aino', 'noelle', 'illuga']
 	},
 	{
 		patchVersion: '6.5.2',
-		startDate: '2025-04-29',
-		featuredCharacterIds: ['nefer', 'lauma'],
-	},
+		startDate: '2026-04-28',
+		featuredCharacterIds: ['lauma', 'nefer', 'jahoda', 'xingqiu', 'kirara'],
+		chronicleBannerIds: ['emilie', 'clorinde', 'navia', 'sigewinne', 'lyney', 'wriothesley']
+	}
 ];
 
 const parseScheduleDate = (dateString: string): Date => new Date(`${dateString}T00:00:00Z`);

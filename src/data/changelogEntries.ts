@@ -1,3 +1,5 @@
+import { version } from "react";
+
 export interface ChangelogEntry {
   version: string;
   date: string;
@@ -67,5 +69,12 @@ export const changelogEntries: ChangelogEntry[] = [
         'Added a new section in the attribution menu for user feedback and comments, powered by Disqus.',
         'Updated featured character schedule for patch 6.5.2.',
       ],
-    }
+    },
+    {
+      version: 'v0.5.6',
+      date: '2026-04-28',
+      changes: [
+          'Added character-specific dialogue for Jahoda and Kirara.',
+      ],
+    },
 ];

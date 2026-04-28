@@ -94,6 +94,16 @@ export const characterDialogues: CharacterDialogueMap = {
         "I knew you'd come to me eventually. I included you in my morning prayers.",
         "Thank Barbatos you came to find me. I was hoping for you to come to find me.",
     ],
+        jahoda: [
+            "Oh? You picked me? Heh, good call. Don't worry—I can handle most things… as long as you pay enough.",
+            "Looking for me, huh? Alright, alright—I'll take the job. Just don't ask too many questions, yeah?",
+            "You chose me? Hehe… bold. Stick with me and I'll get things done—mostly clean, too.",
+        ],
+    kirara: [
+        "Delivery for you! Oh—wait, you picked me? Nice! I'll make sure everything gets to you safe and sound!",
+        "Hehe, you chose me? Then I'm on the job! Fast, reliable, and maybe a little extra cute on the side~",
+        "Ooh, I'm your pick? Great! I'll handle this—no delays, no damage, guaranteed!",
+    ],
     eula: [
         "Oh? You're putting your fate in my hands? Very well… but don't expect me to go easy on you.",
         "So you've chosen me to judge your fortunes? Hmph. I hope you're prepared for the outcome.",
@@ -318,6 +328,14 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         Misfortune: ["Unfortunate. Reassess before you commit more resources."],
         'Great Misfortune': ["A severe warning. Reckless repetition would be unwise."],
     },
+    jahoda: {
+        'Great Fortune': ["Hah! See? Told you I've got this. Smooth, clean, no loose ends… just how I like it."],
+        'Good Fortune': ["Nice, nice! That went pretty well. Guess you picked the right person for the job, huh?"],
+        'Modest Fortune': ["Eh, not perfect… but it worked, didn't it? I'll take that over a total mess any day."],
+        'Rising Fortune': ["Oh? It's picking up. Hehe, now we're getting somewhere—just keep following my lead."],
+        Misfortune: ["Tch… that didn't go as planned. Still, nothing I can't fix. Just… give me a second, alright?"],
+        'Great Misfortune': ["...Yeah, that's bad. Real bad. But hey—don't run off. I'll figure something out… I always do."],
+    },
     jean: {
         'Great Fortune': ["That's wonderful news. If you keep going, I hope fortune stays with you."],
         'Good Fortune': ["A good sign. You're doing well, so trust your judgment."],
@@ -437,6 +455,14 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Interesting. The trajectory is improving. Whether you can keep up… remains to be seen."],
         Misfortune: ["…Unfortunate. Though failure often provides more valuable data than success."],
         'Great Misfortune': ["…Ah. Now this is where things become truly interesting. Go on. I'm curious to see how you handle the consequences."],
+    },
+    kirara: {
+        'Great Fortune': ["Special express success! Delivered perfectly, right on time! See? You can always count on me!"],
+        'Good Fortune': ["Nice! Smooth delivery, no issues at all! I'd call that a job well done!"],
+        'Modest Fortune': ["Hm, a little bumpy, but it still arrived! I'll try to make the next one even better!"],
+        'Rising Fortune': ["Oh! It's getting faster! Hehe, I'm really picking up speed now—watch me go!"],
+        Misfortune: ["Ah! Slight delay! Don't worry, I'll reroute and get things back on track!"],
+        'Great Misfortune': ["Wah! Total delivery disaster! B-but don't worry, I won't give up—I'll fix it somehow!"],
     },
     eula: { 
         'Great Fortune': ["Oh? A result like this… impressive. Don't misunderstand—I'm not praising you. I'm simply acknowledging it."], 

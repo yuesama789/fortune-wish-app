@@ -104,6 +104,16 @@ export const characterDialogues: CharacterDialogueMap = {
         "Hehe, you chose me? Then I'm on the job! Fast, reliable, and maybe a little extra cute on the side~",
         "Ooh, I'm your pick? Great! I'll handle this—no delays, no damage, guaranteed!",
     ],
+    xilonen: [
+        "You picked me? Heh… guess you've got good taste. I forge, I fight, I skate—yeah, I can handle you too.",
+        "So it's me you want? Alright. Just know I don't slow down for anyone… you'll have to keep pace.",
+        "Hm. Choosing me, huh? That's a lot to take on… but I'm curious how far you'll get.",
+    ],
+    mualani: [
+        "Aw, you picked me? Hehe, then we're basically travel buddies now! Hope you're ready to ride the wave~",
+        "Ooooh, aiming for me? Then hang on tight! I don't do boring trips, you know!",
+        "You chose me? Yes! Okay, okay—this is gonna be fun. Just don't wipe out too early, alright?",
+    ],
     eula: [
         "Oh? You're putting your fate in my hands? Very well… but don't expect me to go easy on you.",
         "So you've chosen me to judge your fortunes? Hmph. I hope you're prepared for the outcome.",
@@ -791,5 +801,21 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Oh? Now that's interesting. You're getting closer… slowly, but with intent. Keep going."],
         Misfortune: ["Tch, rough round. Don't worry—I've seen worse. The question is whether you're willing to try again."],
         'Great Misfortune': ["...That was a mess. And yet, you're still here. Heh. I respect that kind of stubbornness."]
+    },
+    xilonen: {
+        'Great Fortune': ["Nice. Looks like you've got this down, looking forward to where it goes. If you've got a handle on this then I'm just gonna sit down here for a bit and catch some shut-eye."],
+        'Good Fortune': ["Clean result. Nothing flashy, but solid. I like it—makes things easier on both of us."],
+        'Modest Fortune': ["Careful. You're on the right track, but one bad move and it all comes crashing down."],
+        'Rising Fortune': ["Oh? It's coming together. Took you long enough… but yeah, I can see the improvement."],
+        Misfortune: ["Tch. Sometimes the iron just cracks under the hammer and there's nothing you can do about it. The next attempt should go better, but you won't know unless you try."],
+        'Great Misfortune': ["...Yeah, that one fell apart completely. Still—next attempt'll be better. If you've got the stamina."],
+    },
+    mualani: {
+        'Great Fortune': ["Wahoo! The future's looking almost as shiny as the beaches we're gonna hit up to celebrate. We are going to have so much fun. Do you wanna see my itinerary?"],
+        'Good Fortune': ["Nice one! Smooth ride, no wipeouts. Keep this up and we're going straight to the good spots!"],
+        'Modest Fortune': ["Great going dipping your toes in, but don't go making travel plans just yet."],
+        'Rising Fortune': ["Ooh, I see it! You're catching the wave now! Keep going, don't lose your balance!"],
+        Misfortune: ["Ahh, little slip! Don't worry, happens all the time. Just get back up and try again!"],
+        'Great Misfortune': ["Total wipeout! Keep treading water, Paimon's on her way with a fishing rod."],
     },
 };

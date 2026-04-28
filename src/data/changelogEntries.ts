@@ -75,6 +75,7 @@ export const changelogEntries: ChangelogEntry[] = [
       date: '2026-04-28',
       changes: [
           'Added character-specific dialogue for Jahoda and Kirara.',
+          'Added character-specific dialogue for Xilonen and Mualani. Thanks to u/arseholierthanthou for your contribution of dialogue text for these characters!',
       ],
     },
 ];

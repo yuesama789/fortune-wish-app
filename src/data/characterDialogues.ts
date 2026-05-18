@@ -249,6 +249,36 @@ export const characterDialogues: CharacterDialogueMap = {
         "Oho~ aiming for me? Careful now, I come with a discount… but only if you stick around long enough~",
         "You chose me? Hehe, bold move! Don't worry, I'll make this fun—whether it goes well… or not~"
     ],
+    arataki_itto: [
+        "So you're checkin' me out, huh? Ha, can't say I blame ya, I'd be checking me out too.",
+        "One time I caught the Raiden Shogun's eye and she was like, 'whoa, who is that?' So yeah, I'm kinda used to attention like this.",
+        "Wow, haha, you got some good taste right there! Grab a beetle and let's get this show on the road.",
+    ],
+    yae_miko: [
+        "My my, surely you're not looking at me? You know what they say about biting off more than you can chew.",
+        "And what can I do for you, little one? A lifetime supply of light novels? A private audience with the Shogun? And here I was thinking they'd shut down the Delusion factory.",
+        "So you heard about me and thought I'm the one you want by your side? I wonder what that says about you. I'll get you Ms Mizuki's card.",
+    ],
+    varka: [
+        "The name's Varka and the rumours are all true! Right, get that down you, we've got some drinking to do. It's Tuesday.",
+        "So you're after me in a more personal capacity? Wait, Nicole, is that you? No? Oh. Pity.",
+        "Jean put you up to this, didn't she? I knew she'd send someone to keep an eye on me sooner or later. Well, let's get this over with.",
+    ],
+    nicole: [
+        "Interesting... The flow of fate around you feels unusually active today. If I were you, I'd take advantage of it before the moment passes.",
+        "You're nervous, aren't you? Mm... that's understandable. But fortune rarely favors those who hesitate forever.",
+        "I already have a theory about how this wish will go. Now I'm curious whether fate intends to prove me correct.",
+    ],
+    prune: [
+        "Oho? You're wishing today? Hehe, I like your confidence already. Something fun's definitely about to happen.",
+        "C'mon, don't look so scared! If you're gonna challenge fate, at least do it dramatically.",
+        "I've got a really good feeling about this one. Either your luck's incredible today... or we're about to create a very funny disaster.",
+    ],
+    durin: [
+        "Oh... You're making a wish? Then I hope it becomes something beautiful.",
+        "I have a really good feeling about this one! Maybe the stars are finally being kind today.",
+        "Wishes always shine brightest right before they come true.",
+    ],
     tartaglia: [
         "Oh? You picked me? Heh, you've got guts—I like that. Let's see how far you can keep up.",
         "So you're aiming for me? Careful now, this won't be a safe game… but that's what makes it fun, right?",
@@ -677,7 +707,7 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
     neuvillette: {
         'Great Fortune': ["...The currents are clear, undisturbed. It seems your path leads directly to me… without resistance."],
         'Good Fortune': ["The flow remains steady. If you continue as you are, you will find yourself exactly where you intend to be."],
-        'Modest Fortune': ["There is some turbulence… yet nothing insurmountable. With care, you may still reach your destination."],
+        'Modest Fortune': ["There is some turbulence… yet nothing insurmountable. With care, you mdie Teay still reach your destination."],
         'Rising Fortune': ["I sense a shift in the tide. Subtle, but undeniable… you are drawing closer."],
         Misfortune: ["The waters are unsettled. If you proceed without thought, you risk losing your way entirely."],
         'Great Misfortune': ["...The current rejects this path. And yet… if your resolve is genuine, even this may be overcome in time."]
@@ -689,6 +719,54 @@ export const fortuneFollowUpDialogues: Record<string, Record<FortuneHeader, stri
         'Rising Fortune': ["Ooooh~ it's getting better! I like where this is going… don't stop now, okay?"],
         Misfortune: ["Aww~ that didn't go so well, huh? Don't look so down! I can still keep you company~"],
         'Great Misfortune': ["Ehehe… wow, that was rough! But hey, even in the worst cases, I'm great at handling… aftercare~"]
+    },
+    arataki_itto: {
+        'Great Fortune': ["Alright, partner, you know what time it is! You're never lonely with the One and Oni!"],
+        'Good Fortune': ["Nice one! Hey, so, totally random question, but, now that we're best buds, could you come down to the Tenryou Commission and post bail?"],
+        'Modest Fortune': ["You gotta really go for it, Bro. Dedicate yourself, train up, and then hit it as hard as you can."],
+        'Rising Fortune': ["Looking good! At this rate we're gonna need another chair at Arataki HQ."],
+        Misfortune: ["Come on Compadre, I really don't want you to have to get a real job."],
+        'Great Misfortune': ["Yowch, that's some bad luck you got right there, Hombre. I won't tell anyone, but you'd better get outta here."],
+    },
+    yae_miko: {
+        'Great Fortune': ["Well, it does seem congratulations are in order. I'll have the fried tofu please. Your treat."],
+        'Good Fortune': ["Perhaps the great youkai of the skies will sing for your arrival. Perhaps they have blessed your path. Or perhaps they think you've brought snacks."],
+        'Modest Fortune': ["Not bad, but if you ever want a second opinion on your fortune, you could drop by my shrine. Call first."],
+        'Rising Fortune': ["Look at you, a plucky underdog straight out of a light novel. But is it heading for the best-seller list or the bargain bin?"],
+        Misfortune: ["I have a friend who locked herself away to escape the world. It doesn't work, I'm afraid. Move on, move forward, try again."],
+        'Great Misfortune': ["Alas, fate appears to enjoy mocking you."],
+    },
+    varka: {
+        'Great Fortune': ["You made it! I knew you had it in you. Right, let's get you settled in. Comfy? Know what needs doing? Great, then I'm off to the pub."],
+        'Good Fortune': ["Ok, listen up, 'cause this is important. Three parts Dandelion wine, one part sparkling wine. Your round!"],
+        'Modest Fortune': ["Take some time and think of the things that remind you of home, something to keep you warm on the frigid nights."],
+        'Rising Fortune': ["You're getting there, but it needs something more. Ever thought about dual-wielding?"],
+        Misfortune: ["You ever wake up in a field and wonder how you got here?"],
+        'Great Misfortune': ["Walk it off, Knight, we've all had nights like those."],
+    },
+    nicole: {
+        'Great Fortune': ["Exactly as expected. The odds were quietly leaning in your favor all along, even if you failed to notice."],
+        'Good Fortune': ["A favorable result. Not flawless, perhaps, but certainly enough to consider this experiment a success."],
+        'Modest Fortune': ["Mm. Perfectly average. Though judging by your expression, I suspect your expectations were considerably higher."],
+        'Rising Fortune': ["Not ideal, certainly. However, outcomes like this often appear immediately before probability shifts in your favor. I wouldn't abandon the experiment just yet."],
+        Misfortune: ["An unfortunate outcome... though probability has a habit of correcting itself eventually. Your luck may not be finished yet."],
+        'Great Misfortune': ["...How fascinating. Even I didn't predict a result quite this catastrophically unlucky. You have my condolences."],
+    },
+    prune: {
+        'Great Fortune': ["HAH! I knew it! That pull was amazing - you should've seen your face for a second there!"],
+        'Good Fortune': ["See? See!? Your luck's actually pretty good today. You should keep going while fate's still paying attention to you."],
+        'Modest Fortune': ["Eh, not terrible. Not exciting either, though. Feels like the universe is saving the real chaos for later."],
+        'Rising Fortune': ["Ouch… okay, that could've gone better. But honestly? This feels exactly like the kind of pull that happens right before something amazing."],
+        Misfortune: ["Oof... okay, that one hurt a little. But hey, bad luck just makes the comeback more dramatic, right?"],
+        'Great Misfortune': ["...Wow. That was impressively awful. Honestly, I almost respect how catastrophically wrong that went."],
+    },
+    durin: {
+        'Great Fortune': ["You got them?! Really!? Ah- wait, let me see! Hehe... I knew your wish would reach the stars."],
+        'Good Fortune': ["See? I told you it would work out somehow. Wishes are stronger than people think."],
+        'Modest Fortune': ["Mm... not perfect. But not hopeless either! Maybe the next wish is just waiting for the right moment."],
+        'Rising Fortune': ["Oh… that wasn't the result you wanted, was it? But I don't think your luck has disappeared yet. Maybe the next wish is the one that's meant to find you."],
+        Misfortune: ["Oh no... Are you alright? We can sit here a little longer if you want."],
+        'Great Misfortune': ["...I'm sorry. I really thought this time would be different."],
     },
     tartaglia: {
         'Great Fortune': ["Now that's what I'm talking about! You've got skill—and luck to match. I might actually enjoy sticking with you."],

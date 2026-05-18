@@ -78,4 +78,12 @@ export const changelogEntries: ChangelogEntry[] = [
           'Added character-specific dialogue for Xilonen and Mualani. Thanks to u/arseholierthanthou for your contribution of dialogue text for these characters!',
       ],
     },
+    { 
+      version: 'v0.5.7',
+      date: '2026-05-18',
+      changes: [
+          'Added character-specific dialogue for Nicole, Durin and Prune.',
+          'Added character-specific dialogue for Arataki Itto, Yae Miko and Varka. Thanks to u/arseholierthanthou for providing dialogue text for these characters!',
+      ],
+    }
 ];

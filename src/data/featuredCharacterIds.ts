@@ -34,6 +34,16 @@ export const featuredPatchSchedule: FeaturedPatchSchedule[] = [
 		startDate: '2026-04-28',
 		featuredCharacterIds: ['lauma', 'nefer', 'jahoda', 'xingqiu', 'kirara'],
 		chronicleBannerIds: ['emilie', 'clorinde', 'navia', 'sigewinne', 'lyney', 'wriothesley']
+	},
+	{
+		patchVersion: '6.6.1',
+		startDate: '2026-05-18',
+		featuredCharacterIds: ['nicole', 'durin', 'prune', 'fischl', 'razor'],
+	},
+	{
+		patchVersion: '6.6.2',
+		startDate: '2026-06-08',
+		featuredCharacterIds: ['lohen', 'mavuika', 'prune', 'fischl', 'razor'],
 	}
 ];
 

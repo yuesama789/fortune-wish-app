@@ -37,7 +37,7 @@ export const featuredPatchSchedule: FeaturedPatchSchedule[] = [
 	},
 	{
 		patchVersion: '6.6.1',
-		startDate: '2026-05-18',
+		startDate: '2026-05-19',
 		featuredCharacterIds: ['nicole', 'durin', 'prune', 'fischl', 'razor'],
 	},
 	{

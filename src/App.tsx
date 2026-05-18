@@ -66,6 +66,20 @@ const App: React.FC = () => {
     }, []);
 
     useEffect(() => {
+        const faviconHref = resolveAssetUrl('/images/misc/favicon.webp');
+        let faviconLink = document.querySelector("link[rel='icon']") as HTMLLinkElement | null;
+
+        if (!faviconLink) {
+            faviconLink = document.createElement('link');
+            faviconLink.rel = 'icon';
+            document.head.appendChild(faviconLink);
+        }
+
+        faviconLink.type = 'image/png';
+        faviconLink.href = faviconHref;
+    }, []);
+
+    useEffect(() => {
         if (!import.meta.env.DEV) {
             return;
         }
